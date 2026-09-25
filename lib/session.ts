@@ -17,6 +17,8 @@ import { MicCapture, PcmPlayer, pcm16ToBase64 } from "./audio";
 export interface SessionHooks {
   onState: (state: CallState) => void;
   onError: (message: string) => void;
+  /** Optional mic input level (0..1), ~per worklet frame — for the meter UI. */
+  onMicLevel?: (level: number) => void;
 }
 
 export interface ReplayHooks {
@@ -64,10 +66,17 @@ export class CallSession {
     }
   }
 
+  /** Director channel is closed once the coach took over or the call ended —
+   *  no session.update / reply.create may go out after that point. */
+  private directorClosed() {
+    return this.coachRequested || this.state.coach_started || this.state.phase === "ended";
+  }
+
   private resetSilenceTimer() {
-    if (this.state.phase !== "ready" || this.coachRequested) return;
+    if (this.state.phase !== "ready" || this.directorClosed()) return;
     if (this.silenceTimer) clearTimeout(this.silenceTimer);
     this.silenceTimer = setTimeout(() => {
+      if (this.directorClosed() || this.state.phase !== "ready") return;
       this.send({ type: "conversation.message", role: "system", content: SILENCE_NUDGE });
       this.note("silence", "Trainee silent — injected a pressure nudge via conversation.message");
     }, this.scenario.director.silence_nudge_ms);
@@ -77,14 +86,14 @@ export class CallSession {
     const d = this.scenario.director;
     this.resetSilenceTimer();
     this.escalateTimer = setTimeout(() => {
-      if (this.state.phase !== "ready" || this.state.escalated) return;
+      if (this.state.phase !== "ready" || this.state.escalated || this.directorClosed()) return;
       this.send({ type: "session.update", session: { system_prompt: d.escalation_prompt } });
       this.state.escalated = true;
       this.note("escalation", `Escalated at ${Math.round(d.escalate_at_ms / 1000)}s — sent harder system prompt`);
     }, d.escalate_at_ms);
     const finalAt = Math.max(15000, this.scenario.approx_seconds * 1000 - d.final_push_before_end_ms);
     this.finalPushTimer = setTimeout(() => {
-      if (this.state.phase !== "ready") return;
+      if (this.state.phase !== "ready" || this.directorClosed()) return;
       this.send({ type: "conversation.message", role: "system", content: FINAL_PUSH });
       this.send({ type: "reply.create" });
       this.note("final_push", "Time cap near — injected final-push directive");
@@ -102,6 +111,8 @@ export class CallSession {
     this.state.phase = "connecting";
     this.push();
     this.player = new PcmPlayer();
+    // prime() must run inside this click handler — autoplay policy.
+    void this.player.prime();
     const sep = wsUrl.includes("?") ? "&" : "?";
     const ws = new WebSocket(`${wsUrl}${sep}token=${encodeURIComponent(token)}&scenario=${encodeURIComponent(this.scenario.id)}`);
     this.ws = ws;
@@ -192,7 +203,7 @@ export class CallSession {
     try {
       await this.mic.start((pcm) => {
         this.send({ type: "input.audio", audio: pcm16ToBase64(pcm) });
-      });
+      }, this.hooks.onMicLevel);
     } catch (err) {
       this.hooks.onError(`microphone: ${err instanceof Error ? err.message : String(err)}`);
     }
@@ -220,7 +231,7 @@ export class CallSession {
     this.send({ type: "reply.create" });
     this.coachRequested = true;
     this.state.coach_started = true;
-    this.note("coach", "Switched persona → coach via session.update; prompted the spoken debrief");
+    this.note("coach", "Switched persona → coach via session.update; prompted the spoken debrief (coach speaks in the caller's voice — voice is immutable mid-session)");
   }
 
   /** Always session.end so billing stops; then close the socket. */
