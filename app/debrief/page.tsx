@@ -200,8 +200,8 @@ export default function DebriefPage() {
       </div>
 
       <p className="mt-6 text-xs" style={{ color: "var(--muted)" }}>
-        Scoring is a deterministic training aid, not a certification — deterministic where it can be
-        (tool trip-wire, transcript patterns, timing metrics), LLM-judged only for soft skills.
+        Scoring is a deterministic training aid, not a certification — tool trip-wire,
+        agent-logged observations, transcript patterns and timing metrics; no separate LLM judge.
       </p>
 
       <div className="mt-8 flex gap-3">
