@@ -28,3 +28,4 @@ agents.lock.json
 *.pem
 npm-debug.log*
 .vercel
+tsconfig.tsbuildinfo
