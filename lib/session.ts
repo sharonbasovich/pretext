@@ -142,13 +142,17 @@ export class CallSession {
     };
   }
 
+  private readyPerfAt: number | null = null;
+
   private handleEvent(msg: ServerEvent) {
-    const at = this.state.ready_at == null ? 0 : this.state.metrics.elapsed_ms + 1;
+    // Event clock = ms since session.ready (performance.now-based).
+    const at = this.readyPerfAt == null ? 0 : performance.now() - this.readyPerfAt;
     applyServerEvent(this.state, msg, at);
     this.push();
 
     switch (msg.type) {
       case "session.ready":
+        this.readyPerfAt = performance.now();
         this.armDirectorTimers();
         void this.startMic();
         break;

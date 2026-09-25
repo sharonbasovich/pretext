@@ -29,3 +29,4 @@ agents.lock.json
 npm-debug.log*
 .vercel
 tsconfig.tsbuildinfo
+shots/
