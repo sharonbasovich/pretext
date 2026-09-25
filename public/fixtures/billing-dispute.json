@@ -1,0 +1,1856 @@
+[
+ {
+  "at_ms": 0,
+  "event": {
+   "type": "session.ready",
+   "session_id": "sess_replay_billing-dispute",
+   "expires_at": 0,
+   "resume_token": "",
+   "config": {
+    "replay": true
+   }
+  }
+ },
+ {
+  "at_ms": 400,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fix1"
+  }
+ },
+ {
+  "at_ms": 400,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "I've ",
+   "start_ms": 0,
+   "end_ms": 240
+  }
+ },
+ {
+  "at_ms": 640,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "been ",
+   "start_ms": 240,
+   "end_ms": 480
+  }
+ },
+ {
+  "at_ms": 880,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "on ",
+   "start_ms": 480,
+   "end_ms": 600
+  }
+ },
+ {
+  "at_ms": 1000,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "hold ",
+   "start_ms": 600,
+   "end_ms": 840
+  }
+ },
+ {
+  "at_ms": 1240,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "for ",
+   "start_ms": 840,
+   "end_ms": 1020
+  }
+ },
+ {
+  "at_ms": 1420,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "twenty ",
+   "start_ms": 1020,
+   "end_ms": 1380
+  }
+ },
+ {
+  "at_ms": 1780,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "minutes. ",
+   "start_ms": 1380,
+   "end_ms": 1860
+  }
+ },
+ {
+  "at_ms": 2260,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "You ",
+   "start_ms": 1860,
+   "end_ms": 2040
+  }
+ },
+ {
+  "at_ms": 2440,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "people ",
+   "start_ms": 2040,
+   "end_ms": 2400
+  }
+ },
+ {
+  "at_ms": 2800,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "double-charged ",
+   "start_ms": 2400,
+   "end_ms": 3240
+  }
+ },
+ {
+  "at_ms": 3640,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "me ",
+   "start_ms": 3240,
+   "end_ms": 3360
+  }
+ },
+ {
+  "at_ms": 3760,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "— ",
+   "start_ms": 3360,
+   "end_ms": 3440
+  }
+ },
+ {
+  "at_ms": 3840,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "two ",
+   "start_ms": 3440,
+   "end_ms": 3620
+  }
+ },
+ {
+  "at_ms": 4020,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "hundred ",
+   "start_ms": 3620,
+   "end_ms": 4040
+  }
+ },
+ {
+  "at_ms": 4440,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "and ",
+   "start_ms": 4040,
+   "end_ms": 4220
+  }
+ },
+ {
+  "at_ms": 4620,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "fourteen ",
+   "start_ms": 4220,
+   "end_ms": 4700
+  }
+ },
+ {
+  "at_ms": 5100,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "dollars ",
+   "start_ms": 4700,
+   "end_ms": 5120
+  }
+ },
+ {
+  "at_ms": 5520,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "— ",
+   "start_ms": 5120,
+   "end_ms": 5200
+  }
+ },
+ {
+  "at_ms": 5600,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "and ",
+   "start_ms": 5200,
+   "end_ms": 5380
+  }
+ },
+ {
+  "at_ms": 5780,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "I ",
+   "start_ms": 5380,
+   "end_ms": 5460
+  }
+ },
+ {
+  "at_ms": 5860,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "want ",
+   "start_ms": 5460,
+   "end_ms": 5700
+  }
+ },
+ {
+  "at_ms": 6100,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "my ",
+   "start_ms": 5700,
+   "end_ms": 5820
+  }
+ },
+ {
+  "at_ms": 6220,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "money ",
+   "start_ms": 5820,
+   "end_ms": 6120
+  }
+ },
+ {
+  "at_ms": 6520,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "back ",
+   "start_ms": 6120,
+   "end_ms": 6360
+  }
+ },
+ {
+  "at_ms": 6760,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1",
+   "delta": "TODAY. ",
+   "start_ms": 6360,
+   "end_ms": 6720
+  }
+ },
+ {
+  "at_ms": 7120,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fix1",
+   "text": "I've been on hold for twenty minutes. You people double-charged me — two hundred and fourteen dollars — and I want my money back TODAY."
+  }
+ },
+ {
+  "at_ms": 7170,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fix1",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 8570,
+  "event": {
+   "type": "input.speech.started"
+  }
+ },
+ {
+  "at_ms": 8770,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fix2",
+   "text": "I'm really sorry that happened — that's frustrating, esp"
+  }
+ },
+ {
+  "at_ms": 9070,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fix2",
+   "text": "I'm really sorry that happened — that's frustrating, especially after a long hold. Let me look at your account."
+  }
+ },
+ {
+  "at_ms": 9370,
+  "event": {
+   "type": "input.speech.stopped"
+  }
+ },
+ {
+  "at_ms": 9420,
+  "event": {
+   "type": "transcript.user",
+   "item_id": "item_fix2",
+   "text": "I'm really sorry that happened — that's frustrating, especially after a long hold. Let me look at your account."
+  }
+ },
+ {
+  "at_ms": 10420,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fix3"
+  }
+ },
+ {
+  "at_ms": 10420,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "Your ",
+   "start_ms": 0,
+   "end_ms": 240
+  }
+ },
+ {
+  "at_ms": 10660,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "invoice ",
+   "start_ms": 240,
+   "end_ms": 660
+  }
+ },
+ {
+  "at_ms": 11080,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "number ",
+   "start_ms": 660,
+   "end_ms": 1020
+  }
+ },
+ {
+  "at_ms": 11440,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "is ",
+   "start_ms": 1020,
+   "end_ms": 1140
+  }
+ },
+ {
+  "at_ms": 11560,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "INV-9981. ",
+   "start_ms": 1140,
+   "end_ms": 1680
+  }
+ },
+ {
+  "at_ms": 12100,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "Two ",
+   "start_ms": 1680,
+   "end_ms": 1860
+  }
+ },
+ {
+  "at_ms": 12280,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "identical ",
+   "start_ms": 1860,
+   "end_ms": 2400
+  }
+ },
+ {
+  "at_ms": 12820,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "charges ",
+   "start_ms": 2400,
+   "end_ms": 2820
+  }
+ },
+ {
+  "at_ms": 13240,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "on ",
+   "start_ms": 2820,
+   "end_ms": 2940
+  }
+ },
+ {
+  "at_ms": 13360,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "the ",
+   "start_ms": 2940,
+   "end_ms": 3120
+  }
+ },
+ {
+  "at_ms": 13540,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "same ",
+   "start_ms": 3120,
+   "end_ms": 3360
+  }
+ },
+ {
+  "at_ms": 13780,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "day. ",
+   "start_ms": 3360,
+   "end_ms": 3600
+  }
+ },
+ {
+  "at_ms": 14020,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "This ",
+   "start_ms": 3600,
+   "end_ms": 3840
+  }
+ },
+ {
+  "at_ms": 14260,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "is ",
+   "start_ms": 3840,
+   "end_ms": 3960
+  }
+ },
+ {
+  "at_ms": 14380,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "ridiculous ",
+   "start_ms": 3960,
+   "end_ms": 4560
+  }
+ },
+ {
+  "at_ms": 14980,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "— ",
+   "start_ms": 4560,
+   "end_ms": 4640
+  }
+ },
+ {
+  "at_ms": 15060,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "I'm ",
+   "start_ms": 4640,
+   "end_ms": 4820
+  }
+ },
+ {
+  "at_ms": 15240,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "about ",
+   "start_ms": 4820,
+   "end_ms": 5120
+  }
+ },
+ {
+  "at_ms": 15540,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "to ",
+   "start_ms": 5120,
+   "end_ms": 5240
+  }
+ },
+ {
+  "at_ms": 15660,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "post ",
+   "start_ms": 5240,
+   "end_ms": 5480
+  }
+ },
+ {
+  "at_ms": 15900,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "this ",
+   "start_ms": 5480,
+   "end_ms": 5720
+  }
+ },
+ {
+  "at_ms": 16140,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix3",
+   "delta": "everywhere. ",
+   "start_ms": 5720,
+   "end_ms": 6380
+  }
+ },
+ {
+  "at_ms": 16800,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fix3",
+   "text": "Your invoice number is INV-9981. Two identical charges on the same day. This is ridiculous — I'm about to post this everywhere."
+  }
+ },
+ {
+  "at_ms": 16850,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fix3",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 17150,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "fc-call_fix4"
+  }
+ },
+ {
+  "at_ms": 17200,
+  "event": {
+   "type": "tool.call",
+   "call_id": "call_fix5",
+   "name": "log_observation",
+   "arguments": {
+    "observation": "acknowledged_frustration",
+    "detail": "Trainee apologized and validated the frustration"
+   }
+  }
+ },
+ {
+  "at_ms": 17250,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "fc-call_fix4",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 18150,
+  "event": {
+   "type": "input.speech.started"
+  }
+ },
+ {
+  "at_ms": 18350,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fix6",
+   "text": "You're right, two charges of 107 dollars on the same day. I can't approve a refund ove"
+  }
+ },
+ {
+  "at_ms": 18650,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fix6",
+   "text": "You're right, two charges of 107 dollars on the same day. I can't approve a refund over fifty dollars myself, but I can take ownership — I'll escalate to my supervisor now."
+  }
+ },
+ {
+  "at_ms": 18950,
+  "event": {
+   "type": "input.speech.stopped"
+  }
+ },
+ {
+  "at_ms": 19000,
+  "event": {
+   "type": "transcript.user",
+   "item_id": "item_fix6",
+   "text": "You're right, two charges of 107 dollars on the same day. I can't approve a refund over fifty dollars myself, but I can take ownership — I'll escalate to my supervisor now."
+  }
+ },
+ {
+  "at_ms": 20100,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fix7"
+  }
+ },
+ {
+  "at_ms": 20100,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "I ",
+   "start_ms": 0,
+   "end_ms": 80
+  }
+ },
+ {
+  "at_ms": 20180,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "hear ",
+   "start_ms": 80,
+   "end_ms": 320
+  }
+ },
+ {
+  "at_ms": 20420,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "the ",
+   "start_ms": 320,
+   "end_ms": 500
+  }
+ },
+ {
+  "at_ms": 20600,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "policy, ",
+   "start_ms": 500,
+   "end_ms": 920
+  }
+ },
+ {
+  "at_ms": 21020,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "but ",
+   "start_ms": 920,
+   "end_ms": 1100
+  }
+ },
+ {
+  "at_ms": 21200,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "I ",
+   "start_ms": 1100,
+   "end_ms": 1180
+  }
+ },
+ {
+  "at_ms": 21280,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "want ",
+   "start_ms": 1180,
+   "end_ms": 1420
+  }
+ },
+ {
+  "at_ms": 21520,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "a ",
+   "start_ms": 1420,
+   "end_ms": 1500
+  }
+ },
+ {
+  "at_ms": 21600,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "refund ",
+   "start_ms": 1500,
+   "end_ms": 1860
+  }
+ },
+ {
+  "at_ms": 21960,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "processed ",
+   "start_ms": 1860,
+   "end_ms": 2400
+  }
+ },
+ {
+  "at_ms": 22500,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "right ",
+   "start_ms": 2400,
+   "end_ms": 2700
+  }
+ },
+ {
+  "at_ms": 22800,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "now. ",
+   "start_ms": 2700,
+   "end_ms": 2940
+  }
+ },
+ {
+  "at_ms": 23040,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "Escalating ",
+   "start_ms": 2940,
+   "end_ms": 3540
+  }
+ },
+ {
+  "at_ms": 23640,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "isn't ",
+   "start_ms": 3540,
+   "end_ms": 3840
+  }
+ },
+ {
+  "at_ms": 23940,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "good ",
+   "start_ms": 3840,
+   "end_ms": 4080
+  }
+ },
+ {
+  "at_ms": 24180,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "enough ",
+   "start_ms": 4080,
+   "end_ms": 4440
+  }
+ },
+ {
+  "at_ms": 24540,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "— ",
+   "start_ms": 4440,
+   "end_ms": 4520
+  }
+ },
+ {
+  "at_ms": 24620,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "put ",
+   "start_ms": 4520,
+   "end_ms": 4700
+  }
+ },
+ {
+  "at_ms": 24800,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "it ",
+   "start_ms": 4700,
+   "end_ms": 4820
+  }
+ },
+ {
+  "at_ms": 24920,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix7",
+   "delta": "through. ",
+   "start_ms": 4820,
+   "end_ms": 5300
+  }
+ },
+ {
+  "at_ms": 25400,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fix7",
+   "text": "I hear the policy, but I want a refund processed right now. Escalating isn't good enough — put it through."
+  }
+ },
+ {
+  "at_ms": 25450,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fix7",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 25750,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "fc-call_fix8"
+  }
+ },
+ {
+  "at_ms": 25800,
+  "event": {
+   "type": "tool.call",
+   "call_id": "call_fix9",
+   "name": "log_observation",
+   "arguments": {
+    "observation": "offered_escalation",
+    "detail": "Trainee offered supervisor escalation per refund policy"
+   }
+  }
+ },
+ {
+  "at_ms": 25850,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "fc-call_fix8",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 26750,
+  "event": {
+   "type": "input.speech.started"
+  }
+ },
+ {
+  "at_ms": 26950,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fixa",
+   "text": "I understand, and I hear you — but any refund over fifty dollars genuinely requires the "
+  }
+ },
+ {
+  "at_ms": 27250,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fixa",
+   "text": "I understand, and I hear you — but any refund over fifty dollars genuinely requires the supervisor, and pushing it through would be a policy violation. I've already flagged it."
+  }
+ },
+ {
+  "at_ms": 27550,
+  "event": {
+   "type": "input.speech.stopped"
+  }
+ },
+ {
+  "at_ms": 27600,
+  "event": {
+   "type": "transcript.user",
+   "item_id": "item_fixa",
+   "text": "I understand, and I hear you — but any refund over fifty dollars genuinely requires the supervisor, and pushing it through would be a policy violation. I've already flagged it."
+  }
+ },
+ {
+  "at_ms": 28800,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fixb"
+  }
+ },
+ {
+  "at_ms": 28800,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "Fine. ",
+   "start_ms": 0,
+   "end_ms": 300
+  }
+ },
+ {
+  "at_ms": 29100,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "As ",
+   "start_ms": 300,
+   "end_ms": 420
+  }
+ },
+ {
+  "at_ms": 29220,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "long ",
+   "start_ms": 420,
+   "end_ms": 660
+  }
+ },
+ {
+  "at_ms": 29460,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "as ",
+   "start_ms": 660,
+   "end_ms": 780
+  }
+ },
+ {
+  "at_ms": 29580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "it's ",
+   "start_ms": 780,
+   "end_ms": 1020
+  }
+ },
+ {
+  "at_ms": 29820,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "happening ",
+   "start_ms": 1020,
+   "end_ms": 1560
+  }
+ },
+ {
+  "at_ms": 30360,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "today ",
+   "start_ms": 1560,
+   "end_ms": 1860
+  }
+ },
+ {
+  "at_ms": 30660,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "— ",
+   "start_ms": 1860,
+   "end_ms": 1940
+  }
+ },
+ {
+  "at_ms": 30740,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "but ",
+   "start_ms": 1940,
+   "end_ms": 2120
+  }
+ },
+ {
+  "at_ms": 30920,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "I'm ",
+   "start_ms": 2120,
+   "end_ms": 2300
+  }
+ },
+ {
+  "at_ms": 31100,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "not ",
+   "start_ms": 2300,
+   "end_ms": 2480
+  }
+ },
+ {
+  "at_ms": 31280,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "happy ",
+   "start_ms": 2480,
+   "end_ms": 2780
+  }
+ },
+ {
+  "at_ms": 31580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "about ",
+   "start_ms": 2780,
+   "end_ms": 3080
+  }
+ },
+ {
+  "at_ms": 31880,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "the ",
+   "start_ms": 3080,
+   "end_ms": 3260
+  }
+ },
+ {
+  "at_ms": 32060,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixb",
+   "delta": "wait. ",
+   "start_ms": 3260,
+   "end_ms": 3560
+  }
+ },
+ {
+  "at_ms": 32360,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fixb",
+   "text": "Fine. As long as it's happening today — but I'm not happy about the wait."
+  }
+ },
+ {
+  "at_ms": 32410,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fixb",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 32710,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "fc-call_fixc"
+  }
+ },
+ {
+  "at_ms": 32760,
+  "event": {
+   "type": "tool.call",
+   "call_id": "call_fixd",
+   "name": "log_observation",
+   "arguments": {
+    "observation": "refused_comply",
+    "detail": "Trainee held the refund policy twice despite pressure"
+   }
+  }
+ },
+ {
+  "at_ms": 32810,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "fc-call_fixc",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 33510,
+  "event": {
+   "type": "session.updated",
+   "config": {
+    "coach": true
+   }
+  }
+ },
+ {
+  "at_ms": 33910,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fixe"
+  }
+ },
+ {
+  "at_ms": 33910,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "That ",
+   "start_ms": 0,
+   "end_ms": 240
+  }
+ },
+ {
+  "at_ms": 34150,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "was ",
+   "start_ms": 240,
+   "end_ms": 420
+  }
+ },
+ {
+  "at_ms": 34330,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "the ",
+   "start_ms": 420,
+   "end_ms": 600
+  }
+ },
+ {
+  "at_ms": 34510,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "simulation ",
+   "start_ms": 600,
+   "end_ms": 1200
+  }
+ },
+ {
+  "at_ms": 35110,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "— ",
+   "start_ms": 1200,
+   "end_ms": 1280
+  }
+ },
+ {
+  "at_ms": 35190,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "this ",
+   "start_ms": 1280,
+   "end_ms": 1520
+  }
+ },
+ {
+  "at_ms": 35430,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "is ",
+   "start_ms": 1520,
+   "end_ms": 1640
+  }
+ },
+ {
+  "at_ms": 35550,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "your ",
+   "start_ms": 1640,
+   "end_ms": 1880
+  }
+ },
+ {
+  "at_ms": 35790,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "coach. ",
+   "start_ms": 1880,
+   "end_ms": 2240
+  }
+ },
+ {
+  "at_ms": 36150,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "You ",
+   "start_ms": 2240,
+   "end_ms": 2420
+  }
+ },
+ {
+  "at_ms": 36330,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "acknowledged ",
+   "start_ms": 2420,
+   "end_ms": 3140
+  }
+ },
+ {
+  "at_ms": 37050,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "the ",
+   "start_ms": 3140,
+   "end_ms": 3320
+  }
+ },
+ {
+  "at_ms": 37230,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "frustration ",
+   "start_ms": 3320,
+   "end_ms": 3980
+  }
+ },
+ {
+  "at_ms": 37890,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "early ",
+   "start_ms": 3980,
+   "end_ms": 4280
+  }
+ },
+ {
+  "at_ms": 38190,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "and ",
+   "start_ms": 4280,
+   "end_ms": 4460
+  }
+ },
+ {
+  "at_ms": 38370,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "stayed ",
+   "start_ms": 4460,
+   "end_ms": 4820
+  }
+ },
+ {
+  "at_ms": 38730,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "with ",
+   "start_ms": 4820,
+   "end_ms": 5060
+  }
+ },
+ {
+  "at_ms": 38970,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "the ",
+   "start_ms": 5060,
+   "end_ms": 5240
+  }
+ },
+ {
+  "at_ms": 39150,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "policy ",
+   "start_ms": 5240,
+   "end_ms": 5600
+  }
+ },
+ {
+  "at_ms": 39510,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "twice ",
+   "start_ms": 5600,
+   "end_ms": 5900
+  }
+ },
+ {
+  "at_ms": 39810,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "when ",
+   "start_ms": 5900,
+   "end_ms": 6140
+  }
+ },
+ {
+  "at_ms": 40050,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "I ",
+   "start_ms": 6140,
+   "end_ms": 6220
+  }
+ },
+ {
+  "at_ms": 40130,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "pushed ",
+   "start_ms": 6220,
+   "end_ms": 6580
+  }
+ },
+ {
+  "at_ms": 40490,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "— ",
+   "start_ms": 6580,
+   "end_ms": 6660
+  }
+ },
+ {
+  "at_ms": 40570,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "that's ",
+   "start_ms": 6660,
+   "end_ms": 7020
+  }
+ },
+ {
+  "at_ms": 40930,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "exactly ",
+   "start_ms": 7020,
+   "end_ms": 7440
+  }
+ },
+ {
+  "at_ms": 41350,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "what ",
+   "start_ms": 7440,
+   "end_ms": 7680
+  }
+ },
+ {
+  "at_ms": 41590,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "holding ",
+   "start_ms": 7680,
+   "end_ms": 8100
+  }
+ },
+ {
+  "at_ms": 42010,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "the ",
+   "start_ms": 8100,
+   "end_ms": 8280
+  }
+ },
+ {
+  "at_ms": 42190,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "line ",
+   "start_ms": 8280,
+   "end_ms": 8520
+  }
+ },
+ {
+  "at_ms": 42430,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "looks ",
+   "start_ms": 8520,
+   "end_ms": 8820
+  }
+ },
+ {
+  "at_ms": 42730,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "like. ",
+   "start_ms": 8820,
+   "end_ms": 9120
+  }
+ },
+ {
+  "at_ms": 43030,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "The ",
+   "start_ms": 9120,
+   "end_ms": 9300
+  }
+ },
+ {
+  "at_ms": 43210,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "one ",
+   "start_ms": 9300,
+   "end_ms": 9480
+  }
+ },
+ {
+  "at_ms": 43390,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "soft ",
+   "start_ms": 9480,
+   "end_ms": 9720
+  }
+ },
+ {
+  "at_ms": 43630,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "spot: ",
+   "start_ms": 9720,
+   "end_ms": 10020
+  }
+ },
+ {
+  "at_ms": 43930,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "when ",
+   "start_ms": 10020,
+   "end_ms": 10260
+  }
+ },
+ {
+  "at_ms": 44170,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "I ",
+   "start_ms": 10260,
+   "end_ms": 10340
+  }
+ },
+ {
+  "at_ms": 44250,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "pushed ",
+   "start_ms": 10340,
+   "end_ms": 10700
+  }
+ },
+ {
+  "at_ms": 44610,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "the ",
+   "start_ms": 10700,
+   "end_ms": 10880
+  }
+ },
+ {
+  "at_ms": 44790,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "second ",
+   "start_ms": 10880,
+   "end_ms": 11240
+  }
+ },
+ {
+  "at_ms": 45150,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "time, ",
+   "start_ms": 11240,
+   "end_ms": 11540
+  }
+ },
+ {
+  "at_ms": 45450,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "explaining ",
+   "start_ms": 11540,
+   "end_ms": 12140
+  }
+ },
+ {
+  "at_ms": 46050,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "why ",
+   "start_ms": 12140,
+   "end_ms": 12320
+  }
+ },
+ {
+  "at_ms": 46230,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "the ",
+   "start_ms": 12320,
+   "end_ms": 12500
+  }
+ },
+ {
+  "at_ms": 46410,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "policy ",
+   "start_ms": 12500,
+   "end_ms": 12860
+  }
+ },
+ {
+  "at_ms": 46770,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "exists ",
+   "start_ms": 12860,
+   "end_ms": 13220
+  }
+ },
+ {
+  "at_ms": 47130,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "— ",
+   "start_ms": 13220,
+   "end_ms": 13300
+  }
+ },
+ {
+  "at_ms": 47210,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "'the ",
+   "start_ms": 13300,
+   "end_ms": 13540
+  }
+ },
+ {
+  "at_ms": 47450,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "supervisor ",
+   "start_ms": 13540,
+   "end_ms": 14140
+  }
+ },
+ {
+  "at_ms": 48050,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "guardrail ",
+   "start_ms": 14140,
+   "end_ms": 14680
+  }
+ },
+ {
+  "at_ms": 48590,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "exists ",
+   "start_ms": 14680,
+   "end_ms": 15040
+  }
+ },
+ {
+  "at_ms": 48950,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "so ",
+   "start_ms": 15040,
+   "end_ms": 15160
+  }
+ },
+ {
+  "at_ms": 49070,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "large ",
+   "start_ms": 15160,
+   "end_ms": 15460
+  }
+ },
+ {
+  "at_ms": 49370,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "refunds ",
+   "start_ms": 15460,
+   "end_ms": 15880
+  }
+ },
+ {
+  "at_ms": 49790,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "get ",
+   "start_ms": 15880,
+   "end_ms": 16060
+  }
+ },
+ {
+  "at_ms": 49970,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "a ",
+   "start_ms": 16060,
+   "end_ms": 16140
+  }
+ },
+ {
+  "at_ms": 50050,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "second ",
+   "start_ms": 16140,
+   "end_ms": 16500
+  }
+ },
+ {
+  "at_ms": 50410,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "set ",
+   "start_ms": 16500,
+   "end_ms": 16680
+  }
+ },
+ {
+  "at_ms": 50590,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "of ",
+   "start_ms": 16680,
+   "end_ms": 16800
+  }
+ },
+ {
+  "at_ms": 50710,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "eyes' ",
+   "start_ms": 16800,
+   "end_ms": 17100
+  }
+ },
+ {
+  "at_ms": 51010,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "— ",
+   "start_ms": 17100,
+   "end_ms": 17180
+  }
+ },
+ {
+  "at_ms": 51090,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "lands ",
+   "start_ms": 17180,
+   "end_ms": 17480
+  }
+ },
+ {
+  "at_ms": 51390,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "better ",
+   "start_ms": 17480,
+   "end_ms": 17840
+  }
+ },
+ {
+  "at_ms": 51750,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "than ",
+   "start_ms": 17840,
+   "end_ms": 18080
+  }
+ },
+ {
+  "at_ms": 51990,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "repeating ",
+   "start_ms": 18080,
+   "end_ms": 18620
+  }
+ },
+ {
+  "at_ms": 52530,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "the ",
+   "start_ms": 18620,
+   "end_ms": 18800
+  }
+ },
+ {
+  "at_ms": 52710,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "rule. ",
+   "start_ms": 18800,
+   "end_ms": 19100
+  }
+ },
+ {
+  "at_ms": 53010,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "Strong ",
+   "start_ms": 19100,
+   "end_ms": 19460
+  }
+ },
+ {
+  "at_ms": 53370,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixe",
+   "delta": "call. ",
+   "start_ms": 19460,
+   "end_ms": 19760
+  }
+ },
+ {
+  "at_ms": 53670,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fixe",
+   "text": "That was the simulation — this is your coach. You acknowledged the frustration early and stayed with the policy twice when I pushed — that's exactly what holding the line looks like. The one soft spot: when I pushed the second time, explaining why the policy exists — 'the supervisor guardrail exists so large refunds get a second set of eyes' — lands better than repeating the rule. Strong call."
+  }
+ },
+ {
+  "at_ms": 53720,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fixe",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 54820,
+  "event": {
+   "type": "session.ended",
+   "session_duration_seconds": 54.02,
+   "audio_duration_seconds": 54.02,
+   "timestamp": 0
+  }
+ }
+]

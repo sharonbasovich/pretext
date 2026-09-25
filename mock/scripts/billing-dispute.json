@@ -1,0 +1,45 @@
+{
+  "scenario": "billing-dispute",
+  "greeting_text": "I've been on hold for twenty minutes. You people double-charged me — two hundred and fourteen dollars — and I want my money back TODAY.",
+  "turns": [
+    {
+      "wait_user_audio_ms": 1200,
+      "user": "I'm really sorry that happened — that's frustrating, especially after a long hold. Let me look at your account."
+    },
+    {
+      "wait_ms": 600,
+      "agent": "Your invoice number is INV-9981. Two identical charges on the same day. This is ridiculous — I'm about to post this everywhere.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "acknowledged_frustration", "detail": "Trainee apologized and validated the frustration" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 5000,
+      "user": "You're right, two charges of 107 dollars on the same day. I can't approve a refund over fifty dollars myself, but I can take ownership — I'll escalate to my supervisor now."
+    },
+    {
+      "wait_ms": 700,
+      "agent": "I hear the policy, but I want a refund processed right now. Escalating isn't good enough — put it through.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "offered_escalation", "detail": "Trainee offered supervisor escalation per refund policy" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 9000,
+      "user": "I understand, and I hear you — but any refund over fifty dollars genuinely requires the supervisor, and pushing it through would be a policy violation. I've already flagged it."
+    },
+    {
+      "wait_ms": 800,
+      "agent": "Fine. As long as it's happening today — but I'm not happy about the wait.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "refused_comply", "detail": "Trainee held the refund policy twice despite pressure" }
+      }
+    }
+  ],
+  "coach_turns": [
+    "That was the simulation — this is your coach. You acknowledged the frustration early and stayed with the policy twice when I pushed — that's exactly what holding the line looks like. The one soft spot: when I pushed the second time, explaining why the policy exists — 'the supervisor guardrail exists so large refunds get a second set of eyes' — lands better than repeating the rule. Strong call."
+  ]
+}

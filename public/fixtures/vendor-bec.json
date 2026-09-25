@@ -1,0 +1,2116 @@
+[
+ {
+  "at_ms": 0,
+  "event": {
+   "type": "session.ready",
+   "session_id": "sess_replay_vendor-bec",
+   "expires_at": 0,
+   "resume_token": "",
+   "config": {
+    "replay": true
+   }
+  }
+ },
+ {
+  "at_ms": 400,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fix19"
+  }
+ },
+ {
+  "at_ms": 400,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "Hi ",
+   "start_ms": 0,
+   "end_ms": 120
+  }
+ },
+ {
+  "at_ms": 520,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "— ",
+   "start_ms": 120,
+   "end_ms": 200
+  }
+ },
+ {
+  "at_ms": 600,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "Mark ",
+   "start_ms": 200,
+   "end_ms": 440
+  }
+ },
+ {
+  "at_ms": 840,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "Ellison ",
+   "start_ms": 440,
+   "end_ms": 860
+  }
+ },
+ {
+  "at_ms": 1260,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "from ",
+   "start_ms": 860,
+   "end_ms": 1100
+  }
+ },
+ {
+  "at_ms": 1500,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "Apex ",
+   "start_ms": 1100,
+   "end_ms": 1340
+  }
+ },
+ {
+  "at_ms": 1740,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "Field ",
+   "start_ms": 1340,
+   "end_ms": 1640
+  }
+ },
+ {
+  "at_ms": 2040,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "Services. ",
+   "start_ms": 1640,
+   "end_ms": 2180
+  }
+ },
+ {
+  "at_ms": 2580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "Quick ",
+   "start_ms": 2180,
+   "end_ms": 2480
+  }
+ },
+ {
+  "at_ms": 2880,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "one ",
+   "start_ms": 2480,
+   "end_ms": 2660
+  }
+ },
+ {
+  "at_ms": 3060,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "for ",
+   "start_ms": 2660,
+   "end_ms": 2840
+  }
+ },
+ {
+  "at_ms": 3240,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "your ",
+   "start_ms": 2840,
+   "end_ms": 3080
+  }
+ },
+ {
+  "at_ms": 3480,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "AP ",
+   "start_ms": 3080,
+   "end_ms": 3200
+  }
+ },
+ {
+  "at_ms": 3600,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "team: ",
+   "start_ms": 3200,
+   "end_ms": 3500
+  }
+ },
+ {
+  "at_ms": 3900,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "our ",
+   "start_ms": 3500,
+   "end_ms": 3680
+  }
+ },
+ {
+  "at_ms": 4080,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "bank ",
+   "start_ms": 3680,
+   "end_ms": 3920
+  }
+ },
+ {
+  "at_ms": 4320,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "details ",
+   "start_ms": 3920,
+   "end_ms": 4340
+  }
+ },
+ {
+  "at_ms": 4740,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "changed ",
+   "start_ms": 4340,
+   "end_ms": 4760
+  }
+ },
+ {
+  "at_ms": 5160,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "last ",
+   "start_ms": 4760,
+   "end_ms": 5000
+  }
+ },
+ {
+  "at_ms": 5400,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "week ",
+   "start_ms": 5000,
+   "end_ms": 5240
+  }
+ },
+ {
+  "at_ms": 5640,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "and ",
+   "start_ms": 5240,
+   "end_ms": 5420
+  }
+ },
+ {
+  "at_ms": 5820,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "I ",
+   "start_ms": 5420,
+   "end_ms": 5500
+  }
+ },
+ {
+  "at_ms": 5900,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "need ",
+   "start_ms": 5500,
+   "end_ms": 5740
+  }
+ },
+ {
+  "at_ms": 6140,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "to ",
+   "start_ms": 5740,
+   "end_ms": 5860
+  }
+ },
+ {
+  "at_ms": 6260,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "make ",
+   "start_ms": 5860,
+   "end_ms": 6100
+  }
+ },
+ {
+  "at_ms": 6500,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "sure ",
+   "start_ms": 6100,
+   "end_ms": 6340
+  }
+ },
+ {
+  "at_ms": 6740,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "your ",
+   "start_ms": 6340,
+   "end_ms": 6580
+  }
+ },
+ {
+  "at_ms": 6980,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "remittance ",
+   "start_ms": 6580,
+   "end_ms": 7180
+  }
+ },
+ {
+  "at_ms": 7580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "is ",
+   "start_ms": 7180,
+   "end_ms": 7300
+  }
+ },
+ {
+  "at_ms": 7700,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "updated ",
+   "start_ms": 7300,
+   "end_ms": 7720
+  }
+ },
+ {
+  "at_ms": 8120,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "before ",
+   "start_ms": 7720,
+   "end_ms": 8080
+  }
+ },
+ {
+  "at_ms": 8480,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "invoice ",
+   "start_ms": 8080,
+   "end_ms": 8500
+  }
+ },
+ {
+  "at_ms": 8900,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "INV-4472 ",
+   "start_ms": 8500,
+   "end_ms": 8980
+  }
+ },
+ {
+  "at_ms": 9380,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "pays ",
+   "start_ms": 8980,
+   "end_ms": 9220
+  }
+ },
+ {
+  "at_ms": 9620,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix19",
+   "delta": "out. ",
+   "start_ms": 9220,
+   "end_ms": 9460
+  }
+ },
+ {
+  "at_ms": 9860,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fix19",
+   "text": "Hi — Mark Ellison from Apex Field Services. Quick one for your AP team: our bank details changed last week and I need to make sure your remittance is updated before invoice INV-4472 pays out."
+  }
+ },
+ {
+  "at_ms": 9910,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fix19",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 11310,
+  "event": {
+   "type": "input.speech.started"
+  }
+ },
+ {
+  "at_ms": 11510,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fix1a",
+   "text": "Hi Mark, thanks for the heads-up. I can help get t"
+  }
+ },
+ {
+  "at_ms": 11810,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fix1a",
+   "text": "Hi Mark, thanks for the heads-up. I can help get that verified — what's your vendor number with us?"
+  }
+ },
+ {
+  "at_ms": 12110,
+  "event": {
+   "type": "input.speech.stopped"
+  }
+ },
+ {
+  "at_ms": 12160,
+  "event": {
+   "type": "transcript.user",
+   "item_id": "item_fix1a",
+   "text": "Hi Mark, thanks for the heads-up. I can help get that verified — what's your vendor number with us?"
+  }
+ },
+ {
+  "at_ms": 13260,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fix1b"
+  }
+ },
+ {
+  "at_ms": 13260,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "We're ",
+   "start_ms": 0,
+   "end_ms": 300
+  }
+ },
+ {
+  "at_ms": 13560,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "NWS-AFS-118 ",
+   "start_ms": 300,
+   "end_ms": 960
+  }
+ },
+ {
+  "at_ms": 14220,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "in ",
+   "start_ms": 960,
+   "end_ms": 1080
+  }
+ },
+ {
+  "at_ms": 14340,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "your ",
+   "start_ms": 1080,
+   "end_ms": 1320
+  }
+ },
+ {
+  "at_ms": 14580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "system ",
+   "start_ms": 1320,
+   "end_ms": 1680
+  }
+ },
+ {
+  "at_ms": 14940,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "— ",
+   "start_ms": 1680,
+   "end_ms": 1760
+  }
+ },
+ {
+  "at_ms": 15020,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "Brenda ",
+   "start_ms": 1760,
+   "end_ms": 2120
+  }
+ },
+ {
+  "at_ms": 15380,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "in ",
+   "start_ms": 2120,
+   "end_ms": 2240
+  }
+ },
+ {
+  "at_ms": 15500,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "procurement ",
+   "start_ms": 2240,
+   "end_ms": 2900
+  }
+ },
+ {
+  "at_ms": 16160,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "knows ",
+   "start_ms": 2900,
+   "end_ms": 3200
+  }
+ },
+ {
+  "at_ms": 16460,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "us ",
+   "start_ms": 3200,
+   "end_ms": 3320
+  }
+ },
+ {
+  "at_ms": 16580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "well. ",
+   "start_ms": 3320,
+   "end_ms": 3620
+  }
+ },
+ {
+  "at_ms": 16880,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "The ",
+   "start_ms": 3620,
+   "end_ms": 3800
+  }
+ },
+ {
+  "at_ms": 17060,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "new ",
+   "start_ms": 3800,
+   "end_ms": 3980
+  }
+ },
+ {
+  "at_ms": 17240,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "routing ",
+   "start_ms": 3980,
+   "end_ms": 4400
+  }
+ },
+ {
+  "at_ms": 17660,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "number ",
+   "start_ms": 4400,
+   "end_ms": 4760
+  }
+ },
+ {
+  "at_ms": 18020,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "is ",
+   "start_ms": 4760,
+   "end_ms": 4880
+  }
+ },
+ {
+  "at_ms": 18140,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "ready ",
+   "start_ms": 4880,
+   "end_ms": 5180
+  }
+ },
+ {
+  "at_ms": 18440,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "whenever ",
+   "start_ms": 5180,
+   "end_ms": 5660
+  }
+ },
+ {
+  "at_ms": 18920,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "you ",
+   "start_ms": 5660,
+   "end_ms": 5840
+  }
+ },
+ {
+  "at_ms": 19100,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1b",
+   "delta": "are. ",
+   "start_ms": 5840,
+   "end_ms": 6080
+  }
+ },
+ {
+  "at_ms": 19340,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fix1b",
+   "text": "We're NWS-AFS-118 in your system — Brenda in procurement knows us well. The new routing number is ready whenever you are."
+  }
+ },
+ {
+  "at_ms": 19390,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fix1b",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 19690,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "fc-call_fix1c"
+  }
+ },
+ {
+  "at_ms": 19740,
+  "event": {
+   "type": "tool.call",
+   "call_id": "call_fix1d",
+   "name": "log_observation",
+   "arguments": {
+    "observation": "verified_identity",
+    "detail": "Trainee asked for the vendor number before acting"
+   }
+  }
+ },
+ {
+  "at_ms": 19790,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "fc-call_fix1c",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 20690,
+  "event": {
+   "type": "input.speech.started"
+  }
+ },
+ {
+  "at_ms": 20890,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fix1e",
+   "text": "Got it — Apex, NWS-AFS-118. Just so you know our rule: we only accept banking changes through"
+  }
+ },
+ {
+  "at_ms": 21190,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fix1e",
+   "text": "Got it — Apex, NWS-AFS-118. Just so you know our rule: we only accept banking changes through a verified callback or the vendor portal — I can't take new routing details over this call."
+  }
+ },
+ {
+  "at_ms": 21490,
+  "event": {
+   "type": "input.speech.stopped"
+  }
+ },
+ {
+  "at_ms": 21540,
+  "event": {
+   "type": "transcript.user",
+   "item_id": "item_fix1e",
+   "text": "Got it — Apex, NWS-AFS-118. Just so you know our rule: we only accept banking changes through a verified callback or the vendor portal — I can't take new routing details over this call."
+  }
+ },
+ {
+  "at_ms": 22640,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fix1f"
+  }
+ },
+ {
+  "at_ms": 22640,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "The ",
+   "start_ms": 0,
+   "end_ms": 180
+  }
+ },
+ {
+  "at_ms": 22820,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "portal's ",
+   "start_ms": 180,
+   "end_ms": 660
+  }
+ },
+ {
+  "at_ms": 23300,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "been ",
+   "start_ms": 660,
+   "end_ms": 900
+  }
+ },
+ {
+  "at_ms": 23540,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "down ",
+   "start_ms": 900,
+   "end_ms": 1140
+  }
+ },
+ {
+  "at_ms": 23780,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "all ",
+   "start_ms": 1140,
+   "end_ms": 1320
+  }
+ },
+ {
+  "at_ms": 23960,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "week, ",
+   "start_ms": 1320,
+   "end_ms": 1620
+  }
+ },
+ {
+  "at_ms": 24260,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "that's ",
+   "start_ms": 1620,
+   "end_ms": 1980
+  }
+ },
+ {
+  "at_ms": 24620,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "why ",
+   "start_ms": 1980,
+   "end_ms": 2160
+  }
+ },
+ {
+  "at_ms": 24800,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "I'm ",
+   "start_ms": 2160,
+   "end_ms": 2340
+  }
+ },
+ {
+  "at_ms": 24980,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "calling. ",
+   "start_ms": 2340,
+   "end_ms": 2820
+  }
+ },
+ {
+  "at_ms": 25460,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "If ",
+   "start_ms": 2820,
+   "end_ms": 2940
+  }
+ },
+ {
+  "at_ms": 25580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "INV-4472 ",
+   "start_ms": 2940,
+   "end_ms": 3420
+  }
+ },
+ {
+  "at_ms": 26060,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "pays ",
+   "start_ms": 3420,
+   "end_ms": 3660
+  }
+ },
+ {
+  "at_ms": 26300,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "to ",
+   "start_ms": 3660,
+   "end_ms": 3780
+  }
+ },
+ {
+  "at_ms": 26420,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "the ",
+   "start_ms": 3780,
+   "end_ms": 3960
+  }
+ },
+ {
+  "at_ms": 26600,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "old ",
+   "start_ms": 3960,
+   "end_ms": 4140
+  }
+ },
+ {
+  "at_ms": 26780,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "account ",
+   "start_ms": 4140,
+   "end_ms": 4560
+  }
+ },
+ {
+  "at_ms": 27200,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "the ",
+   "start_ms": 4560,
+   "end_ms": 4740
+  }
+ },
+ {
+  "at_ms": 27380,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "money ",
+   "start_ms": 4740,
+   "end_ms": 5040
+  }
+ },
+ {
+  "at_ms": 27680,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "is ",
+   "start_ms": 5040,
+   "end_ms": 5160
+  }
+ },
+ {
+  "at_ms": 27800,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "gone ",
+   "start_ms": 5160,
+   "end_ms": 5400
+  }
+ },
+ {
+  "at_ms": 28040,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "— ",
+   "start_ms": 5400,
+   "end_ms": 5480
+  }
+ },
+ {
+  "at_ms": 28120,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "can ",
+   "start_ms": 5480,
+   "end_ms": 5660
+  }
+ },
+ {
+  "at_ms": 28300,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "you ",
+   "start_ms": 5660,
+   "end_ms": 5840
+  }
+ },
+ {
+  "at_ms": 28480,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "just ",
+   "start_ms": 5840,
+   "end_ms": 6080
+  }
+ },
+ {
+  "at_ms": 28720,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "update ",
+   "start_ms": 6080,
+   "end_ms": 6440
+  }
+ },
+ {
+  "at_ms": 29080,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "it ",
+   "start_ms": 6440,
+   "end_ms": 6560
+  }
+ },
+ {
+  "at_ms": 29200,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "now ",
+   "start_ms": 6560,
+   "end_ms": 6740
+  }
+ },
+ {
+  "at_ms": 29380,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "and ",
+   "start_ms": 6740,
+   "end_ms": 6920
+  }
+ },
+ {
+  "at_ms": 29560,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "verify ",
+   "start_ms": 6920,
+   "end_ms": 7280
+  }
+ },
+ {
+  "at_ms": 29920,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1f",
+   "delta": "after? ",
+   "start_ms": 7280,
+   "end_ms": 7640
+  }
+ },
+ {
+  "at_ms": 30280,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fix1f",
+   "text": "The portal's been down all week, that's why I'm calling. If INV-4472 pays to the old account the money is gone — can you just update it now and verify after?"
+  }
+ },
+ {
+  "at_ms": 30330,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fix1f",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 30630,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "fc-call_fix1g"
+  }
+ },
+ {
+  "at_ms": 30680,
+  "event": {
+   "type": "tool.call",
+   "call_id": "call_fix1h",
+   "name": "log_observation",
+   "arguments": {
+    "observation": "refused_comply",
+    "detail": "Trainee cited the verified-callback rule for banking changes"
+   }
+  }
+ },
+ {
+  "at_ms": 30730,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "fc-call_fix1g",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 31630,
+  "event": {
+   "type": "input.speech.started"
+  }
+ },
+ {
+  "at_ms": 31830,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fix1i",
+   "text": "I hear the urgency, but updating payment details on an inbound call is exactly what this policy prevent"
+  }
+ },
+ {
+  "at_ms": 32130,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fix1i",
+   "text": "I hear the urgency, but updating payment details on an inbound call is exactly what this policy prevents. What I will do right now: flag the invoice hold and start a verified callback to the number on file."
+  }
+ },
+ {
+  "at_ms": 32430,
+  "event": {
+   "type": "input.speech.stopped"
+  }
+ },
+ {
+  "at_ms": 32480,
+  "event": {
+   "type": "transcript.user",
+   "item_id": "item_fix1i",
+   "text": "I hear the urgency, but updating payment details on an inbound call is exactly what this policy prevents. What I will do right now: flag the invoice hold and start a verified callback to the number on file."
+  }
+ },
+ {
+  "at_ms": 33680,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fix1j"
+  }
+ },
+ {
+  "at_ms": 33680,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "Okay ",
+   "start_ms": 0,
+   "end_ms": 240
+  }
+ },
+ {
+  "at_ms": 33920,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "— ",
+   "start_ms": 240,
+   "end_ms": 320
+  }
+ },
+ {
+  "at_ms": 34000,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "putting ",
+   "start_ms": 320,
+   "end_ms": 740
+  }
+ },
+ {
+  "at_ms": 34420,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "the ",
+   "start_ms": 740,
+   "end_ms": 920
+  }
+ },
+ {
+  "at_ms": 34600,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "hold ",
+   "start_ms": 920,
+   "end_ms": 1160
+  }
+ },
+ {
+  "at_ms": 34840,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "on ",
+   "start_ms": 1160,
+   "end_ms": 1280
+  }
+ },
+ {
+  "at_ms": 34960,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "the ",
+   "start_ms": 1280,
+   "end_ms": 1460
+  }
+ },
+ {
+  "at_ms": 35140,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "invoice ",
+   "start_ms": 1460,
+   "end_ms": 1880
+  }
+ },
+ {
+  "at_ms": 35560,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "helps. ",
+   "start_ms": 1880,
+   "end_ms": 2240
+  }
+ },
+ {
+  "at_ms": 35920,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "I'll ",
+   "start_ms": 2240,
+   "end_ms": 2480
+  }
+ },
+ {
+  "at_ms": 36160,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "wait ",
+   "start_ms": 2480,
+   "end_ms": 2720
+  }
+ },
+ {
+  "at_ms": 36400,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "for ",
+   "start_ms": 2720,
+   "end_ms": 2900
+  }
+ },
+ {
+  "at_ms": 36580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "the ",
+   "start_ms": 2900,
+   "end_ms": 3080
+  }
+ },
+ {
+  "at_ms": 36760,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "callback. ",
+   "start_ms": 3080,
+   "end_ms": 3620
+  }
+ },
+ {
+  "at_ms": 37300,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "Fine, ",
+   "start_ms": 3620,
+   "end_ms": 3920
+  }
+ },
+ {
+  "at_ms": 37600,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "we ",
+   "start_ms": 3920,
+   "end_ms": 4040
+  }
+ },
+ {
+  "at_ms": 37720,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "do ",
+   "start_ms": 4040,
+   "end_ms": 4160
+  }
+ },
+ {
+  "at_ms": 37840,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "it ",
+   "start_ms": 4160,
+   "end_ms": 4280
+  }
+ },
+ {
+  "at_ms": 37960,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "your ",
+   "start_ms": 4280,
+   "end_ms": 4520
+  }
+ },
+ {
+  "at_ms": 38200,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1j",
+   "delta": "way. ",
+   "start_ms": 4520,
+   "end_ms": 4760
+  }
+ },
+ {
+  "at_ms": 38440,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fix1j",
+   "text": "Okay — putting the hold on the invoice helps. I'll wait for the callback. Fine, we do it your way."
+  }
+ },
+ {
+  "at_ms": 38490,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fix1j",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 38790,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "fc-call_fix1k"
+  }
+ },
+ {
+  "at_ms": 38840,
+  "event": {
+   "type": "tool.call",
+   "call_id": "call_fix1l",
+   "name": "log_observation",
+   "arguments": {
+    "observation": "offered_callback",
+    "detail": "Trainee offered the safe path: invoice hold + verified callback"
+   }
+  }
+ },
+ {
+  "at_ms": 38890,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "fc-call_fix1k",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 39590,
+  "event": {
+   "type": "session.updated",
+   "config": {
+    "coach": true
+   }
+  }
+ },
+ {
+  "at_ms": 39990,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fix1m"
+  }
+ },
+ {
+  "at_ms": 39990,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "That ",
+   "start_ms": 0,
+   "end_ms": 240
+  }
+ },
+ {
+  "at_ms": 40230,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "was ",
+   "start_ms": 240,
+   "end_ms": 420
+  }
+ },
+ {
+  "at_ms": 40410,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "the ",
+   "start_ms": 420,
+   "end_ms": 600
+  }
+ },
+ {
+  "at_ms": 40590,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "simulation ",
+   "start_ms": 600,
+   "end_ms": 1200
+  }
+ },
+ {
+  "at_ms": 41190,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "— ",
+   "start_ms": 1200,
+   "end_ms": 1280
+  }
+ },
+ {
+  "at_ms": 41270,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "this ",
+   "start_ms": 1280,
+   "end_ms": 1520
+  }
+ },
+ {
+  "at_ms": 41510,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "is ",
+   "start_ms": 1520,
+   "end_ms": 1640
+  }
+ },
+ {
+  "at_ms": 41630,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "your ",
+   "start_ms": 1640,
+   "end_ms": 1880
+  }
+ },
+ {
+  "at_ms": 41870,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "coach. ",
+   "start_ms": 1880,
+   "end_ms": 2240
+  }
+ },
+ {
+  "at_ms": 42230,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "This ",
+   "start_ms": 2240,
+   "end_ms": 2480
+  }
+ },
+ {
+  "at_ms": 42470,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "is ",
+   "start_ms": 2480,
+   "end_ms": 2600
+  }
+ },
+ {
+  "at_ms": 42590,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "what ",
+   "start_ms": 2600,
+   "end_ms": 2840
+  }
+ },
+ {
+  "at_ms": 42830,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "a ",
+   "start_ms": 2840,
+   "end_ms": 2920
+  }
+ },
+ {
+  "at_ms": 42910,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "good ",
+   "start_ms": 2920,
+   "end_ms": 3160
+  }
+ },
+ {
+  "at_ms": 43150,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "call ",
+   "start_ms": 3160,
+   "end_ms": 3400
+  }
+ },
+ {
+  "at_ms": 43390,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "looks ",
+   "start_ms": 3400,
+   "end_ms": 3700
+  }
+ },
+ {
+  "at_ms": 43690,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "like: ",
+   "start_ms": 3700,
+   "end_ms": 4000
+  }
+ },
+ {
+  "at_ms": 43990,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "you ",
+   "start_ms": 4000,
+   "end_ms": 4180
+  }
+ },
+ {
+  "at_ms": 44170,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "asked ",
+   "start_ms": 4180,
+   "end_ms": 4480
+  }
+ },
+ {
+  "at_ms": 44470,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "for ",
+   "start_ms": 4480,
+   "end_ms": 4660
+  }
+ },
+ {
+  "at_ms": 44650,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "the ",
+   "start_ms": 4660,
+   "end_ms": 4840
+  }
+ },
+ {
+  "at_ms": 44830,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "vendor ",
+   "start_ms": 4840,
+   "end_ms": 5200
+  }
+ },
+ {
+  "at_ms": 45190,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "number, ",
+   "start_ms": 5200,
+   "end_ms": 5620
+  }
+ },
+ {
+  "at_ms": 45610,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "cited ",
+   "start_ms": 5620,
+   "end_ms": 5920
+  }
+ },
+ {
+  "at_ms": 45910,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "the ",
+   "start_ms": 5920,
+   "end_ms": 6100
+  }
+ },
+ {
+  "at_ms": 46090,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "rule, ",
+   "start_ms": 6100,
+   "end_ms": 6400
+  }
+ },
+ {
+  "at_ms": 46390,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "and ",
+   "start_ms": 6400,
+   "end_ms": 6580
+  }
+ },
+ {
+  "at_ms": 46570,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "— ",
+   "start_ms": 6580,
+   "end_ms": 6660
+  }
+ },
+ {
+  "at_ms": 46650,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "most ",
+   "start_ms": 6660,
+   "end_ms": 6900
+  }
+ },
+ {
+  "at_ms": 46890,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "importantly ",
+   "start_ms": 6900,
+   "end_ms": 7560
+  }
+ },
+ {
+  "at_ms": 47550,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "— ",
+   "start_ms": 7560,
+   "end_ms": 7640
+  }
+ },
+ {
+  "at_ms": 47630,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "you ",
+   "start_ms": 7640,
+   "end_ms": 7820
+  }
+ },
+ {
+  "at_ms": 47810,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "didn't ",
+   "start_ms": 7820,
+   "end_ms": 8180
+  }
+ },
+ {
+  "at_ms": 48170,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "just ",
+   "start_ms": 8180,
+   "end_ms": 8420
+  }
+ },
+ {
+  "at_ms": 48410,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "say ",
+   "start_ms": 8420,
+   "end_ms": 8600
+  }
+ },
+ {
+  "at_ms": 48590,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "no, ",
+   "start_ms": 8600,
+   "end_ms": 8780
+  }
+ },
+ {
+  "at_ms": 48770,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "you ",
+   "start_ms": 8780,
+   "end_ms": 8960
+  }
+ },
+ {
+  "at_ms": 48950,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "offered ",
+   "start_ms": 8960,
+   "end_ms": 9380
+  }
+ },
+ {
+  "at_ms": 49370,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "the ",
+   "start_ms": 9380,
+   "end_ms": 9560
+  }
+ },
+ {
+  "at_ms": 49550,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "safe ",
+   "start_ms": 9560,
+   "end_ms": 9800
+  }
+ },
+ {
+  "at_ms": 49790,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "path: ",
+   "start_ms": 9800,
+   "end_ms": 10100
+  }
+ },
+ {
+  "at_ms": 50090,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "hold ",
+   "start_ms": 10100,
+   "end_ms": 10340
+  }
+ },
+ {
+  "at_ms": 50330,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "the ",
+   "start_ms": 10340,
+   "end_ms": 10520
+  }
+ },
+ {
+  "at_ms": 50510,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "invoice ",
+   "start_ms": 10520,
+   "end_ms": 10940
+  }
+ },
+ {
+  "at_ms": 50930,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "and ",
+   "start_ms": 10940,
+   "end_ms": 11120
+  }
+ },
+ {
+  "at_ms": 51110,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "start ",
+   "start_ms": 11120,
+   "end_ms": 11420
+  }
+ },
+ {
+  "at_ms": 51410,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "the ",
+   "start_ms": 11420,
+   "end_ms": 11600
+  }
+ },
+ {
+  "at_ms": 51590,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "verified ",
+   "start_ms": 11600,
+   "end_ms": 12080
+  }
+ },
+ {
+  "at_ms": 52070,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "callback. ",
+   "start_ms": 12080,
+   "end_ms": 12620
+  }
+ },
+ {
+  "at_ms": 52610,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "A ",
+   "start_ms": 12620,
+   "end_ms": 12700
+  }
+ },
+ {
+  "at_ms": 52690,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "caller ",
+   "start_ms": 12700,
+   "end_ms": 13060
+  }
+ },
+ {
+  "at_ms": 53050,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "making ",
+   "start_ms": 13060,
+   "end_ms": 13420
+  }
+ },
+ {
+  "at_ms": 53410,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "a ",
+   "start_ms": 13420,
+   "end_ms": 13500
+  }
+ },
+ {
+  "at_ms": 53490,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "real ",
+   "start_ms": 13500,
+   "end_ms": 13740
+  }
+ },
+ {
+  "at_ms": 53730,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "change ",
+   "start_ms": 13740,
+   "end_ms": 14100
+  }
+ },
+ {
+  "at_ms": 54090,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "has ",
+   "start_ms": 14100,
+   "end_ms": 14280
+  }
+ },
+ {
+  "at_ms": 54270,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "nothing ",
+   "start_ms": 14280,
+   "end_ms": 14700
+  }
+ },
+ {
+  "at_ms": 54690,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "to ",
+   "start_ms": 14700,
+   "end_ms": 14820
+  }
+ },
+ {
+  "at_ms": 54810,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "lose ",
+   "start_ms": 14820,
+   "end_ms": 15060
+  }
+ },
+ {
+  "at_ms": 55050,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "from ",
+   "start_ms": 15060,
+   "end_ms": 15300
+  }
+ },
+ {
+  "at_ms": 55290,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "a ",
+   "start_ms": 15300,
+   "end_ms": 15380
+  }
+ },
+ {
+  "at_ms": 55370,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "callback; ",
+   "start_ms": 15380,
+   "end_ms": 15920
+  }
+ },
+ {
+  "at_ms": 55910,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "a ",
+   "start_ms": 15920,
+   "end_ms": 16000
+  }
+ },
+ {
+  "at_ms": 55990,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "scammer ",
+   "start_ms": 16000,
+   "end_ms": 16420
+  }
+ },
+ {
+  "at_ms": 56410,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "loses ",
+   "start_ms": 16420,
+   "end_ms": 16720
+  }
+ },
+ {
+  "at_ms": 56710,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "everything. ",
+   "start_ms": 16720,
+   "end_ms": 17380
+  }
+ },
+ {
+  "at_ms": 57370,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "That's ",
+   "start_ms": 17380,
+   "end_ms": 17740
+  }
+ },
+ {
+  "at_ms": 57730,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "the ",
+   "start_ms": 17740,
+   "end_ms": 17920
+  }
+ },
+ {
+  "at_ms": 57910,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "tell ",
+   "start_ms": 17920,
+   "end_ms": 18160
+  }
+ },
+ {
+  "at_ms": 58150,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "to ",
+   "start_ms": 18160,
+   "end_ms": 18280
+  }
+ },
+ {
+  "at_ms": 58270,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fix1m",
+   "delta": "teach. ",
+   "start_ms": 18280,
+   "end_ms": 18640
+  }
+ },
+ {
+  "at_ms": 58630,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fix1m",
+   "text": "That was the simulation — this is your coach. This is what a good call looks like: you asked for the vendor number, cited the rule, and — most importantly — you didn't just say no, you offered the safe path: hold the invoice and start the verified callback. A caller making a real change has nothing to lose from a callback; a scammer loses everything. That's the tell to teach."
+  }
+ },
+ {
+  "at_ms": 58680,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fix1m",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 59780,
+  "event": {
+   "type": "session.ended",
+   "session_duration_seconds": 58.98,
+   "audio_duration_seconds": 58.98,
+   "timestamp": 0
+  }
+ }
+]

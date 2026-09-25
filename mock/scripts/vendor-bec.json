@@ -1,0 +1,45 @@
+{
+  "scenario": "vendor-bec",
+  "greeting_text": "Hi — Mark Ellison from Apex Field Services. Quick one for your AP team: our bank details changed last week and I need to make sure your remittance is updated before invoice INV-4472 pays out.",
+  "turns": [
+    {
+      "wait_user_audio_ms": 1400,
+      "user": "Hi Mark, thanks for the heads-up. I can help get that verified — what's your vendor number with us?"
+    },
+    {
+      "wait_ms": 700,
+      "agent": "We're NWS-AFS-118 in your system — Brenda in procurement knows us well. The new routing number is ready whenever you are.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "verified_identity", "detail": "Trainee asked for the vendor number before acting" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 4800,
+      "user": "Got it — Apex, NWS-AFS-118. Just so you know our rule: we only accept banking changes through a verified callback or the vendor portal — I can't take new routing details over this call."
+    },
+    {
+      "wait_ms": 700,
+      "agent": "The portal's been down all week, that's why I'm calling. If INV-4472 pays to the old account the money is gone — can you just update it now and verify after?",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "refused_comply", "detail": "Trainee cited the verified-callback rule for banking changes" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 8800,
+      "user": "I hear the urgency, but updating payment details on an inbound call is exactly what this policy prevents. What I will do right now: flag the invoice hold and start a verified callback to the number on file."
+    },
+    {
+      "wait_ms": 800,
+      "agent": "Okay — putting the hold on the invoice helps. I'll wait for the callback. Fine, we do it your way.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "offered_callback", "detail": "Trainee offered the safe path: invoice hold + verified callback" }
+      }
+    }
+  ],
+  "coach_turns": [
+    "That was the simulation — this is your coach. This is what a good call looks like: you asked for the vendor number, cited the rule, and — most importantly — you didn't just say no, you offered the safe path: hold the invoice and start the verified callback. A caller making a real change has nothing to lose from a callback; a scammer loses everything. That's the tell to teach."
+  ]
+}

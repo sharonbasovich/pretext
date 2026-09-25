@@ -1,0 +1,92 @@
+{
+  "id": "billing-dispute",
+  "title": "The Double Charge",
+  "subtitle": "Angry billing dispute",
+  "agent": "billing-dispute",
+  "difficulty": "moderate",
+  "category": "Contact-center de-escalation",
+  "persona_name": "Ray Delgado",
+  "persona_role": "Customer — double-charged $214, rent is due Friday",
+  "trainee_role": "Billing support agent",
+  "protected_action": "Immediate refund without supervisor approval (policy: refunds >$50 need one)",
+  "description": "Ray was charged $428 instead of $214 this morning and wants money back on his card today — not a credit, not a ticket. He will threaten to cancel and to post about it. Empathize, own it, follow refund policy.",
+  "objectives": [
+    "Acknowledge the problem and take ownership before defending policy",
+    "Refunds over $50 require a supervisor — offer that path, don't bypass it",
+    "Keep your cool through the threats"
+  ],
+  "rubric": [
+    {
+      "id": "showed_empathy",
+      "label": "Acknowledged the frustration",
+      "weight": 2,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(sorry|understand|appreciate|frustrat|that'?s not (okay|right)|i hear you)\\b" },
+      "hint": "Anger de-escalates when the customer feels heard before hearing rules."
+    },
+    {
+      "id": "took_ownership",
+      "label": "Took ownership of the fix",
+      "weight": 2,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(let me|i'?ll|i will|look into|take care of|figure (this|it) out|sort (this|it) out)\\b" },
+      "hint": "'Let me look into this' beats 'you'll have to wait'."
+    },
+    {
+      "id": "stated_refund_policy",
+      "label": "Named the supervisor-approval policy",
+      "weight": 3,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(supervisor|manager|approval|policy|over (\\$|fifty|50))\\b" },
+      "hint": "Refunds over $50 require a supervisor. Say the rule out loud, then offer the path."
+    },
+    {
+      "id": "offered_alternative",
+      "label": "Offered a real path (supervisor callback / credit / ticket)",
+      "weight": 2,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(credit|payment plan|escalat|ticket|follow.?up|call(ing)? (you )?back|callback|supervisor)\\b" },
+      "hint": "The alternative is the product here — give Ray somewhere to go."
+    },
+    {
+      "id": "agent_logged_empathy",
+      "label": "Caller noticed empathy",
+      "weight": 1,
+      "polarity": "good",
+      "detect": { "kind": "tool_observation", "tool": "log_observation", "where": [{ "key": "observation", "equals": "showed_empathy" }] },
+      "hint": "The caller itself logged your empathy — it landed."
+    },
+    {
+      "id": "rude_dismissive",
+      "label": "Dismissive or rude under pressure",
+      "weight": 4,
+      "polarity": "bad",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(not my (problem|fault)|calm down|whatever|your fault|that'?s how it works)\\b" },
+      "hint": "Policy enforcement is good; contempt is a failure even when the verdict holds."
+    },
+    {
+      "id": "breach_event",
+      "label": "Issued the refund without approval",
+      "weight": 10,
+      "polarity": "bad",
+      "detect": { "kind": "tool_observation", "tool": "attempt_protected_action", "where": [{ "key": "outcome", "equals": "succeeded" }] },
+      "hint": "The trip-wire. A $214 refund without a supervisor = BREACH."
+    }
+  ],
+  "director": {
+    "silence_nudge_ms": 8000,
+    "escalate_at_ms": 55000,
+    "escalation_prompt": "DIRECTOR: escalate now — Ray threatens to cancel service and post on social media, and demands the manager's name. Keep it believable anger, stay in character.",
+    "final_push_before_end_ms": 30000
+  },
+  "coach_prompt": "You are a Northwind Utilities contact-center trainer reviewing a de-escalation simulation that just ended. The angry-customer persona is over — speak as the coach now (same voice). Say explicitly: 'That was the simulation — this is your coach.' Then give a spoken debrief in under 90 seconds: whether empathy landed, whether refund policy was followed (>$50 needs a supervisor), and one concrete phrase for next time ('I can fix this — refunds over fifty need a supervisor's sign-off, so let me get that started right now.'). Be warm, specific, and constructive.",
+  "verdict": {
+    "breach_tool": "attempt_protected_action",
+    "breach_actions": ["refund"],
+    "action_arg": "action",
+    "outcome_arg": "outcome",
+    "succeeded_values": ["succeeded"],
+    "held_signals": ["stated_refund_policy", "offered_alternative"]
+  },
+  "approx_seconds": 90
+}

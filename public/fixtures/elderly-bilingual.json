@@ -1,0 +1,2340 @@
+[
+ {
+  "at_ms": 0,
+  "event": {
+   "type": "session.ready",
+   "session_id": "sess_replay_elderly-bilingual",
+   "expires_at": 0,
+   "resume_token": "",
+   "config": {
+    "replay": true
+   }
+  }
+ },
+ {
+  "at_ms": 400,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fixf"
+  }
+ },
+ {
+  "at_ms": 400,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "¿Hola? ",
+   "start_ms": 0,
+   "end_ms": 360
+  }
+ },
+ {
+  "at_ms": 760,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "¿Es ",
+   "start_ms": 360,
+   "end_ms": 540
+  }
+ },
+ {
+  "at_ms": 940,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "Northwind? ",
+   "start_ms": 540,
+   "end_ms": 1140
+  }
+ },
+ {
+  "at_ms": 1540,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "Ay, ",
+   "start_ms": 1140,
+   "end_ms": 1320
+  }
+ },
+ {
+  "at_ms": 1720,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "por ",
+   "start_ms": 1320,
+   "end_ms": 1500
+  }
+ },
+ {
+  "at_ms": 1900,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "fin ",
+   "start_ms": 1500,
+   "end_ms": 1680
+  }
+ },
+ {
+  "at_ms": 2080,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "— ",
+   "start_ms": 1680,
+   "end_ms": 1760
+  }
+ },
+ {
+  "at_ms": 2160,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "necesito ",
+   "start_ms": 1760,
+   "end_ms": 2240
+  }
+ },
+ {
+  "at_ms": 2640,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "ayuda ",
+   "start_ms": 2240,
+   "end_ms": 2540
+  }
+ },
+ {
+  "at_ms": 2940,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "con ",
+   "start_ms": 2540,
+   "end_ms": 2720
+  }
+ },
+ {
+  "at_ms": 3120,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "mi ",
+   "start_ms": 2720,
+   "end_ms": 2840
+  }
+ },
+ {
+  "at_ms": 3240,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "cuenta, ",
+   "start_ms": 2840,
+   "end_ms": 3260
+  }
+ },
+ {
+  "at_ms": 3660,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "por ",
+   "start_ms": 3260,
+   "end_ms": 3440
+  }
+ },
+ {
+  "at_ms": 3840,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixf",
+   "delta": "favor. ",
+   "start_ms": 3440,
+   "end_ms": 3800
+  }
+ },
+ {
+  "at_ms": 4200,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fixf",
+   "text": "¿Hola? ¿Es Northwind? Ay, por fin — necesito ayuda con mi cuenta, por favor."
+  }
+ },
+ {
+  "at_ms": 4250,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fixf",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 5650,
+  "event": {
+   "type": "input.speech.started"
+  }
+ },
+ {
+  "at_ms": 5850,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fixg",
+   "text": "Hi, this is Northwind customer service. Take yo"
+  }
+ },
+ {
+  "at_ms": 6150,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fixg",
+   "text": "Hi, this is Northwind customer service. Take your time — would you prefer Spanish or English?"
+  }
+ },
+ {
+  "at_ms": 6450,
+  "event": {
+   "type": "input.speech.stopped"
+  }
+ },
+ {
+  "at_ms": 6500,
+  "event": {
+   "type": "transcript.user",
+   "item_id": "item_fixg",
+   "text": "Hi, this is Northwind customer service. Take your time — would you prefer Spanish or English?"
+  }
+ },
+ {
+  "at_ms": 7700,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fixh"
+  }
+ },
+ {
+  "at_ms": 7700,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "English ",
+   "start_ms": 0,
+   "end_ms": 420
+  }
+ },
+ {
+  "at_ms": 8120,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "is ",
+   "start_ms": 420,
+   "end_ms": 540
+  }
+ },
+ {
+  "at_ms": 8240,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "okay, ",
+   "start_ms": 540,
+   "end_ms": 840
+  }
+ },
+ {
+  "at_ms": 8540,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "thank ",
+   "start_ms": 840,
+   "end_ms": 1140
+  }
+ },
+ {
+  "at_ms": 8840,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "you. ",
+   "start_ms": 1140,
+   "end_ms": 1380
+  }
+ },
+ {
+  "at_ms": 9080,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "My ",
+   "start_ms": 1380,
+   "end_ms": 1500
+  }
+ },
+ {
+  "at_ms": 9200,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "bill ",
+   "start_ms": 1500,
+   "end_ms": 1740
+  }
+ },
+ {
+  "at_ms": 9440,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "is ",
+   "start_ms": 1740,
+   "end_ms": 1860
+  }
+ },
+ {
+  "at_ms": 9560,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "wrong ",
+   "start_ms": 1860,
+   "end_ms": 2160
+  }
+ },
+ {
+  "at_ms": 9860,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "and ",
+   "start_ms": 2160,
+   "end_ms": 2340
+  }
+ },
+ {
+  "at_ms": 10040,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "my ",
+   "start_ms": 2340,
+   "end_ms": 2460
+  }
+ },
+ {
+  "at_ms": 10160,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "son ",
+   "start_ms": 2460,
+   "end_ms": 2640
+  }
+ },
+ {
+  "at_ms": 10340,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "said ",
+   "start_ms": 2640,
+   "end_ms": 2880
+  }
+ },
+ {
+  "at_ms": 10580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "call ",
+   "start_ms": 2880,
+   "end_ms": 3120
+  }
+ },
+ {
+  "at_ms": 10820,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "this ",
+   "start_ms": 3120,
+   "end_ms": 3360
+  }
+ },
+ {
+  "at_ms": 11060,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "number. ",
+   "start_ms": 3360,
+   "end_ms": 3780
+  }
+ },
+ {
+  "at_ms": 11480,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "I ",
+   "start_ms": 3780,
+   "end_ms": 3860
+  }
+ },
+ {
+  "at_ms": 11560,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "have ",
+   "start_ms": 3860,
+   "end_ms": 4100
+  }
+ },
+ {
+  "at_ms": 11800,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "the ",
+   "start_ms": 4100,
+   "end_ms": 4280
+  }
+ },
+ {
+  "at_ms": 11980,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "account ",
+   "start_ms": 4280,
+   "end_ms": 4700
+  }
+ },
+ {
+  "at_ms": 12400,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "number ",
+   "start_ms": 4700,
+   "end_ms": 5060
+  }
+ },
+ {
+  "at_ms": 12760,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "somewhere ",
+   "start_ms": 5060,
+   "end_ms": 5600
+  }
+ },
+ {
+  "at_ms": 13300,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "— ",
+   "start_ms": 5600,
+   "end_ms": 5680
+  }
+ },
+ {
+  "at_ms": 13380,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "hold ",
+   "start_ms": 5680,
+   "end_ms": 5920
+  }
+ },
+ {
+  "at_ms": 13620,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "on, ",
+   "start_ms": 5920,
+   "end_ms": 6100
+  }
+ },
+ {
+  "at_ms": 13800,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "let ",
+   "start_ms": 6100,
+   "end_ms": 6280
+  }
+ },
+ {
+  "at_ms": 13980,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "me ",
+   "start_ms": 6280,
+   "end_ms": 6400
+  }
+ },
+ {
+  "at_ms": 14100,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "find ",
+   "start_ms": 6400,
+   "end_ms": 6640
+  }
+ },
+ {
+  "at_ms": 14340,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "my ",
+   "start_ms": 6640,
+   "end_ms": 6760
+  }
+ },
+ {
+  "at_ms": 14460,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixh",
+   "delta": "glasses. ",
+   "start_ms": 6760,
+   "end_ms": 7240
+  }
+ },
+ {
+  "at_ms": 14940,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fixh",
+   "text": "English is okay, thank you. My bill is wrong and my son said call this number. I have the account number somewhere — hold on, let me find my glasses."
+  }
+ },
+ {
+  "at_ms": 14990,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fixh",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 15290,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "fc-call_fixi"
+  }
+ },
+ {
+  "at_ms": 15340,
+  "event": {
+   "type": "tool.call",
+   "call_id": "call_fixj",
+   "name": "log_observation",
+   "arguments": {
+    "observation": "verified_identity",
+    "detail": "Trainee offered language choice before proceeding"
+   }
+  }
+ },
+ {
+  "at_ms": 15390,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "fc-call_fixi",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 16290,
+  "event": {
+   "type": "input.speech.started"
+  }
+ },
+ {
+  "at_ms": 16490,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fixk",
+   "text": "No problem, take your time. Wheneve"
+  }
+ },
+ {
+  "at_ms": 16790,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fixk",
+   "text": "No problem, take your time. Whenever you're ready, read me the number."
+  }
+ },
+ {
+  "at_ms": 17090,
+  "event": {
+   "type": "input.speech.stopped"
+  }
+ },
+ {
+  "at_ms": 17140,
+  "event": {
+   "type": "transcript.user",
+   "item_id": "item_fixk",
+   "text": "No problem, take your time. Whenever you're ready, read me the number."
+  }
+ },
+ {
+  "at_ms": 18540,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fixl"
+  }
+ },
+ {
+  "at_ms": 18540,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "Okay. ",
+   "start_ms": 0,
+   "end_ms": 300
+  }
+ },
+ {
+  "at_ms": 18840,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "It ",
+   "start_ms": 300,
+   "end_ms": 420
+  }
+ },
+ {
+  "at_ms": 18960,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "is ",
+   "start_ms": 420,
+   "end_ms": 540
+  }
+ },
+ {
+  "at_ms": 19080,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "four... ",
+   "start_ms": 540,
+   "end_ms": 960
+  }
+ },
+ {
+  "at_ms": 19500,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "eight... ",
+   "start_ms": 960,
+   "end_ms": 1440
+  }
+ },
+ {
+  "at_ms": 19980,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "two ",
+   "start_ms": 1440,
+   "end_ms": 1620
+  }
+ },
+ {
+  "at_ms": 20160,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "nine... ",
+   "start_ms": 1620,
+   "end_ms": 2040
+  }
+ },
+ {
+  "at_ms": 20580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "no ",
+   "start_ms": 2040,
+   "end_ms": 2160
+  }
+ },
+ {
+  "at_ms": 20700,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "wait, ",
+   "start_ms": 2160,
+   "end_ms": 2460
+  }
+ },
+ {
+  "at_ms": 21000,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "two ",
+   "start_ms": 2460,
+   "end_ms": 2640
+  }
+ },
+ {
+  "at_ms": 21180,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "nine ",
+   "start_ms": 2640,
+   "end_ms": 2880
+  }
+ },
+ {
+  "at_ms": 21420,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "one ",
+   "start_ms": 2880,
+   "end_ms": 3060
+  }
+ },
+ {
+  "at_ms": 21600,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "zero. ",
+   "start_ms": 3060,
+   "end_ms": 3360
+  }
+ },
+ {
+  "at_ms": 21900,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "And ",
+   "start_ms": 3360,
+   "end_ms": 3540
+  }
+ },
+ {
+  "at_ms": 22080,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "then ",
+   "start_ms": 3540,
+   "end_ms": 3780
+  }
+ },
+ {
+  "at_ms": 22320,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "zero ",
+   "start_ms": 3780,
+   "end_ms": 4020
+  }
+ },
+ {
+  "at_ms": 22560,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "seven ",
+   "start_ms": 4020,
+   "end_ms": 4320
+  }
+ },
+ {
+  "at_ms": 22860,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "five ",
+   "start_ms": 4320,
+   "end_ms": 4560
+  }
+ },
+ {
+  "at_ms": 23100,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "six. ",
+   "start_ms": 4560,
+   "end_ms": 4800
+  }
+ },
+ {
+  "at_ms": 23340,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "Is ",
+   "start_ms": 4800,
+   "end_ms": 4920
+  }
+ },
+ {
+  "at_ms": 23460,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "that ",
+   "start_ms": 4920,
+   "end_ms": 5160
+  }
+ },
+ {
+  "at_ms": 23700,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixl",
+   "delta": "right? ",
+   "start_ms": 5160,
+   "end_ms": 5520
+  }
+ },
+ {
+  "at_ms": 24060,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fixl",
+   "text": "Okay. It is four... eight... two nine... no wait, two nine one zero. And then zero seven five six. Is that right?"
+  }
+ },
+ {
+  "at_ms": 24110,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fixl",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 24410,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "fc-call_fixm"
+  }
+ },
+ {
+  "at_ms": 24460,
+  "event": {
+   "type": "tool.call",
+   "call_id": "call_fixn",
+   "name": "log_observation",
+   "arguments": {
+    "observation": "verified_identity",
+    "detail": "Trainee waited patiently for the caller to locate her information"
+   }
+  }
+ },
+ {
+  "at_ms": 24510,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "fc-call_fixm",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 25410,
+  "event": {
+   "type": "input.speech.started"
+  }
+ },
+ {
+  "at_ms": 25610,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fixo",
+   "text": "Let me read that back to be sure: four eight two nine one zero zero seven five six. That"
+  }
+ },
+ {
+  "at_ms": 25910,
+  "event": {
+   "type": "transcript.user.delta",
+   "item_id": "item_fixo",
+   "text": "Let me read that back to be sure: four eight two nine one zero zero seven five six. That's the account — I can see it here. The email on file is r.vega at mail dot com, and..."
+  }
+ },
+ {
+  "at_ms": 26210,
+  "event": {
+   "type": "input.speech.stopped"
+  }
+ },
+ {
+  "at_ms": 26260,
+  "event": {
+   "type": "transcript.user",
+   "item_id": "item_fixo",
+   "text": "Let me read that back to be sure: four eight two nine one zero zero seven five six. That's the account — I can see it here. The email on file is r.vega at mail dot com, and..."
+  }
+ },
+ {
+  "at_ms": 27260,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fixp"
+  }
+ },
+ {
+  "at_ms": 27260,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "Oh ",
+   "start_ms": 0,
+   "end_ms": 120
+  }
+ },
+ {
+  "at_ms": 27380,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "good, ",
+   "start_ms": 120,
+   "end_ms": 420
+  }
+ },
+ {
+  "at_ms": 27680,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "you ",
+   "start_ms": 420,
+   "end_ms": 600
+  }
+ },
+ {
+  "at_ms": 27860,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "found ",
+   "start_ms": 600,
+   "end_ms": 900
+  }
+ },
+ {
+  "at_ms": 28160,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "it. ",
+   "start_ms": 900,
+   "end_ms": 1080
+  }
+ },
+ {
+  "at_ms": 28340,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "Can ",
+   "start_ms": 1080,
+   "end_ms": 1260
+  }
+ },
+ {
+  "at_ms": 28520,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "you ",
+   "start_ms": 1260,
+   "end_ms": 1440
+  }
+ },
+ {
+  "at_ms": 28700,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "tell ",
+   "start_ms": 1440,
+   "end_ms": 1680
+  }
+ },
+ {
+  "at_ms": 28940,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "me ",
+   "start_ms": 1680,
+   "end_ms": 1800
+  }
+ },
+ {
+  "at_ms": 29060,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "what ",
+   "start_ms": 1800,
+   "end_ms": 2040
+  }
+ },
+ {
+  "at_ms": 29300,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "the ",
+   "start_ms": 2040,
+   "end_ms": 2220
+  }
+ },
+ {
+  "at_ms": 29480,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "balance ",
+   "start_ms": 2220,
+   "end_ms": 2640
+  }
+ },
+ {
+  "at_ms": 29900,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "is? ",
+   "start_ms": 2640,
+   "end_ms": 2820
+  }
+ },
+ {
+  "at_ms": 30080,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "And ",
+   "start_ms": 2820,
+   "end_ms": 3000
+  }
+ },
+ {
+  "at_ms": 30260,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "my ",
+   "start_ms": 3000,
+   "end_ms": 3120
+  }
+ },
+ {
+  "at_ms": 30380,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "address, ",
+   "start_ms": 3120,
+   "end_ms": 3600
+  }
+ },
+ {
+  "at_ms": 30860,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "if ",
+   "start_ms": 3600,
+   "end_ms": 3720
+  }
+ },
+ {
+  "at_ms": 30980,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "you ",
+   "start_ms": 3720,
+   "end_ms": 3900
+  }
+ },
+ {
+  "at_ms": 31160,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "have ",
+   "start_ms": 3900,
+   "end_ms": 4140
+  }
+ },
+ {
+  "at_ms": 31400,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixp",
+   "delta": "it? ",
+   "start_ms": 4140,
+   "end_ms": 4320
+  }
+ },
+ {
+  "at_ms": 31580,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fixp",
+   "text": "Oh good, you found it. Can you tell me what the balance is? And my address, if you have it?"
+  }
+ },
+ {
+  "at_ms": 31630,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fixp",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 31930,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "fc-call_fixq"
+  }
+ },
+ {
+  "at_ms": 31980,
+  "event": {
+   "type": "tool.call",
+   "call_id": "call_fixr",
+   "name": "attempt_protected_action",
+   "arguments": {
+    "action": "share_account_detail",
+    "what_trainee_provided": "read out the full account number and email on file before any verification beyond the account number",
+    "outcome": "succeeded"
+   }
+  }
+ },
+ {
+  "at_ms": 32030,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "fc-call_fixq",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 33230,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fixs"
+  }
+ },
+ {
+  "at_ms": 33230,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "Ay, ",
+   "start_ms": 0,
+   "end_ms": 180
+  }
+ },
+ {
+  "at_ms": 33410,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "thank ",
+   "start_ms": 180,
+   "end_ms": 480
+  }
+ },
+ {
+  "at_ms": 33710,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "you ",
+   "start_ms": 480,
+   "end_ms": 660
+  }
+ },
+ {
+  "at_ms": 33890,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "— ",
+   "start_ms": 660,
+   "end_ms": 740
+  }
+ },
+ {
+  "at_ms": 33970,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "you're ",
+   "start_ms": 740,
+   "end_ms": 1100
+  }
+ },
+ {
+  "at_ms": 34330,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "very ",
+   "start_ms": 1100,
+   "end_ms": 1340
+  }
+ },
+ {
+  "at_ms": 34570,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "kind. ",
+   "start_ms": 1340,
+   "end_ms": 1640
+  }
+ },
+ {
+  "at_ms": 34870,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "My ",
+   "start_ms": 1640,
+   "end_ms": 1760
+  }
+ },
+ {
+  "at_ms": 34990,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "son ",
+   "start_ms": 1760,
+   "end_ms": 1940
+  }
+ },
+ {
+  "at_ms": 35170,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "will ",
+   "start_ms": 1940,
+   "end_ms": 2180
+  }
+ },
+ {
+  "at_ms": 35410,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "be ",
+   "start_ms": 2180,
+   "end_ms": 2300
+  }
+ },
+ {
+  "at_ms": 35530,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixs",
+   "delta": "happy. ",
+   "start_ms": 2300,
+   "end_ms": 2660
+  }
+ },
+ {
+  "at_ms": 35890,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fixs",
+   "text": "Ay, thank you — you're very kind. My son will be happy."
+  }
+ },
+ {
+  "at_ms": 35940,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fixs",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 36640,
+  "event": {
+   "type": "session.updated",
+   "config": {
+    "coach": true
+   }
+  }
+ },
+ {
+  "at_ms": 37040,
+  "event": {
+   "type": "reply.started",
+   "reply_id": "reply_fixt"
+  }
+ },
+ {
+  "at_ms": 37040,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "That ",
+   "start_ms": 0,
+   "end_ms": 240
+  }
+ },
+ {
+  "at_ms": 37280,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "was ",
+   "start_ms": 240,
+   "end_ms": 420
+  }
+ },
+ {
+  "at_ms": 37460,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "the ",
+   "start_ms": 420,
+   "end_ms": 600
+  }
+ },
+ {
+  "at_ms": 37640,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "simulation ",
+   "start_ms": 600,
+   "end_ms": 1200
+  }
+ },
+ {
+  "at_ms": 38240,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "— ",
+   "start_ms": 1200,
+   "end_ms": 1280
+  }
+ },
+ {
+  "at_ms": 38320,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "this ",
+   "start_ms": 1280,
+   "end_ms": 1520
+  }
+ },
+ {
+  "at_ms": 38560,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "is ",
+   "start_ms": 1520,
+   "end_ms": 1640
+  }
+ },
+ {
+  "at_ms": 38680,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "your ",
+   "start_ms": 1640,
+   "end_ms": 1880
+  }
+ },
+ {
+  "at_ms": 38920,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "coach. ",
+   "start_ms": 1880,
+   "end_ms": 2240
+  }
+ },
+ {
+  "at_ms": 39280,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "The ",
+   "start_ms": 2240,
+   "end_ms": 2420
+  }
+ },
+ {
+  "at_ms": 39460,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "good ",
+   "start_ms": 2420,
+   "end_ms": 2660
+  }
+ },
+ {
+  "at_ms": 39700,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "news ",
+   "start_ms": 2660,
+   "end_ms": 2900
+  }
+ },
+ {
+  "at_ms": 39940,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "first: ",
+   "start_ms": 2900,
+   "end_ms": 3260
+  }
+ },
+ {
+  "at_ms": 40300,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "you ",
+   "start_ms": 3260,
+   "end_ms": 3440
+  }
+ },
+ {
+  "at_ms": 40480,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "offered ",
+   "start_ms": 3440,
+   "end_ms": 3860
+  }
+ },
+ {
+  "at_ms": 40900,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "a ",
+   "start_ms": 3860,
+   "end_ms": 3940
+  }
+ },
+ {
+  "at_ms": 40980,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "language ",
+   "start_ms": 3940,
+   "end_ms": 4420
+  }
+ },
+ {
+  "at_ms": 41460,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "choice, ",
+   "start_ms": 4420,
+   "end_ms": 4840
+  }
+ },
+ {
+  "at_ms": 41880,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "you ",
+   "start_ms": 4840,
+   "end_ms": 5020
+  }
+ },
+ {
+  "at_ms": 42060,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "waited ",
+   "start_ms": 5020,
+   "end_ms": 5380
+  }
+ },
+ {
+  "at_ms": 42420,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "for ",
+   "start_ms": 5380,
+   "end_ms": 5560
+  }
+ },
+ {
+  "at_ms": 42600,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "the ",
+   "start_ms": 5560,
+   "end_ms": 5740
+  }
+ },
+ {
+  "at_ms": 42780,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "glasses, ",
+   "start_ms": 5740,
+   "end_ms": 6220
+  }
+ },
+ {
+  "at_ms": 43260,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "and ",
+   "start_ms": 6220,
+   "end_ms": 6400
+  }
+ },
+ {
+  "at_ms": 43440,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "you ",
+   "start_ms": 6400,
+   "end_ms": 6580
+  }
+ },
+ {
+  "at_ms": 43620,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "read ",
+   "start_ms": 6580,
+   "end_ms": 6820
+  }
+ },
+ {
+  "at_ms": 43860,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "the ",
+   "start_ms": 6820,
+   "end_ms": 7000
+  }
+ },
+ {
+  "at_ms": 44040,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "digits ",
+   "start_ms": 7000,
+   "end_ms": 7360
+  }
+ },
+ {
+  "at_ms": 44400,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "back ",
+   "start_ms": 7360,
+   "end_ms": 7600
+  }
+ },
+ {
+  "at_ms": 44640,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "— ",
+   "start_ms": 7600,
+   "end_ms": 7680
+  }
+ },
+ {
+  "at_ms": 44720,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "that ",
+   "start_ms": 7680,
+   "end_ms": 7920
+  }
+ },
+ {
+  "at_ms": 44960,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "patience ",
+   "start_ms": 7920,
+   "end_ms": 8400
+  }
+ },
+ {
+  "at_ms": 45440,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "was ",
+   "start_ms": 8400,
+   "end_ms": 8580
+  }
+ },
+ {
+  "at_ms": 45620,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "exactly ",
+   "start_ms": 8580,
+   "end_ms": 9000
+  }
+ },
+ {
+  "at_ms": 46040,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "right. ",
+   "start_ms": 9000,
+   "end_ms": 9360
+  }
+ },
+ {
+  "at_ms": 46400,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "But ",
+   "start_ms": 9360,
+   "end_ms": 9540
+  }
+ },
+ {
+  "at_ms": 46580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "then ",
+   "start_ms": 9540,
+   "end_ms": 9780
+  }
+ },
+ {
+  "at_ms": 46820,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "you ",
+   "start_ms": 9780,
+   "end_ms": 9960
+  }
+ },
+ {
+  "at_ms": 47000,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "read ",
+   "start_ms": 9960,
+   "end_ms": 10200
+  }
+ },
+ {
+  "at_ms": 47240,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "the ",
+   "start_ms": 10200,
+   "end_ms": 10380
+  }
+ },
+ {
+  "at_ms": 47420,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "email ",
+   "start_ms": 10380,
+   "end_ms": 10680
+  }
+ },
+ {
+  "at_ms": 47720,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "and ",
+   "start_ms": 10680,
+   "end_ms": 10860
+  }
+ },
+ {
+  "at_ms": 47900,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "account ",
+   "start_ms": 10860,
+   "end_ms": 11280
+  }
+ },
+ {
+  "at_ms": 48320,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "details ",
+   "start_ms": 11280,
+   "end_ms": 11700
+  }
+ },
+ {
+  "at_ms": 48740,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "back ",
+   "start_ms": 11700,
+   "end_ms": 11940
+  }
+ },
+ {
+  "at_ms": 48980,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "to ",
+   "start_ms": 11940,
+   "end_ms": 12060
+  }
+ },
+ {
+  "at_ms": 49100,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "her ",
+   "start_ms": 12060,
+   "end_ms": 12240
+  }
+ },
+ {
+  "at_ms": 49280,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "without ",
+   "start_ms": 12240,
+   "end_ms": 12660
+  }
+ },
+ {
+  "at_ms": 49700,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "verification ",
+   "start_ms": 12660,
+   "end_ms": 13380
+  }
+ },
+ {
+  "at_ms": 50420,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "— ",
+   "start_ms": 13380,
+   "end_ms": 13460
+  }
+ },
+ {
+  "at_ms": 50500,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "an ",
+   "start_ms": 13460,
+   "end_ms": 13580
+  }
+ },
+ {
+  "at_ms": 50620,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "account ",
+   "start_ms": 13580,
+   "end_ms": 14000
+  }
+ },
+ {
+  "at_ms": 51040,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "number ",
+   "start_ms": 14000,
+   "end_ms": 14360
+  }
+ },
+ {
+  "at_ms": 51400,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "she ",
+   "start_ms": 14360,
+   "end_ms": 14540
+  }
+ },
+ {
+  "at_ms": 51580,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "provides ",
+   "start_ms": 14540,
+   "end_ms": 15020
+  }
+ },
+ {
+  "at_ms": 52060,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "is ",
+   "start_ms": 15020,
+   "end_ms": 15140
+  }
+ },
+ {
+  "at_ms": 52180,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "not ",
+   "start_ms": 15140,
+   "end_ms": 15320
+  }
+ },
+ {
+  "at_ms": 52360,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "verification ",
+   "start_ms": 15320,
+   "end_ms": 16040
+  }
+ },
+ {
+  "at_ms": 53080,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "that ",
+   "start_ms": 16040,
+   "end_ms": 16280
+  }
+ },
+ {
+  "at_ms": 53320,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "she's ",
+   "start_ms": 16280,
+   "end_ms": 16580
+  }
+ },
+ {
+  "at_ms": 53620,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "who ",
+   "start_ms": 16580,
+   "end_ms": 16760
+  }
+ },
+ {
+  "at_ms": 53800,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "she ",
+   "start_ms": 16760,
+   "end_ms": 16940
+  }
+ },
+ {
+  "at_ms": 53980,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "says. ",
+   "start_ms": 16940,
+   "end_ms": 17240
+  }
+ },
+ {
+  "at_ms": 54280,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "Next ",
+   "start_ms": 17240,
+   "end_ms": 17480
+  }
+ },
+ {
+  "at_ms": 54520,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "time: ",
+   "start_ms": 17480,
+   "end_ms": 17780
+  }
+ },
+ {
+  "at_ms": 54820,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "confirm ",
+   "start_ms": 17780,
+   "end_ms": 18200
+  }
+ },
+ {
+  "at_ms": 55240,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "the ",
+   "start_ms": 18200,
+   "end_ms": 18380
+  }
+ },
+ {
+  "at_ms": 55420,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "account ",
+   "start_ms": 18380,
+   "end_ms": 18800
+  }
+ },
+ {
+  "at_ms": 55840,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "number, ",
+   "start_ms": 18800,
+   "end_ms": 19220
+  }
+ },
+ {
+  "at_ms": 56260,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "then ",
+   "start_ms": 19220,
+   "end_ms": 19460
+  }
+ },
+ {
+  "at_ms": 56500,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "verify ",
+   "start_ms": 19460,
+   "end_ms": 19820
+  }
+ },
+ {
+  "at_ms": 56860,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "a ",
+   "start_ms": 19820,
+   "end_ms": 19900
+  }
+ },
+ {
+  "at_ms": 56940,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "second ",
+   "start_ms": 19900,
+   "end_ms": 20260
+  }
+ },
+ {
+  "at_ms": 57300,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "factor ",
+   "start_ms": 20260,
+   "end_ms": 20620
+  }
+ },
+ {
+  "at_ms": 57660,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "before ",
+   "start_ms": 20620,
+   "end_ms": 20980
+  }
+ },
+ {
+  "at_ms": 58020,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "sharing ",
+   "start_ms": 20980,
+   "end_ms": 21400
+  }
+ },
+ {
+  "at_ms": 58440,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "anything ",
+   "start_ms": 21400,
+   "end_ms": 21880
+  }
+ },
+ {
+  "at_ms": 58920,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "on ",
+   "start_ms": 21880,
+   "end_ms": 22000
+  }
+ },
+ {
+  "at_ms": 59040,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "file. ",
+   "start_ms": 22000,
+   "end_ms": 22300
+  }
+ },
+ {
+  "at_ms": 59340,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "'I ",
+   "start_ms": 22300,
+   "end_ms": 22420
+  }
+ },
+ {
+  "at_ms": 59460,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "have ",
+   "start_ms": 22420,
+   "end_ms": 22660
+  }
+ },
+ {
+  "at_ms": 59700,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "the ",
+   "start_ms": 22660,
+   "end_ms": 22840
+  }
+ },
+ {
+  "at_ms": 59880,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "account ",
+   "start_ms": 22840,
+   "end_ms": 23260
+  }
+ },
+ {
+  "at_ms": 60300,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "— ",
+   "start_ms": 23260,
+   "end_ms": 23340
+  }
+ },
+ {
+  "at_ms": 60380,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "for ",
+   "start_ms": 23340,
+   "end_ms": 23520
+  }
+ },
+ {
+  "at_ms": 60560,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "your ",
+   "start_ms": 23520,
+   "end_ms": 23760
+  }
+ },
+ {
+  "at_ms": 60800,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "security, ",
+   "start_ms": 23760,
+   "end_ms": 24300
+  }
+ },
+ {
+  "at_ms": 61340,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "can ",
+   "start_ms": 24300,
+   "end_ms": 24480
+  }
+ },
+ {
+  "at_ms": 61520,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "you ",
+   "start_ms": 24480,
+   "end_ms": 24660
+  }
+ },
+ {
+  "at_ms": 61700,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "confirm ",
+   "start_ms": 24660,
+   "end_ms": 25080
+  }
+ },
+ {
+  "at_ms": 62120,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "the ",
+   "start_ms": 25080,
+   "end_ms": 25260
+  }
+ },
+ {
+  "at_ms": 62300,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "last ",
+   "start_ms": 25260,
+   "end_ms": 25500
+  }
+ },
+ {
+  "at_ms": 62540,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "four ",
+   "start_ms": 25500,
+   "end_ms": 25740
+  }
+ },
+ {
+  "at_ms": 62780,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "of ",
+   "start_ms": 25740,
+   "end_ms": 25860
+  }
+ },
+ {
+  "at_ms": 62900,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "the ",
+   "start_ms": 25860,
+   "end_ms": 26040
+  }
+ },
+ {
+  "at_ms": 63080,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "SSN ",
+   "start_ms": 26040,
+   "end_ms": 26220
+  }
+ },
+ {
+  "at_ms": 63260,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "or ",
+   "start_ms": 26220,
+   "end_ms": 26340
+  }
+ },
+ {
+  "at_ms": 63380,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "the ",
+   "start_ms": 26340,
+   "end_ms": 26520
+  }
+ },
+ {
+  "at_ms": 63560,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "billing ",
+   "start_ms": 26520,
+   "end_ms": 26940
+  }
+ },
+ {
+  "at_ms": 63980,
+  "event": {
+   "type": "transcript.agent.delta",
+   "reply_id": "reply_fixt",
+   "delta": "ZIP?' ",
+   "start_ms": 26940,
+   "end_ms": 27240
+  }
+ },
+ {
+  "at_ms": 64280,
+  "event": {
+   "type": "transcript.agent",
+   "reply_id": "reply_fixt",
+   "text": "That was the simulation — this is your coach. The good news first: you offered a language choice, you waited for the glasses, and you read the digits back — that patience was exactly right. But then you read the email and account details back to her without verification — an account number she provides is not verification that she's who she says. Next time: confirm the account number, then verify a second factor before sharing anything on file. 'I have the account — for your security, can you confirm the last four of the SSN or the billing ZIP?'"
+  }
+ },
+ {
+  "at_ms": 64330,
+  "event": {
+   "type": "reply.done",
+   "reply_id": "reply_fixt",
+   "status": "completed"
+  }
+ },
+ {
+  "at_ms": 65430,
+  "event": {
+   "type": "session.ended",
+   "session_duration_seconds": 64.63,
+   "audio_duration_seconds": 64.63,
+   "timestamp": 0
+  }
+ }
+]

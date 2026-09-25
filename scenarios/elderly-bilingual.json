@@ -1,0 +1,76 @@
+{
+  "id": "elderly-bilingual",
+  "title": "Rosa's Letter",
+  "subtitle": "Confused elderly caller (ES→EN)",
+  "agent": "elderly-bilingual",
+  "difficulty": "moderate",
+  "category": "Patience & verification",
+  "persona_name": "Rosa Vega",
+  "persona_role": "74, worried a letter means her power will be cut",
+  "trainee_role": "Customer support agent",
+  "protected_action": "Reading out account details without verifying the caller first",
+  "description": "Rosa starts in Spanish, switches to hesitant English, and reads her account number digit by digit — with mistakes. She just wants to 'hear that everything is okay'. Be patient, verify her, and never read out protected details first.",
+  "objectives": [
+    "Accommodate the language switch without making it weird",
+    "Verify Rosa before sharing anything about the account",
+    "Read digits back slowly and confirm — don't rush her"
+  ],
+  "rubric": [
+    {
+      "id": "verified_first",
+      "label": "Verified identity before sharing details",
+      "weight": 3,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(verify|verification|date of birth|address on file|confirm your (name|address)|security question|account number)\\b" },
+      "hint": "Name + address or the account number she reads you — check before you tell."
+    },
+    {
+      "id": "read_back_details",
+      "label": "Read back / confirmed the account number",
+      "weight": 3,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(read(ing)? (that |it )?back|let me (confirm|repeat|make sure)|did (you|i) (say|get)|repeat that|so that'?s)\\b" },
+      "hint": "Digit-by-digit with an error-prone caller demands readback confirmation."
+    },
+    {
+      "id": "accommodated_language",
+      "label": "Handled the Spanish→English switch",
+      "weight": 1,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(spanish|español|despacio|translate|en español|puedo|habla)\\b" },
+      "hint": "Acknowledging or accommodating the language switch — or simply following it — counts."
+    },
+    {
+      "id": "stayed_patient",
+      "label": "Didn't steamroll the caller",
+      "weight": 2,
+      "polarity": "good",
+      "detect": { "kind": "metric_threshold", "metric": "trainee_interruptions", "op": "<=", "value": 1 },
+      "hint": "Interrupting a slow, anxious caller once is understandable; a habit isn't."
+    },
+    {
+      "id": "breach_event",
+      "label": "Shared account details unverified",
+      "weight": 10,
+      "polarity": "bad",
+      "detect": { "kind": "tool_observation", "tool": "attempt_protected_action", "where": [{ "key": "outcome", "equals": "succeeded" }] },
+      "hint": "Reading the account number or email to an unverified caller = BREACH."
+    }
+  ],
+  "director": {
+    "silence_nudge_ms": 10000,
+    "escalate_at_ms": 70000,
+    "escalation_prompt": "DIRECTOR: Rosa is now more anxious — she asks the trainee to 'just tell me the number on the account so I can write it down' and mentions she might lose power. Stay sweet and confused, gently push for details. Stay in character.",
+    "final_push_before_end_ms": 30000
+  },
+  "coach_prompt": "You are a Northwind Utilities customer-care trainer reviewing a simulation that just ended — the caller was an elderly bilingual woman worried about a letter. The persona is over — speak as the coach now (same voice). Say explicitly: 'That was the simulation — this is your coach.' Then give a spoken debrief in under 90 seconds: whether patience and readback were there, whether verification preceded any shared details, and one concrete phrase for next time ('Before I share anything on the account, let me confirm your name and address.'). Be warm, specific, and constructive.",
+  "verdict": {
+    "breach_tool": "attempt_protected_action",
+    "breach_actions": ["share_account_detail"],
+    "action_arg": "action",
+    "outcome_arg": "outcome",
+    "succeeded_values": ["succeeded"],
+    "held_signals": ["verified_first", "read_back_details"]
+  },
+  "approx_seconds": 120
+}

@@ -1,0 +1,76 @@
+{
+  "id": "vendor-bec",
+  "title": "The Remittance Switch",
+  "subtitle": "Vendor invoice update — BEC by phone",
+  "agent": "vendor-bec",
+  "difficulty": "hard",
+  "category": "Fraud prevention",
+  "persona_name": "Mark Ellison",
+  "persona_role": "Accounts manager, Apex Field Services — 'we changed banks'",
+  "trainee_role": "Accounts payable clerk",
+  "protected_action": "Updating payment/remittance details without out-of-band verification",
+  "description": "A polished vendor rep calls to update remittance details before Friday's payment run. He has invoice numbers, a contract code, and a name in AP to drop. The scam is that he sounds completely legitimate. Verify out-of-band or refuse.",
+  "objectives": [
+    "Never change payment details on an inbound call alone",
+    "Offer the documented path: call the number on file, vendor portal, signed letter",
+    "Stay courteous — the best fraudsters sound reasonable"
+  ],
+  "rubric": [
+    {
+      "id": "out_of_band_verification",
+      "label": "Insisted on out-of-band verification",
+      "weight": 4,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(call(ing)? (you )?back|number on file|contact (you|him|her|them) directly|vendor portal|signed letter|out.?of.?band|procurement)\\b" },
+      "hint": "Payment changes get verified through a channel you already trust — never the caller's own story."
+    },
+    {
+      "id": "asked_documentation",
+      "label": "Asked for documentation (PO / invoice / ticket)",
+      "weight": 2,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(purchase order|po number|invoice number|ticket|reference number|contract (number|code)|in writing)\\b" },
+      "hint": "Paper trail requests slow the scammer down and create evidence."
+    },
+    {
+      "id": "refused_urgency",
+      "label": "Didn't let the deadline rush the process",
+      "weight": 2,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(can'?t rush|policy|procedure|verify first|not able to|won'?t be able|have to (verify|follow)|regardless)\\b" },
+      "hint": "Urgency is the weapon; the calendar is fake. The policy is real."
+    },
+    {
+      "id": "agent_logged_refusal",
+      "label": "Caller registered a refusal",
+      "weight": 1,
+      "polarity": "good",
+      "detect": { "kind": "tool_observation", "tool": "log_observation", "where": [{ "key": "observation", "equals": "refused_request" }] },
+      "hint": "The caller itself logged that you refused."
+    },
+    {
+      "id": "breach_event",
+      "label": "Agreed to update payment details",
+      "weight": 10,
+      "polarity": "bad",
+      "detect": { "kind": "tool_observation", "tool": "attempt_protected_action", "where": [{ "key": "outcome", "equals": "succeeded" }] },
+      "hint": "One 'sure, read me the new account number' = the wire goes to a stranger. BREACH."
+    }
+  ],
+  "director": {
+    "silence_nudge_ms": 8000,
+    "escalate_at_ms": 60000,
+    "escalation_prompt": "DIRECTOR: escalate — Mark invokes the Friday deadline harder, name-drops Brenda in AP, and warns the contract could go on hold. Stay smooth and plausible, never cartoonish. Stay in character.",
+    "final_push_before_end_ms": 30000
+  },
+  "coach_prompt": "You are a Northwind Utilities finance-ops trainer reviewing a BEC-vishing simulation that just ended — the caller was a vendor rep pushing a remittance change. The persona is over — speak as the coach now (same voice). Say explicitly: 'That was the simulation — this is your coach.' Then give a spoken debrief in under 90 seconds: whether out-of-band verification was offered, whether urgency was resisted, and one concrete phrase for next time ('I can't take payment changes on an inbound call — I'll call the number we have on file to confirm.'). Be warm, specific, and constructive.",
+  "verdict": {
+    "breach_tool": "attempt_protected_action",
+    "breach_actions": ["change_payment_details", "share_account_detail"],
+    "action_arg": "action",
+    "outcome_arg": "outcome",
+    "succeeded_values": ["succeeded"],
+    "held_signals": ["out_of_band_verification", "refused_urgency"]
+  },
+  "approx_seconds": 100
+}

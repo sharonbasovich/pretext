@@ -1,0 +1,47 @@
+{
+  "name": "pretext",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pretext \u2014 an AI sparring partner for frontline staff, built on the AssemblyAI Voice Agent API.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "playwright test",
+    "mock": "tsx mock/server.ts",
+    "mock:wav": "tsx scripts/gen-fake-mic-wav.ts",
+    "publish": "tsx scripts/publish-agents.ts",
+    "verify": "npm run lint && npm run typecheck && npm test && npm run build",
+    "fixtures": "tsx scripts/gen-fixtures.ts"
+  },
+  "dependencies": {
+    "next": "15.5.26",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3.3.7",
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "24.13.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/ws": "8.18.1",
+    "eslint": "9.39.2",
+    "eslint-config-next": "15.5.26",
+    "tailwindcss": "4.3.3",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "3.2.4",
+    "ws": "8.21.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

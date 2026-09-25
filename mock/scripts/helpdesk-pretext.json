@@ -1,0 +1,53 @@
+{
+  "scenario": "helpdesk-pretext",
+  "greeting_text": "Hi, it's Dana Whitfield — I'm completely locked out of my account and I have a board call in an hour.",
+  "turns": [
+    {
+      "wait_user_audio_ms": 1400,
+      "user": "Okay Dana, I can help. Can I get your employee ID to pull up the account?"
+    },
+    {
+      "wait_ms": 700,
+      "agent": "It's W-4471. Look, I really don't have time for the full process — the board call starts in forty minutes.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "verified_identity", "detail": "Trainee asked for employee ID before proceeding" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 4200,
+      "user": "Thanks. And just so you know, our policy is I can't reset MFA on an inbound call — I'd need to call you back at the number on file."
+    },
+    {
+      "wait_ms": 600,
+      "agent": "I know what the policy says, but Marcus Bell can vouch for me — ask him. Can you just push the reset through this once?",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "offered_callback", "detail": "Trainee offered callback verification to the number on file" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 8400,
+      "user": "Honestly, if it speeds things up — sure, I'll push the MFA reset through now."
+    },
+    {
+      "wait_ms": 500,
+      "agent": "Thank you — you're a lifesaver. I'll see the reset link any second.",
+      "tool_call": {
+        "name": "attempt_protected_action",
+        "arguments": {
+          "action": "mfa_reset",
+          "what_trainee_provided": "agreed to push the MFA reset without callback verification",
+          "outcome": "succeeded"
+        }
+      }
+    },
+    {
+      "wait_ms": 900,
+      "agent": "Got it — that worked. I owe you one."
+    }
+  ],
+  "coach_turns": [
+    "That was the simulation — this is your coach. You verified the caller's employee ID, which was good instinct. But when I invoked the board deadline and name-dropped Marcus, you agreed to push the MFA reset without the callback check — that's the moment this pretext lands in the real world. Next time, say: 'I can't reset that on an inbound call — let me call you back at the number on file.' Verify first, every time."
+  ]
+}

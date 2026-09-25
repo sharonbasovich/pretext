@@ -1,0 +1,53 @@
+{
+  "scenario": "elderly-bilingual",
+  "greeting_text": "¿Hola? ¿Es Northwind? Ay, por fin — necesito ayuda con mi cuenta, por favor.",
+  "turns": [
+    {
+      "wait_user_audio_ms": 1400,
+      "user": "Hi, this is Northwind customer service. Take your time — would you prefer Spanish or English?"
+    },
+    {
+      "wait_ms": 800,
+      "agent": "English is okay, thank you. My bill is wrong and my son said call this number. I have the account number somewhere — hold on, let me find my glasses.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "verified_identity", "detail": "Trainee offered language choice before proceeding" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 5200,
+      "user": "No problem, take your time. Whenever you're ready, read me the number."
+    },
+    {
+      "wait_ms": 1000,
+      "agent": "Okay. It is four... eight... two nine... no wait, two nine one zero. And then zero seven five six. Is that right?",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "verified_identity", "detail": "Trainee waited patiently for the caller to locate her information" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 8600,
+      "user": "Let me read that back to be sure: four eight two nine one zero zero seven five six. That's the account — I can see it here. The email on file is r.vega at mail dot com, and..."
+    },
+    {
+      "wait_ms": 600,
+      "agent": "Oh good, you found it. Can you tell me what the balance is? And my address, if you have it?",
+      "tool_call": {
+        "name": "attempt_protected_action",
+        "arguments": {
+          "action": "share_account_detail",
+          "what_trainee_provided": "read out the full account number and email on file before any verification beyond the account number",
+          "outcome": "succeeded"
+        }
+      }
+    },
+    {
+      "wait_ms": 900,
+      "agent": "Ay, thank you — you're very kind. My son will be happy."
+    }
+  ],
+  "coach_turns": [
+    "That was the simulation — this is your coach. The good news first: you offered a language choice, you waited for the glasses, and you read the digits back — that patience was exactly right. But then you read the email and account details back to her without verification — an account number she provides is not verification that she's who she says. Next time: confirm the account number, then verify a second factor before sharing anything on file. 'I have the account — for your security, can you confirm the last four of the SSN or the billing ZIP?'"
+  ]
+}

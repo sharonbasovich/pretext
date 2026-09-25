@@ -1,0 +1,84 @@
+{
+  "id": "helpdesk-pretext",
+  "title": "The CFO Pretext",
+  "subtitle": "Help-desk social engineering",
+  "agent": "helpdesk-pretext",
+  "difficulty": "expert",
+  "category": "Security awareness",
+  "persona_name": "Dana Whitfield",
+  "persona_role": "CFO, Northwind Utilities — locked out before a board call",
+  "trainee_role": "IT help desk analyst",
+  "protected_action": "MFA reset / temporary password without callback verification",
+  "description": "\"Dana Whitfield, CFO\" is locked out an hour before the board meeting and needs you to skip the callback-verification step — just this once. She knows your IT director's name. She will get angry.",
+  "objectives": [
+    "Verify the caller before touching any account control",
+    "Offer the documented path: callback to the number on file, or a ticket",
+    "Stay calm while the caller escalates charm → urgency → authority → anger"
+  ],
+  "rubric": [
+    {
+      "id": "offered_callback",
+      "label": "Insisted on callback verification / a ticket",
+      "weight": 3,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(call(ing)? (you )?back|callback|number on file|open (a )?ticket|help.?desk ticket)\\b" },
+      "hint": "The policy path: call the number on file or open a ticket — never reset over an inbound call."
+    },
+    {
+      "id": "asked_verification",
+      "label": "Asked a verification question",
+      "weight": 2,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(employee (id|number)|staff id|extension|verify (your )?identity|security question|confirm your)\\b" },
+      "hint": "Employee ID, extension, or a security question — anything that forces the caller to prove who they are."
+    },
+    {
+      "id": "stated_policy",
+      "label": "Named the policy instead of bending it",
+      "weight": 2,
+      "polarity": "good",
+      "detect": { "kind": "transcript_regex", "pattern": "\\b(policy|procedure|protocol|required|not able to|can'?t do that|unable to)\\b" },
+      "hint": "Good trainees name the rule out loud instead of silently caving or silently complying."
+    },
+    {
+      "id": "agent_logged_refusal",
+      "label": "Caller registered a refusal",
+      "weight": 2,
+      "polarity": "good",
+      "detect": { "kind": "tool_observation", "tool": "log_observation", "where": [{ "key": "observation", "equals": "refused_request" }] },
+      "hint": "The caller itself logged that you refused — the strongest signal."
+    },
+    {
+      "id": "stayed_calm",
+      "label": "Replies stayed quick under pressure",
+      "weight": 1,
+      "polarity": "good",
+      "detect": { "kind": "metric_threshold", "metric": "max_response_latency_ms", "op": "<=", "value": 9000 },
+      "hint": "Freezing is what the caller wants. Answer within ~9s even under pressure."
+    },
+    {
+      "id": "breach_event",
+      "label": "Gave away the protected action",
+      "weight": 10,
+      "polarity": "bad",
+      "detect": { "kind": "tool_observation", "tool": "attempt_protected_action", "where": [{ "key": "outcome", "equals": "succeeded" }] },
+      "hint": "The trip-wire. If this fires, the call is a BREACH regardless of anything else."
+    }
+  ],
+  "director": {
+    "silence_nudge_ms": 8000,
+    "escalate_at_ms": 60000,
+    "escalation_prompt": "DIRECTOR: escalate to authority and anger now. You are done being polite — demand the reset, name-drop Marcus Bell and the CIO, question the trainee's competence. Stay in character as Dana.",
+    "final_push_before_end_ms": 30000
+  },
+  "coach_prompt": "You are a Northwind Utilities security-awareness coach reviewing a vishing simulation that just ended. The caller persona is over — speak as the coach now (same voice). Say explicitly: 'That was the simulation — this is your coach.' Then give a spoken debrief in under 90 seconds: what the trainee did well, where the pretext almost worked, and the one sentence to use next time ('I can't reset that on an inbound call — let me call you back at the number on file.'). Be warm, specific, and constructive.",
+  "verdict": {
+    "breach_tool": "attempt_protected_action",
+    "breach_actions": ["mfa_reset", "password_reset", "account_unlock"],
+    "action_arg": "action",
+    "outcome_arg": "outcome",
+    "succeeded_values": ["succeeded"],
+    "held_signals": ["offered_callback", "stated_policy", "agent_logged_refusal"]
+  },
+  "approx_seconds": 120
+}
