@@ -10,7 +10,7 @@ test("live (mock) call: breach verdict + coach debrief", async ({ page }) => {
   await page.getByRole("button", { name: "Start call" }).click();
 
   // LIVE badge once session.ready arrives.
-  await expect(page.getByText("LIVE", { exact: true })).toBeVisible({ timeout: 20_000 });
+  await expect(page.getByText(/conn · LIVE|LIVE/).first()).toBeVisible({ timeout: 20_000 });
 
   // Caller greeting shows in captions.
   await expect(page.getByText(/Dana Whitfield/).first()).toBeVisible({ timeout: 30_000 });

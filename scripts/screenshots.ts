@@ -28,7 +28,7 @@ async function main() {
   // 2. live call mid-flow
   await page.goto(`${APP}/call/helpdesk-pretext`);
   await page.getByRole("button", { name: "Start call" }).click();
-  await page.getByText("LIVE", { exact: true }).waitFor({ timeout: 20000 });
+  await page.getByText(/conn · LIVE|LIVE/).first().waitFor({ timeout: 20000 });
   await page.getByText(/Dana Whitfield/).first().waitFor({ timeout: 30000 });
   await page.waitForTimeout(9000);
   await page.screenshot({ path: `${OUT}/02-live-call.png` });

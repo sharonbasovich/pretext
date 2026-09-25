@@ -102,3 +102,58 @@ html, body {
   overflow: hidden;
 }
 .meter-fill { height: 100%; border-radius: 999px; transition: width 0.4s; }
+
+/* speaker activity chips (live console) */
+.speaker-chip {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  opacity: 0.45;
+  transition: opacity 0.15s;
+}
+.speaker-you-on {
+  opacity: 1;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.speaker-caller-on {
+  opacity: 1;
+  color: var(--warn);
+  border-color: var(--warn);
+  animation: blink 1s infinite;
+}
+.tag-interrupted {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--warn);
+  border: 1px solid var(--warn);
+}
+
+/* mic input level meter */
+.mic-meter {
+  display: inline-block;
+  width: 84px;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--panel-2, #111a26);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  vertical-align: middle;
+}
+.mic-meter-fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--held) 0%, var(--warn) 80%, var(--breach) 100%);
+  transition: width 0.08s linear;
+}

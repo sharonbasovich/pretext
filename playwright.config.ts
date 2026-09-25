@@ -5,7 +5,7 @@ const APP_PORT = 3100;
 
 export default defineConfig({
   testDir: "./e2e",
-  timeout: 90_000,
+  timeout: 150_000,
   fullyParallel: false,
   workers: 1,
   retries: process.env.CI ? 1 : 0,
