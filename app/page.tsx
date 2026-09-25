@@ -7,6 +7,7 @@ export default function Lobby() {
       <header className="mb-10">
         <div className="mb-2 flex items-center gap-3">
           <span className="pill pill-warn">training simulator</span>
+          <span className="pill pill-muted">AssemblyAI Voice Agent API</span>
           <span className="text-sm" style={{ color: "var(--muted)" }}>
             fictional company: Northwind Utilities
           </span>
@@ -26,13 +27,31 @@ export default function Lobby() {
         </p>
       </header>
 
+      {/* how it works — 3-step strip */}
+      <section className="mb-8 grid gap-3 sm:grid-cols-3">
+        <div className="panel p-4">
+          <div className="mb-1 text-xs font-bold uppercase tracking-wider" style={{ color: "var(--accent)" }}>1 · The call</div>
+          <p className="text-xs" style={{ color: "var(--muted)" }}>
+            An AI voice agent phones in character — angry, confused, or running a pretext. You answer as the employee.
+          </p>
+        </div>
+        <div className="panel p-4">
+          <div className="mb-1 text-xs font-bold uppercase tracking-wider" style={{ color: "var(--warn)" }}>2 · The trip-wire</div>
+          <p className="text-xs" style={{ color: "var(--muted)" }}>
+            Hand over a protected action and the agent fires a tool call — BREACH lands live on screen.
+          </p>
+        </div>
+        <div className="panel p-4">
+          <div className="mb-1 text-xs font-bold uppercase tracking-wider" style={{ color: "var(--held)" }}>3 · The debrief</div>
+          <p className="text-xs" style={{ color: "var(--muted)" }}>
+            The same voice drops character and coaches: rubric hits, evidence spans, latency metrics.
+          </p>
+        </div>
+      </section>
+
       <div className="grid gap-4 md:grid-cols-2">
         {SCENARIOS.map((s) => (
-          <Link
-            key={s.id}
-            href={`/call/${s.id}`}
-            className="panel block p-5 transition-transform hover:-translate-y-0.5"
-          >
+          <div key={s.id} className="panel block p-5">
             <div className="mb-2 flex items-center justify-between">
               <h2 className="text-xl font-bold">{s.title}</h2>
               <span className="pill pill-muted">~{Math.round(s.approx_seconds / 60)} min</span>
@@ -46,10 +65,15 @@ export default function Lobby() {
                 <li key={o}>· {o}</li>
               ))}
             </ul>
-            <div className="mt-4 text-sm font-semibold" style={{ color: "var(--accent)" }}>
-              Start call →
+            <div className="mt-4 flex items-center justify-between">
+              <Link className="text-sm font-semibold" style={{ color: "var(--accent)" }} href={`/call/${s.id}`}>
+                Start call →
+              </Link>
+              <Link className="text-xs font-semibold" style={{ color: "var(--muted)" }} href={`/call/${s.id}?replay=1`}>
+                No mic? Watch a replay ↗
+              </Link>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 
