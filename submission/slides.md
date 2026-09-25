@@ -112,6 +112,23 @@ director: conversation.message nudges · session.update escalation
 
 ---
 
+## What's live vs mock-verified (honesty slide)
+
+**Verified end-to-end against our own mock agent** (same wire protocol,
+same reducer, same UI): full call → trip-wire → BREACH verdict →
+persona→coach debrief → JSON export — plus Playwright E2E + 39 unit tests
+(lint · typecheck · build all green; CI workflow ships in-repo).
+
+**Live path — built to the docs, awaiting an API key:** token minting,
+stored-agent publish, session-history playback are implemented and
+unit-tested but not yet exercised against production AssemblyAI.
+
+This deck makes no claim we haven't run. The replay fixtures you see in the
+demo are labeled **REPLAY (recorded)** in the UI and are never passed off as
+live.
+
+---
+
 ## Business model & market
 
 - **Buyers:** CISO / security-awareness lead (vishing drills), contact-center

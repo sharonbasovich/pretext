@@ -88,14 +88,35 @@ Scripts: `npm run lint` · `npm run typecheck` · `npm test` · `npm run build` 
 `PRETEXT_DAILY_SESSION_CAP` (default 200), `PRETEXT_DEMO_PASSCODE`,
 `PRETEXT_MAX_SESSION_SECONDS` (default/max 240).
 
+Run `npm run publish` once after setting the key — it upserts the stored
+agents and writes `agents.lock.json`. Without a stored agent,
+`/api/agent-config` answers **503 `stored_agent_required`** because inline
+configs would ship the attacker's playbook (full persona prompt + tool
+schemas) to every trainee's browser. `PRETEXT_EXPOSE_INLINE=1` opts back in
+for local debugging; `PRETEXT_MOCK=1` is always exempt.
+
+Cost-control note: the per-IP rate limit and the daily session cap live in
+route-handler memory, so on Vercel they're **per serverless instance —
+best-effort**. `max_session_duration_seconds` is the only hard guarantee,
+enforced by AssemblyAI. For anything stricter, front the token route with a
+shared store (e.g. Upstash) — or set `PRETEXT_DEMO_PASSCODE`.
+
 ## Known limitations
 
-Persona drift, trip-wire false ±, STT digit errors, echo on Firefox/Safari
-without headphones, API latency/outage (Replay mode is the fallback),
-public-demo cost exposure (rate-limited + capped), scoring is a training aid
-not certification, single-mic only (no diarization), and ethics/scope:
-personas target only fictional Northwind Utilities — defensive awareness
-training in the same category as phishing sims. See `docs/DECISIONS.md`.
+Persona drift, trip-wire false ±, STT digit errors, API latency/outage
+(Replay mode is the fallback), public-demo cost exposure (rate-limited +
+capped), scoring is a training aid not certification, single-mic only
+(no diarization), and ethics/scope: personas target only fictional
+Northwind Utilities — defensive awareness training in the same category as
+phishing sims.
+
+**Audio caveats:** Firefox can echo/self-interrupt without headphones — we
+force a 24 kHz AudioContext; the docs' production guidance is a default-rate
+context + worklet-side resampling, which this app does when the rate isn't
+honored (e.g. Safari). Chrome + headphones is the recommended demo setup.
+**Coach voice:** `output.voice` is immutable mid-session, so the debrief is
+spoken in the caller's voice — the UI says so at the switch. See
+`docs/DECISIONS.md`.
 
 ## License
 
