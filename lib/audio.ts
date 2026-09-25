@@ -47,7 +47,7 @@ export class MicCapture {
   private node: AudioWorkletNode | null = null;
   private source: MediaStreamAudioSourceNode | null = null;
 
-  async start(onChunk: PcmChunkHandler): Promise<void> {
+  async start(onChunk: PcmChunkHandler, onLevel?: (level: number) => void): Promise<void> {
     this.stream = await navigator.mediaDevices.getUserMedia({
       audio: { echoCancellation: true, noiseSuppression: false, channelCount: 1 },
     });
@@ -64,6 +64,14 @@ export class MicCapture {
     this.node = new AudioWorkletNode(ctx, "pcm-capture");
     this.node.port.onmessage = (ev: MessageEvent<ArrayBuffer>) => {
       const pcm = new Int16Array(ev.data);
+      if (onLevel) {
+        let peak = 0;
+        for (let i = 0; i < pcm.length; i += 8) {
+          const a = Math.abs(pcm[i]);
+          if (a > peak) peak = a;
+        }
+        onLevel(Math.min(1, peak / 0x8000));
+      }
       onChunk(rate === TARGET_RATE ? pcm : resampleLinear(pcm, rate, TARGET_RATE));
     };
     this.source.connect(this.node);
@@ -88,20 +96,32 @@ export class PcmPlayer {
   private nextStart = 0;
   private active: AudioBufferSourceNode[] = [];
 
-  private ensureCtx(): AudioContext {
-    if (!this.ctx || this.ctx.state === "closed") {
-      try {
-        this.ctx = new AudioContext({ sampleRate: TARGET_RATE });
-      } catch {
-        this.ctx = new AudioContext();
-      }
+  private createCtx(): AudioContext {
+    try {
+      return new AudioContext({ sampleRate: TARGET_RATE });
+    } catch {
+      return new AudioContext();
     }
+  }
+
+  /** Create and resume the AudioContext inside the user's click gesture so
+   * autoplay policy allows playback. Call from the same handler that opens
+   * the WebSocket — never lazily on first audio. */
+  async prime(): Promise<void> {
+    if (!this.ctx || this.ctx.state === "closed") this.ctx = this.createCtx();
+    if (this.ctx.state === "suspended") await this.ctx.resume();
+  }
+
+  private ensureCtx(): AudioContext {
+    if (!this.ctx || this.ctx.state === "closed") this.ctx = this.createCtx();
     return this.ctx;
   }
 
   /** Append a base64 PCM16@24kHz chunk to the playback queue. */
   enqueue(base64: string) {
     const ctx = this.ensureCtx();
+    // Fallback for contexts that ended up suspended despite prime().
+    if (ctx.state === "suspended") void ctx.resume();
     const pcm = base64ToPcm16(base64);
     // If the context runs at another rate (Safari), resample to it.
     const data = ctx.sampleRate === TARGET_RATE ? pcm : resampleLinear(pcm, TARGET_RATE, ctx.sampleRate);

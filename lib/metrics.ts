@@ -91,6 +91,8 @@ interface Tracker {
   lastSpeechStoppedAt: number | null;
   speechStartedAt: number | null;
   replyStartedAt: number | null;
+  /** PCM bytes observed in the current reply's reply.audio events. */
+  replyAudioBytes: number;
   lastActivityAt: number | null;
   seenReady: boolean;
   greetingSeen: boolean;
@@ -105,6 +107,7 @@ export class MetricsTracker {
     lastSpeechStoppedAt: null,
     speechStartedAt: null,
     replyStartedAt: null,
+    replyAudioBytes: 0,
     lastActivityAt: null,
     seenReady: false,
     greetingSeen: false,
@@ -141,6 +144,7 @@ export class MetricsTracker {
         break;
       case "reply.started":
         t.replyStartedAt = atMs;
+        t.replyAudioBytes = 0;
         if (t.seenReady && !t.greetingSeen) {
           m.greeting_ttfb_ms = Math.max(0, atMs);
           t.greetingSeen = true;
@@ -149,10 +153,22 @@ export class MetricsTracker {
           t.lastSpeechStoppedAt = null;
         }
         break;
+      case "reply.audio":
+        // base64 expands ~4/3 over raw bytes; PCM16 mono = 2 bytes per
+        // sample at 24000 Hz → 48000 bytes per second of speech.
+        t.replyAudioBytes += Math.floor(event.data.length * 0.75);
+        break;
       case "reply.done":
         if (t.replyStartedAt !== null) {
-          m.agent_reply_ms += Math.max(0, atMs - t.replyStartedAt);
+          // Audio streams faster than realtime, so wall time understates
+          // speech; derive it from payload bytes when audio events exist.
+          if (t.replyAudioBytes > 0) {
+            m.agent_reply_ms += t.replyAudioBytes / 48;
+          } else {
+            m.agent_reply_ms += Math.max(0, atMs - t.replyStartedAt);
+          }
           t.replyStartedAt = null;
+          t.replyAudioBytes = 0;
         }
         m.agent_replies += 1;
         if (event.status === "interrupted") m.trainee_interruptions += 1;

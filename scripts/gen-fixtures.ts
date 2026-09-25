@@ -19,6 +19,12 @@ interface TimedEvent {
 let n = 0;
 const nid = (p: string) => `${p}_fix${(++n).toString(36)}`;
 
+/** Rough speech duration for a scripted line: ~14 chars/sec spoken English —
+ *  matches mock/server.ts so Replay and live-mock report the same talk ratio. */
+function speechMs(text: string): number {
+  return Math.min(9000, Math.max(700, (text.length / 14) * 1000));
+}
+
 function agentReply(t0: number, text: string): { events: TimedEvent[]; end: number } {
   const replyId = nid("reply");
   const evs: TimedEvent[] = [{ at_ms: t0, event: { type: "reply.started", reply_id: replyId } }];
@@ -36,14 +42,15 @@ function agentReply(t0: number, text: string): { events: TimedEvent[]; end: numb
 
 function userTurn(t0: number, text: string): { events: TimedEvent[]; end: number } {
   const itemId = nid("item");
+  const dur = speechMs(text);
   const evs: TimedEvent[] = [
     { at_ms: t0, event: { type: "input.speech.started" } },
-    { at_ms: t0 + 200, event: { type: "transcript.user.delta", item_id: itemId, text: text.slice(0, Math.ceil(text.length / 2)) } },
-    { at_ms: t0 + 500, event: { type: "transcript.user.delta", item_id: itemId, text } },
-    { at_ms: t0 + 800, event: { type: "input.speech.stopped" } },
-    { at_ms: t0 + 850, event: { type: "transcript.user", item_id: itemId, text } },
+    { at_ms: t0 + Math.round(dur * 0.3), event: { type: "transcript.user.delta", item_id: itemId, text: text.slice(0, Math.ceil(text.length / 2)) } },
+    { at_ms: t0 + Math.round(dur * 0.7), event: { type: "transcript.user.delta", item_id: itemId, text } },
+    { at_ms: t0 + dur, event: { type: "input.speech.stopped" } },
+    { at_ms: t0 + dur + 50, event: { type: "transcript.user", item_id: itemId, text } },
   ];
-  return { events: evs, end: t0 + 850 };
+  return { events: evs, end: t0 + dur + 50 };
 }
 
 function toolCall(t0: number, name: string, args: Record<string, unknown>): { events: TimedEvent[]; end: number } {

@@ -22,6 +22,11 @@ const nid = (p: string) => `${p}_mock${(++seq).toString(36)}${Date.now().toStrin
 
 const SILENT_PCM_40MS = Buffer.alloc(24000 * 2 * 0.04).toString("base64"); // zeros, 24kHz s16le
 
+/** Rough speech duration for a scripted line: ~14 chars/sec spoken English. */
+function speechMs(text: string): number {
+  return Math.min(9000, Math.max(700, (text.length / 14) * 1000));
+}
+
 function silentAudioChunks(ms: number): { type: "reply.audio"; data: string }[] {
   const chunks = Math.max(1, Math.round(ms / 40));
   return Array.from({ length: chunks }, () => ({ type: "reply.audio" as const, data: SILENT_PCM_40MS }));
@@ -74,8 +79,7 @@ class MockSession {
   async emitAgentReply(text: string, opts: { interrupted?: boolean } = {}) {
     const replyId = nid("reply");
     this.send({ type: "reply.started", reply_id: replyId });
-    // Rough speech duration: ~14 chars/sec spoken English.
-    const durMs = Math.min(9000, Math.max(700, (text.length / 14) * 1000));
+    const durMs = speechMs(text);
     for (const chunk of silentAudioChunks(durMs)) this.send(chunk);
     const words = text.split(" ");
     let t = 0;
@@ -91,12 +95,16 @@ class MockSession {
 
   async emitUserTurn(text: string) {
     const itemId = nid("item");
+    // Trainee speech duration derives from the scripted line at the same
+    // ~14 chars/s rate as the agent — fake-mic frames are only the trigger,
+    // not the duration, so talk ratio stays plausible (~40/60).
+    const durMs = speechMs(text);
     this.send({ type: "input.speech.started" });
     const half = Math.ceil(text.length / 2);
     this.send({ type: "transcript.user.delta", item_id: itemId, text: text.slice(0, half) });
-    await sleep(450);
+    await sleep(Math.round(durMs * 0.55));
     this.send({ type: "transcript.user.delta", item_id: itemId, text });
-    await sleep(300);
+    await sleep(Math.round(durMs * 0.45));
     this.send({ type: "input.speech.stopped" });
     this.send({ type: "transcript.user", item_id: itemId, text });
   }
