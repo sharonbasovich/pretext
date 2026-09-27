@@ -140,14 +140,14 @@ export default function CallConsole({ scenario }: { scenario: Scenario }) {
   return (
     <main className="mx-auto flex min-h-screen max-w-6xl flex-col px-6 py-6">
       {/* header */}
-      <div className="mb-4 flex items-center justify-between">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-extrabold">{scenario.title}</h1>
           <p className="text-xs" style={{ color: "var(--muted)" }}>
             {scenario.persona_name} · {scenario.persona_role} — you are the {scenario.trainee_role}
           </p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2">
           {replay && <span className="pill pill-warn">REPLAY · recorded mock</span>}
           {mock && <span className="pill pill-muted">mock agent</span>}
           <span className={`pill ${conn.cls}`}>conn · {conn.label}</span>
@@ -162,13 +162,13 @@ export default function CallConsole({ scenario }: { scenario: Scenario }) {
 
       {/* verdict banner */}
       {replay && (
-        <div className="mb-4 rounded-lg border px-4 py-2 text-xs" style={{ borderColor: "var(--warn)", background: "rgba(245,158,11,0.08)", color: "var(--warn)" }}>
+        <div role="note" className="mb-4 rounded-lg border px-4 py-2 text-xs" style={{ borderColor: "var(--warn)", background: "rgba(245,158,11,0.08)", color: "var(--warn)" }}>
           REPLAY — recorded mock-agent session. No live audio or agent; every event below is replayed from a fixture.
         </div>
       )}
 
       {state.verdict === "breach" && (
-        <div className="banner-breach mb-4 rounded-lg border-2 px-6 py-4" style={{ borderColor: "var(--breach)", background: "rgba(239,68,68,0.10)" }}>
+        <div role="alert" aria-live="assertive" className="banner-breach mb-4 rounded-lg border-2 px-6 py-4" style={{ borderColor: "var(--breach)", background: "rgba(239,68,68,0.10)" }}>
           <div className="text-3xl font-black tracking-wide" style={{ color: "var(--breach)" }}>
             BREACH — {state.breach?.action.replaceAll("_", " ")}
           </div>
@@ -178,7 +178,7 @@ export default function CallConsole({ scenario }: { scenario: Scenario }) {
         </div>
       )}
       {state.verdict === "held" && (
-        <div className="mb-4 rounded-lg border-2 px-6 py-4" style={{ borderColor: "var(--held)", background: "rgba(34,197,94,0.10)" }}>
+        <div role="alert" aria-live="assertive" className="mb-4 rounded-lg border-2 px-6 py-4" style={{ borderColor: "var(--held)", background: "rgba(34,197,94,0.10)" }}>
           <div className="text-3xl font-black tracking-wide" style={{ color: "var(--held)" }}>
             HELD THE LINE
           </div>
@@ -247,7 +247,7 @@ export default function CallConsole({ scenario }: { scenario: Scenario }) {
                 </span>
               </div>
             </div>
-            <div ref={captionsRef} className="caption-scroll flex-1 space-y-3 overflow-y-auto pr-2" style={{ maxHeight: 460 }}>
+            <div ref={captionsRef} role="log" aria-live="polite" aria-label="Live captions" className="caption-scroll flex-1 space-y-3 overflow-y-auto pr-2" style={{ maxHeight: 460 }}>
               {state.captions.map((c) => (
                 <div key={c.id} className={c.speaker === "user" ? "text-right" : "text-left"}>
                   <div className="mb-0.5 text-[10px] font-bold uppercase tracking-wider" style={{ color: "var(--muted)" }}>

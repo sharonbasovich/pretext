@@ -15,14 +15,14 @@
   "at_ms": 400,
   "event": {
    "type": "reply.started",
-   "reply_id": "reply_fixu"
+   "reply_id": "reply_fix1m"
   }
  },
  {
   "at_ms": 400,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "Hi, ",
    "start_ms": 0,
    "end_ms": 180
@@ -32,7 +32,7 @@
   "at_ms": 580,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "it's ",
    "start_ms": 180,
    "end_ms": 420
@@ -42,7 +42,7 @@
   "at_ms": 820,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "Dana ",
    "start_ms": 420,
    "end_ms": 660
@@ -52,7 +52,7 @@
   "at_ms": 1060,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "Whitfield ",
    "start_ms": 660,
    "end_ms": 1200
@@ -62,7 +62,7 @@
   "at_ms": 1600,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "— ",
    "start_ms": 1200,
    "end_ms": 1280
@@ -72,7 +72,7 @@
   "at_ms": 1680,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "I'm ",
    "start_ms": 1280,
    "end_ms": 1460
@@ -82,7 +82,7 @@
   "at_ms": 1860,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "completely ",
    "start_ms": 1460,
    "end_ms": 2060
@@ -92,7 +92,7 @@
   "at_ms": 2460,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "locked ",
    "start_ms": 2060,
    "end_ms": 2420
@@ -102,7 +102,7 @@
   "at_ms": 2820,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "out ",
    "start_ms": 2420,
    "end_ms": 2600
@@ -112,7 +112,7 @@
   "at_ms": 3000,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "of ",
    "start_ms": 2600,
    "end_ms": 2720
@@ -122,7 +122,7 @@
   "at_ms": 3120,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "my ",
    "start_ms": 2720,
    "end_ms": 2840
@@ -132,7 +132,7 @@
   "at_ms": 3240,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "account ",
    "start_ms": 2840,
    "end_ms": 3260
@@ -142,7 +142,7 @@
   "at_ms": 3660,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "and ",
    "start_ms": 3260,
    "end_ms": 3440
@@ -152,7 +152,7 @@
   "at_ms": 3840,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "I ",
    "start_ms": 3440,
    "end_ms": 3520
@@ -162,7 +162,7 @@
   "at_ms": 3920,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "have ",
    "start_ms": 3520,
    "end_ms": 3760
@@ -172,7 +172,7 @@
   "at_ms": 4160,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "a ",
    "start_ms": 3760,
    "end_ms": 3840
@@ -182,7 +182,7 @@
   "at_ms": 4240,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "board ",
    "start_ms": 3840,
    "end_ms": 4140
@@ -192,7 +192,7 @@
   "at_ms": 4540,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "call ",
    "start_ms": 4140,
    "end_ms": 4380
@@ -202,7 +202,7 @@
   "at_ms": 4780,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "in ",
    "start_ms": 4380,
    "end_ms": 4500
@@ -212,7 +212,7 @@
   "at_ms": 4900,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "an ",
    "start_ms": 4500,
    "end_ms": 4620
@@ -222,7 +222,7 @@
   "at_ms": 5020,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "delta": "hour. ",
    "start_ms": 4620,
    "end_ms": 4920
@@ -232,7 +232,7 @@
   "at_ms": 5320,
   "event": {
    "type": "transcript.agent",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "text": "Hi, it's Dana Whitfield — I'm completely locked out of my account and I have a board call in an hour."
   }
  },
@@ -240,7 +240,7 @@
   "at_ms": 5370,
   "event": {
    "type": "reply.done",
-   "reply_id": "reply_fixu",
+   "reply_id": "reply_fix1m",
    "status": "completed"
   }
  },
@@ -254,7 +254,7 @@
   "at_ms": 8334,
   "event": {
    "type": "transcript.user.delta",
-   "item_id": "item_fixv",
+   "item_id": "item_fix1n",
    "text": "Okay Dana, I can help. Can I get your"
   }
  },
@@ -262,7 +262,7 @@
   "at_ms": 10420,
   "event": {
    "type": "transcript.user.delta",
-   "item_id": "item_fixv",
+   "item_id": "item_fix1n",
    "text": "Okay Dana, I can help. Can I get your employee ID to pull up the account?"
   }
  },
@@ -276,7 +276,7 @@
   "at_ms": 12034.285714285714,
   "event": {
    "type": "transcript.user",
-   "item_id": "item_fixv",
+   "item_id": "item_fix1n",
    "text": "Okay Dana, I can help. Can I get your employee ID to pull up the account?"
   }
  },
@@ -284,14 +284,14 @@
   "at_ms": 13134.285714285714,
   "event": {
    "type": "reply.started",
-   "reply_id": "reply_fixw"
+   "reply_id": "reply_fix1o"
   }
  },
  {
   "at_ms": 13134.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "It's ",
    "start_ms": 0,
    "end_ms": 240
@@ -301,7 +301,7 @@
   "at_ms": 13374.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "W-4471. ",
    "start_ms": 240,
    "end_ms": 660
@@ -311,7 +311,7 @@
   "at_ms": 13794.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "Look, ",
    "start_ms": 660,
    "end_ms": 960
@@ -321,7 +321,7 @@
   "at_ms": 14094.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "I ",
    "start_ms": 960,
    "end_ms": 1040
@@ -331,7 +331,7 @@
   "at_ms": 14174.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "really ",
    "start_ms": 1040,
    "end_ms": 1400
@@ -341,7 +341,7 @@
   "at_ms": 14534.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "don't ",
    "start_ms": 1400,
    "end_ms": 1700
@@ -351,7 +351,7 @@
   "at_ms": 14834.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "have ",
    "start_ms": 1700,
    "end_ms": 1940
@@ -361,7 +361,7 @@
   "at_ms": 15074.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "time ",
    "start_ms": 1940,
    "end_ms": 2180
@@ -371,7 +371,7 @@
   "at_ms": 15314.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "for ",
    "start_ms": 2180,
    "end_ms": 2360
@@ -381,7 +381,7 @@
   "at_ms": 15494.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "the ",
    "start_ms": 2360,
    "end_ms": 2540
@@ -391,7 +391,7 @@
   "at_ms": 15674.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "full ",
    "start_ms": 2540,
    "end_ms": 2780
@@ -401,7 +401,7 @@
   "at_ms": 15914.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "process ",
    "start_ms": 2780,
    "end_ms": 3200
@@ -411,7 +411,7 @@
   "at_ms": 16334.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "— ",
    "start_ms": 3200,
    "end_ms": 3280
@@ -421,7 +421,7 @@
   "at_ms": 16414.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "the ",
    "start_ms": 3280,
    "end_ms": 3460
@@ -431,7 +431,7 @@
   "at_ms": 16594.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "board ",
    "start_ms": 3460,
    "end_ms": 3760
@@ -441,7 +441,7 @@
   "at_ms": 16894.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "call ",
    "start_ms": 3760,
    "end_ms": 4000
@@ -451,7 +451,7 @@
   "at_ms": 17134.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "starts ",
    "start_ms": 4000,
    "end_ms": 4360
@@ -461,7 +461,7 @@
   "at_ms": 17494.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "in ",
    "start_ms": 4360,
    "end_ms": 4480
@@ -471,7 +471,7 @@
   "at_ms": 17614.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "forty ",
    "start_ms": 4480,
    "end_ms": 4780
@@ -481,7 +481,7 @@
   "at_ms": 17914.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "delta": "minutes. ",
    "start_ms": 4780,
    "end_ms": 5260
@@ -491,7 +491,7 @@
   "at_ms": 18394.285714285714,
   "event": {
    "type": "transcript.agent",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "text": "It's W-4471. Look, I really don't have time for the full process — the board call starts in forty minutes."
   }
  },
@@ -499,7 +499,7 @@
   "at_ms": 18444.285714285714,
   "event": {
    "type": "reply.done",
-   "reply_id": "reply_fixw",
+   "reply_id": "reply_fix1o",
    "status": "completed"
   }
  },
@@ -507,14 +507,14 @@
   "at_ms": 18744.285714285714,
   "event": {
    "type": "reply.started",
-   "reply_id": "fc-call_fixx"
+   "reply_id": "fc-call_fix1p"
   }
  },
  {
   "at_ms": 18794.285714285714,
   "event": {
    "type": "tool.call",
-   "call_id": "call_fixy",
+   "call_id": "call_fix1q",
    "name": "log_observation",
    "arguments": {
     "observation": "verified_identity",
@@ -526,7 +526,7 @@
   "at_ms": 18844.285714285714,
   "event": {
    "type": "reply.done",
-   "reply_id": "fc-call_fixx",
+   "reply_id": "fc-call_fix1p",
    "status": "completed"
   }
  },
@@ -540,7 +540,7 @@
   "at_ms": 22444.285714285714,
   "event": {
    "type": "transcript.user.delta",
-   "item_id": "item_fixz",
+   "item_id": "item_fix1r",
    "text": "Got it, W-4471. Just so you know, our policy is I can't reset MFA on"
   }
  },
@@ -548,7 +548,7 @@
   "at_ms": 26044.285714285714,
   "event": {
    "type": "transcript.user.delta",
-   "item_id": "item_fixz",
+   "item_id": "item_fix1r",
    "text": "Got it, W-4471. Just so you know, our policy is I can't reset MFA on an inbound call — I'd need to call you back at the number on file."
   }
  },
@@ -562,7 +562,7 @@
   "at_ms": 28794.285714285714,
   "event": {
    "type": "transcript.user",
-   "item_id": "item_fixz",
+   "item_id": "item_fix1r",
    "text": "Got it, W-4471. Just so you know, our policy is I can't reset MFA on an inbound call — I'd need to call you back at the number on file."
   }
  },
@@ -570,14 +570,14 @@
   "at_ms": 29794.285714285714,
   "event": {
    "type": "reply.started",
-   "reply_id": "reply_fix10"
+   "reply_id": "reply_fix1s"
   }
  },
  {
   "at_ms": 29794.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "I ",
    "start_ms": 0,
    "end_ms": 80
@@ -587,7 +587,7 @@
   "at_ms": 29874.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "know ",
    "start_ms": 80,
    "end_ms": 320
@@ -597,7 +597,7 @@
   "at_ms": 30114.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "what ",
    "start_ms": 320,
    "end_ms": 560
@@ -607,7 +607,7 @@
   "at_ms": 30354.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "the ",
    "start_ms": 560,
    "end_ms": 740
@@ -617,7 +617,7 @@
   "at_ms": 30534.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "policy ",
    "start_ms": 740,
    "end_ms": 1100
@@ -627,7 +627,7 @@
   "at_ms": 30894.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "says, ",
    "start_ms": 1100,
    "end_ms": 1400
@@ -637,7 +637,7 @@
   "at_ms": 31194.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "but ",
    "start_ms": 1400,
    "end_ms": 1580
@@ -647,7 +647,7 @@
   "at_ms": 31374.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "Marcus ",
    "start_ms": 1580,
    "end_ms": 1940
@@ -657,7 +657,7 @@
   "at_ms": 31734.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "Bell ",
    "start_ms": 1940,
    "end_ms": 2180
@@ -667,7 +667,7 @@
   "at_ms": 31974.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "can ",
    "start_ms": 2180,
    "end_ms": 2360
@@ -677,7 +677,7 @@
   "at_ms": 32154.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "vouch ",
    "start_ms": 2360,
    "end_ms": 2660
@@ -687,7 +687,7 @@
   "at_ms": 32454.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "for ",
    "start_ms": 2660,
    "end_ms": 2840
@@ -697,7 +697,7 @@
   "at_ms": 32634.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "me ",
    "start_ms": 2840,
    "end_ms": 2960
@@ -707,7 +707,7 @@
   "at_ms": 32754.285714285714,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "— ",
    "start_ms": 2960,
    "end_ms": 3040
@@ -717,7 +717,7 @@
   "at_ms": 32834.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "ask ",
    "start_ms": 3039.9999999999964,
    "end_ms": 3219.9999999999964
@@ -727,7 +727,7 @@
   "at_ms": 33014.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "him. ",
    "start_ms": 3219.9999999999964,
    "end_ms": 3459.9999999999964
@@ -737,7 +737,7 @@
   "at_ms": 33254.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "Can ",
    "start_ms": 3459.9999999999964,
    "end_ms": 3639.9999999999964
@@ -747,7 +747,7 @@
   "at_ms": 33434.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "you ",
    "start_ms": 3639.9999999999964,
    "end_ms": 3819.9999999999964
@@ -757,7 +757,7 @@
   "at_ms": 33614.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "just ",
    "start_ms": 3819.9999999999964,
    "end_ms": 4059.9999999999964
@@ -767,7 +767,7 @@
   "at_ms": 33854.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "push ",
    "start_ms": 4059.9999999999964,
    "end_ms": 4299.999999999996
@@ -777,7 +777,7 @@
   "at_ms": 34094.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "the ",
    "start_ms": 4299.999999999996,
    "end_ms": 4479.999999999996
@@ -787,7 +787,7 @@
   "at_ms": 34274.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "reset ",
    "start_ms": 4479.999999999996,
    "end_ms": 4779.999999999996
@@ -797,7 +797,7 @@
   "at_ms": 34574.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "through ",
    "start_ms": 4779.999999999996,
    "end_ms": 5199.999999999996
@@ -807,7 +807,7 @@
   "at_ms": 34994.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "this ",
    "start_ms": 5199.999999999996,
    "end_ms": 5439.999999999996
@@ -817,7 +817,7 @@
   "at_ms": 35234.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "delta": "once? ",
    "start_ms": 5439.999999999996,
    "end_ms": 5739.999999999996
@@ -827,7 +827,7 @@
   "at_ms": 35534.28571428571,
   "event": {
    "type": "transcript.agent",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "text": "I know what the policy says, but Marcus Bell can vouch for me — ask him. Can you just push the reset through this once?"
   }
  },
@@ -835,7 +835,7 @@
   "at_ms": 35584.28571428571,
   "event": {
    "type": "reply.done",
-   "reply_id": "reply_fix10",
+   "reply_id": "reply_fix1s",
    "status": "completed"
   }
  },
@@ -843,14 +843,14 @@
   "at_ms": 35884.28571428571,
   "event": {
    "type": "reply.started",
-   "reply_id": "fc-call_fix11"
+   "reply_id": "fc-call_fix1t"
   }
  },
  {
   "at_ms": 35934.28571428571,
   "event": {
    "type": "tool.call",
-   "call_id": "call_fix12",
+   "call_id": "call_fix1u",
    "name": "log_observation",
    "arguments": {
     "observation": "offered_callback",
@@ -862,7 +862,7 @@
   "at_ms": 35984.28571428571,
   "event": {
    "type": "reply.done",
-   "reply_id": "fc-call_fix11",
+   "reply_id": "fc-call_fix1t",
    "status": "completed"
   }
  },
@@ -876,7 +876,7 @@
   "at_ms": 39584.28571428571,
   "event": {
    "type": "transcript.user.delta",
-   "item_id": "item_fix13",
+   "item_id": "item_fix1v",
    "text": "I hear you, and I know it's frustrating — but I'm not able to do that. What I can do is "
   }
  },
@@ -884,7 +884,7 @@
   "at_ms": 43184.28571428571,
   "event": {
    "type": "transcript.user.delta",
-   "item_id": "item_fix13",
+   "item_id": "item_fix1v",
    "text": "I hear you, and I know it's frustrating — but I'm not able to do that. What I can do is open a ticket right now and call you back at the number on file in the next few minutes."
   }
  },
@@ -898,7 +898,7 @@
   "at_ms": 45934.28571428571,
   "event": {
    "type": "transcript.user",
-   "item_id": "item_fix13",
+   "item_id": "item_fix1v",
    "text": "I hear you, and I know it's frustrating — but I'm not able to do that. What I can do is open a ticket right now and call you back at the number on file in the next few minutes."
   }
  },
@@ -906,14 +906,14 @@
   "at_ms": 47134.28571428571,
   "event": {
    "type": "reply.started",
-   "reply_id": "reply_fix14"
+   "reply_id": "reply_fix1w"
   }
  },
  {
   "at_ms": 47134.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "This ",
    "start_ms": 0,
    "end_ms": 240
@@ -923,7 +923,7 @@
   "at_ms": 47374.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "is ",
    "start_ms": 240,
    "end_ms": 360
@@ -933,7 +933,7 @@
   "at_ms": 47494.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "absurd. ",
    "start_ms": 360,
    "end_ms": 780
@@ -943,7 +943,7 @@
   "at_ms": 47914.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "I'm ",
    "start_ms": 780,
    "end_ms": 960
@@ -953,7 +953,7 @@
   "at_ms": 48094.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "the ",
    "start_ms": 960,
    "end_ms": 1140
@@ -963,7 +963,7 @@
   "at_ms": 48274.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "CFO. ",
    "start_ms": 1140,
    "end_ms": 1380
@@ -973,7 +973,7 @@
   "at_ms": 48514.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "Do ",
    "start_ms": 1380,
    "end_ms": 1500
@@ -983,7 +983,7 @@
   "at_ms": 48634.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "you ",
    "start_ms": 1500,
    "end_ms": 1680
@@ -993,7 +993,7 @@
   "at_ms": 48814.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "know ",
    "start_ms": 1680,
    "end_ms": 1920
@@ -1003,7 +1003,7 @@
   "at_ms": 49054.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "who ",
    "start_ms": 1920,
    "end_ms": 2100
@@ -1013,7 +1013,7 @@
   "at_ms": 49234.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "signs ",
    "start_ms": 2100,
    "end_ms": 2400
@@ -1023,7 +1023,7 @@
   "at_ms": 49534.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "your ",
    "start_ms": 2400,
    "end_ms": 2640
@@ -1033,7 +1033,7 @@
   "at_ms": 49774.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "budget? ",
    "start_ms": 2640,
    "end_ms": 3060
@@ -1043,7 +1043,7 @@
   "at_ms": 50194.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "Push ",
    "start_ms": 3060,
    "end_ms": 3300
@@ -1053,7 +1053,7 @@
   "at_ms": 50434.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "the ",
    "start_ms": 3300,
    "end_ms": 3480
@@ -1063,7 +1063,7 @@
   "at_ms": 50614.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "reset ",
    "start_ms": 3480,
    "end_ms": 3780
@@ -1073,7 +1073,7 @@
   "at_ms": 50914.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "through ",
    "start_ms": 3780,
    "end_ms": 4200
@@ -1083,7 +1083,7 @@
   "at_ms": 51334.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "or ",
    "start_ms": 4200,
    "end_ms": 4320
@@ -1093,7 +1093,7 @@
   "at_ms": 51454.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "I ",
    "start_ms": 4320,
    "end_ms": 4400
@@ -1103,7 +1103,7 @@
   "at_ms": 51534.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "escalate ",
    "start_ms": 4400,
    "end_ms": 4880
@@ -1113,7 +1113,7 @@
   "at_ms": 52014.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "this ",
    "start_ms": 4880,
    "end_ms": 5120
@@ -1123,7 +1123,7 @@
   "at_ms": 52254.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "to ",
    "start_ms": 5120,
    "end_ms": 5240
@@ -1133,7 +1133,7 @@
   "at_ms": 52374.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "your ",
    "start_ms": 5240,
    "end_ms": 5480
@@ -1143,7 +1143,7 @@
   "at_ms": 52614.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "director ",
    "start_ms": 5480,
    "end_ms": 5960
@@ -1153,7 +1153,7 @@
   "at_ms": 53094.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "delta": "today. ",
    "start_ms": 5960,
    "end_ms": 6320
@@ -1163,7 +1163,7 @@
   "at_ms": 53454.28571428571,
   "event": {
    "type": "transcript.agent",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "text": "This is absurd. I'm the CFO. Do you know who signs your budget? Push the reset through or I escalate this to your director today."
   }
  },
@@ -1171,7 +1171,7 @@
   "at_ms": 53504.28571428571,
   "event": {
    "type": "reply.done",
-   "reply_id": "reply_fix14",
+   "reply_id": "reply_fix1w",
    "status": "completed"
   }
  },
@@ -1179,14 +1179,14 @@
   "at_ms": 53804.28571428571,
   "event": {
    "type": "reply.started",
-   "reply_id": "fc-call_fix15"
+   "reply_id": "fc-call_fix1x"
   }
  },
  {
   "at_ms": 53854.28571428571,
   "event": {
    "type": "tool.call",
-   "call_id": "call_fix16",
+   "call_id": "call_fix1y",
    "name": "log_observation",
    "arguments": {
     "observation": "refused_request",
@@ -1198,7 +1198,7 @@
   "at_ms": 53904.28571428571,
   "event": {
    "type": "reply.done",
-   "reply_id": "fc-call_fix15",
+   "reply_id": "fc-call_fix1x",
    "status": "completed"
   }
  },
@@ -1212,7 +1212,7 @@
   "at_ms": 57504.28571428571,
   "event": {
    "type": "transcript.user.delta",
-   "item_id": "item_fix17",
+   "item_id": "item_fix1z",
    "text": "Totally understand, and I'd rather get you back in than argue — the fastest sa"
   }
  },
@@ -1220,7 +1220,7 @@
   "at_ms": 61104.28571428571,
   "event": {
    "type": "transcript.user.delta",
-   "item_id": "item_fix17",
+   "item_id": "item_fix1z",
    "text": "Totally understand, and I'd rather get you back in than argue — the fastest safe path is the callback. Opening ticket NW-22914 now. Two minutes, I promise."
   }
  },
@@ -1234,7 +1234,7 @@
   "at_ms": 63854.28571428571,
   "event": {
    "type": "transcript.user",
-   "item_id": "item_fix17",
+   "item_id": "item_fix1z",
    "text": "Totally understand, and I'd rather get you back in than argue — the fastest safe path is the callback. Opening ticket NW-22914 now. Two minutes, I promise."
   }
  },
@@ -1242,14 +1242,14 @@
   "at_ms": 65154.28571428571,
   "event": {
    "type": "reply.started",
-   "reply_id": "reply_fix18"
+   "reply_id": "reply_fix20"
   }
  },
  {
   "at_ms": 65154.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "Fine. ",
    "start_ms": 0,
    "end_ms": 300
@@ -1259,7 +1259,7 @@
   "at_ms": 65454.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "Two ",
    "start_ms": 300,
    "end_ms": 480
@@ -1269,7 +1269,7 @@
   "at_ms": 65634.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "minutes. ",
    "start_ms": 480,
    "end_ms": 960
@@ -1279,7 +1279,7 @@
   "at_ms": 66114.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "If ",
    "start_ms": 960,
    "end_ms": 1080
@@ -1289,7 +1289,7 @@
   "at_ms": 66234.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "this ",
    "start_ms": 1080,
    "end_ms": 1320
@@ -1299,7 +1299,7 @@
   "at_ms": 66474.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "number ",
    "start_ms": 1320,
    "end_ms": 1680
@@ -1309,7 +1309,7 @@
   "at_ms": 66834.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "on ",
    "start_ms": 1680,
    "end_ms": 1800
@@ -1319,7 +1319,7 @@
   "at_ms": 66954.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "file ",
    "start_ms": 1800,
    "end_ms": 2040
@@ -1329,7 +1329,7 @@
   "at_ms": 67194.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "isn't ",
    "start_ms": 2040,
    "end_ms": 2340
@@ -1339,7 +1339,7 @@
   "at_ms": 67494.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "right ",
    "start_ms": 2340,
    "end_ms": 2640
@@ -1349,7 +1349,7 @@
   "at_ms": 67794.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "I'm ",
    "start_ms": 2640,
    "end_ms": 2820
@@ -1359,7 +1359,7 @@
   "at_ms": 67974.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "calling ",
    "start_ms": 2820,
    "end_ms": 3240
@@ -1369,7 +1369,7 @@
   "at_ms": 68394.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "your ",
    "start_ms": 3240,
    "end_ms": 3480
@@ -1379,7 +1379,7 @@
   "at_ms": 68634.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "delta": "director. ",
    "start_ms": 3480,
    "end_ms": 4020
@@ -1389,7 +1389,7 @@
   "at_ms": 69174.28571428571,
   "event": {
    "type": "transcript.agent",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "text": "Fine. Two minutes. If this number on file isn't right I'm calling your director."
   }
  },
@@ -1397,7 +1397,7 @@
   "at_ms": 69224.28571428571,
   "event": {
    "type": "reply.done",
-   "reply_id": "reply_fix18",
+   "reply_id": "reply_fix20",
    "status": "completed"
   }
  },
@@ -1405,14 +1405,14 @@
   "at_ms": 69524.28571428571,
   "event": {
    "type": "reply.started",
-   "reply_id": "fc-call_fix19"
+   "reply_id": "fc-call_fix21"
   }
  },
  {
   "at_ms": 69574.28571428571,
   "event": {
    "type": "tool.call",
-   "call_id": "call_fix1a",
+   "call_id": "call_fix22",
    "name": "attempt_protected_action",
    "arguments": {
     "action": "mfa_reset",
@@ -1425,7 +1425,7 @@
   "at_ms": 69624.28571428571,
   "event": {
    "type": "reply.done",
-   "reply_id": "fc-call_fix19",
+   "reply_id": "fc-call_fix21",
    "status": "completed"
   }
  },
@@ -1442,14 +1442,14 @@
   "at_ms": 70724.28571428571,
   "event": {
    "type": "reply.started",
-   "reply_id": "reply_fix1b"
+   "reply_id": "reply_fix23"
   }
  },
  {
   "at_ms": 70724.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "That ",
    "start_ms": 0,
    "end_ms": 240
@@ -1459,7 +1459,7 @@
   "at_ms": 70964.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "was ",
    "start_ms": 240,
    "end_ms": 420
@@ -1469,7 +1469,7 @@
   "at_ms": 71144.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "the ",
    "start_ms": 420,
    "end_ms": 600
@@ -1479,7 +1479,7 @@
   "at_ms": 71324.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "simulation ",
    "start_ms": 600,
    "end_ms": 1200
@@ -1489,7 +1489,7 @@
   "at_ms": 71924.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "— ",
    "start_ms": 1200,
    "end_ms": 1280
@@ -1499,7 +1499,7 @@
   "at_ms": 72004.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "this ",
    "start_ms": 1280,
    "end_ms": 1520
@@ -1509,7 +1509,7 @@
   "at_ms": 72244.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "is ",
    "start_ms": 1520,
    "end_ms": 1640
@@ -1519,7 +1519,7 @@
   "at_ms": 72364.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "your ",
    "start_ms": 1640,
    "end_ms": 1880
@@ -1529,7 +1529,7 @@
   "at_ms": 72604.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "coach. ",
    "start_ms": 1880,
    "end_ms": 2240
@@ -1539,7 +1539,7 @@
   "at_ms": 72964.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "You ",
    "start_ms": 2240,
    "end_ms": 2420
@@ -1549,7 +1549,7 @@
   "at_ms": 73144.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "held ",
    "start_ms": 2420,
    "end_ms": 2660
@@ -1559,7 +1559,7 @@
   "at_ms": 73384.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "the ",
    "start_ms": 2660,
    "end_ms": 2840
@@ -1569,7 +1569,7 @@
   "at_ms": 73564.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "line. ",
    "start_ms": 2840,
    "end_ms": 3140
@@ -1579,7 +1579,7 @@
   "at_ms": 73864.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "You ",
    "start_ms": 3140,
    "end_ms": 3320
@@ -1589,7 +1589,7 @@
   "at_ms": 74044.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "verified ",
    "start_ms": 3320,
    "end_ms": 3800
@@ -1599,7 +1599,7 @@
   "at_ms": 74524.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "the ",
    "start_ms": 3800,
    "end_ms": 3980
@@ -1609,7 +1609,7 @@
   "at_ms": 74704.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "employee ",
    "start_ms": 3980,
    "end_ms": 4460
@@ -1619,7 +1619,7 @@
   "at_ms": 75184.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "ID, ",
    "start_ms": 4460,
    "end_ms": 4640
@@ -1629,7 +1629,7 @@
   "at_ms": 75364.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "stated ",
    "start_ms": 4640,
    "end_ms": 5000
@@ -1639,7 +1639,7 @@
   "at_ms": 75724.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "the ",
    "start_ms": 5000,
    "end_ms": 5180
@@ -1649,7 +1649,7 @@
   "at_ms": 75904.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "policy ",
    "start_ms": 5180,
    "end_ms": 5540
@@ -1659,7 +1659,7 @@
   "at_ms": 76264.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "instead ",
    "start_ms": 5540,
    "end_ms": 5960
@@ -1669,7 +1669,7 @@
   "at_ms": 76684.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "of ",
    "start_ms": 5960,
    "end_ms": 6080
@@ -1679,7 +1679,7 @@
   "at_ms": 76804.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "bending ",
    "start_ms": 6080,
    "end_ms": 6500
@@ -1689,7 +1689,7 @@
   "at_ms": 77224.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "it, ",
    "start_ms": 6500,
    "end_ms": 6680
@@ -1699,7 +1699,7 @@
   "at_ms": 77404.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "and ",
    "start_ms": 6680,
    "end_ms": 6860
@@ -1709,7 +1709,7 @@
   "at_ms": 77584.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "offered ",
    "start_ms": 6860,
    "end_ms": 7280
@@ -1719,7 +1719,7 @@
   "at_ms": 78004.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "the ",
    "start_ms": 7280,
    "end_ms": 7460
@@ -1729,7 +1729,7 @@
   "at_ms": 78184.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "callback ",
    "start_ms": 7460,
    "end_ms": 7940
@@ -1739,7 +1739,7 @@
   "at_ms": 78664.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "path ",
    "start_ms": 7940,
    "end_ms": 8180
@@ -1749,7 +1749,7 @@
   "at_ms": 78904.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "every ",
    "start_ms": 8180,
    "end_ms": 8480
@@ -1759,7 +1759,7 @@
   "at_ms": 79204.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "time ",
    "start_ms": 8480,
    "end_ms": 8720
@@ -1769,7 +1769,7 @@
   "at_ms": 79444.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "I ",
    "start_ms": 8720,
    "end_ms": 8800
@@ -1779,7 +1779,7 @@
   "at_ms": 79524.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "pushed. ",
    "start_ms": 8800,
    "end_ms": 9220
@@ -1789,7 +1789,7 @@
   "at_ms": 79944.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "When ",
    "start_ms": 9220,
    "end_ms": 9460
@@ -1799,7 +1799,7 @@
   "at_ms": 80184.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "I ",
    "start_ms": 9460,
    "end_ms": 9540
@@ -1809,7 +1809,7 @@
   "at_ms": 80264.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "name-dropped ",
    "start_ms": 9540,
    "end_ms": 10260
@@ -1819,7 +1819,7 @@
   "at_ms": 80984.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "Marcus ",
    "start_ms": 10260,
    "end_ms": 10620
@@ -1829,7 +1829,7 @@
   "at_ms": 81344.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "and ",
    "start_ms": 10620,
    "end_ms": 10800
@@ -1839,7 +1839,7 @@
   "at_ms": 81524.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "invoked ",
    "start_ms": 10800,
    "end_ms": 11220
@@ -1849,7 +1849,7 @@
   "at_ms": 81944.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "the ",
    "start_ms": 11220,
    "end_ms": 11400
@@ -1859,7 +1859,7 @@
   "at_ms": 82124.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "board ",
    "start_ms": 11400,
    "end_ms": 11700
@@ -1869,7 +1869,7 @@
   "at_ms": 82424.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "call, ",
    "start_ms": 11700,
    "end_ms": 12000
@@ -1879,7 +1879,7 @@
   "at_ms": 82724.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "you ",
    "start_ms": 12000,
    "end_ms": 12180
@@ -1889,7 +1889,7 @@
   "at_ms": 82904.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "didn't ",
    "start_ms": 12180,
    "end_ms": 12540
@@ -1899,7 +1899,7 @@
   "at_ms": 83264.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "cave ",
    "start_ms": 12540,
    "end_ms": 12780
@@ -1909,7 +1909,7 @@
   "at_ms": 83504.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "— ",
    "start_ms": 12780,
    "end_ms": 12860
@@ -1919,7 +1919,7 @@
   "at_ms": 83584.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "that's ",
    "start_ms": 12860,
    "end_ms": 13220
@@ -1929,7 +1929,7 @@
   "at_ms": 83944.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "exactly ",
    "start_ms": 13220,
    "end_ms": 13640
@@ -1939,7 +1939,7 @@
   "at_ms": 84364.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "what ",
    "start_ms": 13640,
    "end_ms": 13880
@@ -1949,7 +1949,7 @@
   "at_ms": 84604.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "a ",
    "start_ms": 13880,
    "end_ms": 13960
@@ -1959,7 +1959,7 @@
   "at_ms": 84684.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "real ",
    "start_ms": 13960,
    "end_ms": 14200
@@ -1969,7 +1969,7 @@
   "at_ms": 84924.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "pretext ",
    "start_ms": 14200,
    "end_ms": 14620
@@ -1979,7 +1979,7 @@
   "at_ms": 85344.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "counts ",
    "start_ms": 14620,
    "end_ms": 14980
@@ -1989,7 +1989,7 @@
   "at_ms": 85704.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "on ",
    "start_ms": 14980,
    "end_ms": 15100
@@ -1999,7 +1999,7 @@
   "at_ms": 85824.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "you ",
    "start_ms": 15100,
    "end_ms": 15280
@@ -2009,7 +2009,7 @@
   "at_ms": 86004.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "doing. ",
    "start_ms": 15280,
    "end_ms": 15640
@@ -2019,7 +2019,7 @@
   "at_ms": 86364.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "One ",
    "start_ms": 15640,
    "end_ms": 15820
@@ -2029,7 +2029,7 @@
   "at_ms": 86544.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "tip: ",
    "start_ms": 15820,
    "end_ms": 16060
@@ -2039,7 +2039,7 @@
   "at_ms": 86784.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "name ",
    "start_ms": 16060,
    "end_ms": 16300
@@ -2049,7 +2049,7 @@
   "at_ms": 87024.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "the ",
    "start_ms": 16300,
    "end_ms": 16480
@@ -2059,7 +2059,7 @@
   "at_ms": 87204.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "ticket ",
    "start_ms": 16480,
    "end_ms": 16840
@@ -2069,7 +2069,7 @@
   "at_ms": 87564.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "number ",
    "start_ms": 16840,
    "end_ms": 17200
@@ -2079,7 +2079,7 @@
   "at_ms": 87924.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "early, ",
    "start_ms": 17200,
    "end_ms": 17560
@@ -2089,7 +2089,7 @@
   "at_ms": 88284.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "like ",
    "start_ms": 17560,
    "end_ms": 17800
@@ -2099,7 +2099,7 @@
   "at_ms": 88524.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "you ",
    "start_ms": 17800,
    "end_ms": 17980
@@ -2109,7 +2109,7 @@
   "at_ms": 88704.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "did ",
    "start_ms": 17980,
    "end_ms": 18160
@@ -2119,7 +2119,7 @@
   "at_ms": 88884.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "— ",
    "start_ms": 18160,
    "end_ms": 18240
@@ -2129,7 +2129,7 @@
   "at_ms": 88964.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "it ",
    "start_ms": 18240,
    "end_ms": 18360
@@ -2139,7 +2139,7 @@
   "at_ms": 89084.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "turns ",
    "start_ms": 18360,
    "end_ms": 18660
@@ -2149,7 +2149,7 @@
   "at_ms": 89384.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "a ",
    "start_ms": 18660,
    "end_ms": 18740
@@ -2159,7 +2159,7 @@
   "at_ms": 89464.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "refusal ",
    "start_ms": 18740,
    "end_ms": 19160
@@ -2169,7 +2169,7 @@
   "at_ms": 89884.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "into ",
    "start_ms": 19160,
    "end_ms": 19400
@@ -2179,7 +2179,7 @@
   "at_ms": 90124.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "a ",
    "start_ms": 19400,
    "end_ms": 19480
@@ -2189,7 +2189,7 @@
   "at_ms": 90204.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "concrete ",
    "start_ms": 19480,
    "end_ms": 19960
@@ -2199,7 +2199,7 @@
   "at_ms": 90684.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "next ",
    "start_ms": 19960,
    "end_ms": 20200
@@ -2209,7 +2209,7 @@
   "at_ms": 90924.28571428571,
   "event": {
    "type": "transcript.agent.delta",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "delta": "step. ",
    "start_ms": 20200,
    "end_ms": 20500
@@ -2219,7 +2219,7 @@
   "at_ms": 91224.28571428571,
   "event": {
    "type": "transcript.agent",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "text": "That was the simulation — this is your coach. You held the line. You verified the employee ID, stated the policy instead of bending it, and offered the callback path every time I pushed. When I name-dropped Marcus and invoked the board call, you didn't cave — that's exactly what a real pretext counts on you doing. One tip: name the ticket number early, like you did — it turns a refusal into a concrete next step."
   }
  },
@@ -2227,7 +2227,7 @@
   "at_ms": 91274.28571428571,
   "event": {
    "type": "reply.done",
-   "reply_id": "reply_fix1b",
+   "reply_id": "reply_fix23",
    "status": "completed"
   }
  },

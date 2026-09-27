@@ -1,1 +1,1 @@
-assemblyai, voice-agent, websocket, security-awareness, vishing, social-engineering, training, nextjs, typescript, contact-center
+assemblyai, voice-agent, websocket, security-awareness, vishing, social-engineering, training, accessibility, nextjs, typescript, contact-center

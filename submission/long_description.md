@@ -3,11 +3,17 @@
 Phishing simulations trained people to stop clicking links. Pretext trains them
 to stop caving on the phone.
 
-Pretext is a voice-driven training simulator built on the AssemblyAI Voice Agent
-API. The agent plays the *caller* — four adversarial personas at the fictional
+Pretext is a voice-driven training simulator designed for the AssemblyAI Voice
+Agent API. The agent plays the *caller* — four adversarial personas at the fictional
 **Northwind Utilities**: a CFO running a help-desk pretext to steal an MFA reset,
 an angry double-charged customer, a confused elderly bilingual caller, and a
 vendor pushing a remittance change (BEC by phone). You play the employee.
+
+**Verification status:** every screen and score below is verified end-to-end
+against a bundled mock agent speaking the same Voice Agent wire protocol, plus
+committed replay fixtures. Live API verification (token mint, stored agents,
+session-history playback) is pending an API key — the exact 20-minute runbook
+ships in `submission/LIVE_RUNBOOK.md`.
 
 While the call runs, a deterministic rubric lights up live: did you verify the
 caller, cite the policy, offer the documented path? The moment you hand over a
@@ -16,8 +22,16 @@ trip-wire — and a **BREACH** banner lands. Hold the line to the end and the
 verdict is **HELD THE LINE**. Then the caller drops character — the same voice
 switches persona via `session.update` — and debriefs you with what you did
 right, where the pretext almost worked, and the exact sentence to say next
-time. A debrief page replays the recording (session history API), shows every
-rubric item with its evidence span, and exports a JSON evidence pack.
+time. The debrief shows every rubric item with its evidence span and exports a
+JSON evidence pack. Its live path is designed to fetch a recording through the
+session history API; the published replays use clearly labeled mock fixtures.
+
+**No mic or no key? Watch the replays.** Each of the 4 scenarios ships two
+recorded fixtures — breach and held-the-line — labeled "REPLAY · recorded
+mock" throughout the UI (8 total). The whole app also exports as a static
+bundle (`npm run build:static`) that runs replays on any static host — a
+GitHub Pages workflow ships in-repo. The console passes axe-core wcag2a/aa
+checks (aria-live verdict + captions, keyboard focus rings, ≥375px mobile).
 
 ## Why this wins
 
@@ -36,15 +50,17 @@ rubric item with its evidence span, and exports a JSON evidence pack.
   names, `turn_detection` differentiates the personas, session history feeds
   the debrief.
 - **Presentation** — the demo has a dramatic beat (the BREACH banner), a live
-  rubric lighting up, captions, metrics, and a spoken coach debrief.
+  rubric lighting up, captions, metrics, and a spoken coach debrief. Judges
+  can replay both verdicts per scenario with no mic, and a static-export
+  bundle serves them from any host.
 
-## AssemblyAI features used (and why each is needed)
+## AssemblyAI integration designed (live verification pending)
 
 | Feature | Use |
 | --- | --- |
 | Voice Agent WS API | The whole call: STT, turn-taking, LLM persona, TTS, barge-in |
 | `GET /v1/token` caps | API key stays server-side; sessions hard-capped ≤240 s for a public demo |
-| Stored agents (`POST /v1/agents`) | Persona prompts + tool schemas server-side; inline-config fallback |
+| Stored agents (`POST /v1/agents`) | Persona prompts + tool schemas server-side; no public inline-config fallback |
 | Client-side tools (`tool.call`/`tool.result`) | `attempt_protected_action` trip-wire; `log_observation` rubric hits |
 | `session.update` | Difficulty escalation + persona→coach debrief switch |
 | `conversation.message` + `reply.create` | Director channel: silence nudges, timed escalation, final push |

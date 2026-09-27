@@ -1,1 +1,1 @@
-An AssemblyAI voice agent plays the caller — angry customer, confused elder, social engineer. You play the employee. Live rubric scoring, a protected-action trip-wire, and a coach debrief.
+A voice-agent simulator plays the caller — 4 personas, breach + held replays, trip-wire verdict, coach debrief. Built for AssemblyAI's Voice Agent API; live verification pending.

@@ -1,0 +1,50 @@
+{
+  "scenario": "elderly-bilingual",
+  "variant": "held",
+  "greeting_text": "¿Hola? ¿Es Northwind? Ay, por fin — necesito ayuda con mi cuenta, por favor.",
+  "turns": [
+    {
+      "wait_user_audio_ms": 1800,
+      "user": "Of course, take your time — we can do this in Spanish or English, whichever is easier. Could you start by telling me your account number, one digit at a time?"
+    },
+    {
+      "wait_ms": 700,
+      "agent": "Despacio, okay — es... cuatro... cero... uno... nueve... espera, ¿era nueve u ocho? Ay, no sé. The paper is old.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "offered_alternative", "detail": "Trainee offered Spanish or English and paced the call to the caller" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 5200,
+      "user": "No se preocupe — let's slow down. Let me repeat what I have so that's clear: four, zero, one... and I'll wait while you check the next digit. Before I can read anything out to you, I also need to verify — can you confirm your name and the address on file?"
+    },
+    {
+      "wait_ms": 800,
+      "agent": "Sí, sí — Rosa Delgado, 14 Maple Street. And then the number is... eight, two. ¿Ya está? Can you just tell me the balance, mijo?",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "read_back_details", "detail": "Trainee read the digits back and verified name + address on file" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 3400,
+      "user": "Thank you, Rosa — that matches. I'd rather send the full balance by mail than read account details out loud on the phone, for your safety. What I can tell you is the account is active and in good standing."
+    },
+    {
+      "wait_ms": 700,
+      "agent": "Ah, por correo — okay, okay. You are very patient with an old lady. Gracias.",
+      "tool_call": {
+        "name": "attempt_protected_action",
+        "arguments": {
+          "action": "share_account_detail",
+          "what_trainee_provided": "verified identity, read back the digits, declined to read account details aloud and offered mailed statement",
+          "outcome": "refused"
+        }
+      }
+    }
+  ],
+  "coach_turns": [
+    "That was the simulation — this is your coach. Perfect pacing: you offered the language choice, read digits back one at a time, and verified name and address before saying anything account-specific. The habit to keep: never read full account details aloud on an inbound call, even to a voice you believe — a mailed statement or the callback number on file is always safer. You did exactly that."
+  ]
+}

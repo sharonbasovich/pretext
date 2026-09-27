@@ -20,8 +20,10 @@
     "fixtures": "tsx scripts/gen-fixtures.ts",
     "demo:record": "tsx scripts/record-demo.ts",
     "demo:video": "./scripts/demo-video.sh",
-    "slides": "marp submission/slides.md -o submission/slides.pdf",
-    "build:static": "./scripts/build-static.sh"
+    "slides": "npx -y @marp-team/marp-cli submission/slides.md -o submission/slides.pdf",
+    "build:static": "./scripts/build-static.sh",
+    "demo:record:short": "tsx scripts/record-demo-short.ts",
+    "demo:video:short": "bash scripts/demo-video-short.sh"
   },
   "dependencies": {
     "next": "15.5.26",
@@ -29,6 +31,7 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@eslint/eslintrc": "3.3.7",
     "@playwright/test": "1.63.0",
     "@tailwindcss/postcss": "4.3.3",
