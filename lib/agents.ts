@@ -137,14 +137,45 @@ export interface AgentLock {
   published_at?: string;
 }
 
+/**
+ * Server-only deployment override. The publish script writes a local lock file,
+ * but that generated file is intentionally gitignored. A deployment can pass
+ * the published IDs via PRETEXT_AGENT_IDS without shipping the persona prompts
+ * or the AssemblyAI API key to the browser.
+ */
+export function agentIdsFromEnv(value: string | undefined): Record<string, string> {
+  if (!value) return {};
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(value);
+  } catch {
+    throw new Error("PRETEXT_AGENT_IDS must be valid JSON");
+  }
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+    throw new Error("PRETEXT_AGENT_IDS must be a JSON object of agent names to IDs");
+  }
+  const ids: Record<string, string> = {};
+  for (const [name, id] of Object.entries(parsed)) {
+    if (typeof id !== "string" || !id.trim()) {
+      throw new Error(`PRETEXT_AGENT_IDS has an invalid ID for ${name}`);
+    }
+    ids[name] = id;
+  }
+  return ids;
+}
+
 export async function loadAgentLock(): Promise<AgentLock> {
+  let fileLock: AgentLock = { agents: {} };
   try {
     const raw = await fs.readFile(LOCK_PATH, "utf8");
-    const parsed = JSON.parse(raw) as AgentLock;
-    return parsed;
+    fileLock = JSON.parse(raw) as AgentLock;
   } catch {
-    return { agents: {} };
+    // Fresh deployments do not contain the gitignored local lock file.
   }
+  return {
+    ...fileLock,
+    agents: { ...fileLock.agents, ...agentIdsFromEnv(process.env.PRETEXT_AGENT_IDS) },
+  };
 }
 
 /**

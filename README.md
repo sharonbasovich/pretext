@@ -90,12 +90,17 @@ Scripts: `npm run lint` · `npm run typecheck` · `npm test` · `npm run build` 
 
 ## Deploy (Vercel)
 
-`vercel deploy --prod` with one env var: `ASSEMBLYAI_API_KEY`. Optional:
+`vercel deploy --prod` with two server-side env vars: `ASSEMBLYAI_API_KEY`
+and `PRETEXT_AGENT_IDS`. Optional:
 `PRETEXT_DAILY_SESSION_CAP` (default 200), `PRETEXT_DEMO_PASSCODE`,
 `PRETEXT_MAX_SESSION_SECONDS` (default/max 240).
 
 Run `npm run publish` once after setting the key — it upserts the stored
-agents and writes `agents.lock.json`. Without a stored agent,
+agents and writes `agents.lock.json` locally. This file is gitignored, so put
+its `agents` object in the deployment's `PRETEXT_AGENT_IDS` environment
+variable as compact JSON (for example,
+`node -p "JSON.stringify(require('./agents.lock.json').agents)"`). Do not add
+`NEXT_PUBLIC_` to this variable or commit the API key. Without a stored agent ID,
 `/api/agent-config` answers **503 `stored_agent_required`** because inline
 configs would ship the attacker's playbook (full persona prompt + tool
 schemas) to every trainee's browser. `PRETEXT_EXPOSE_INLINE=1` opts back in

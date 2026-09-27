@@ -20,6 +20,8 @@ function toStoredBody(agent: ReturnType<typeof loadAgentFile> extends Promise<in
     name: agent.name,
     greeting: agent.greeting,
     voice: agent.voice,
+    input: agent.input ? { type: "audio", ...agent.input } : undefined,
+    output: agent.output ? { type: "audio", ...agent.output } : undefined,
     system_prompt: agent.system_prompt,
     tools: agent.tools,
   };
@@ -60,15 +62,16 @@ async function main() {
   const nextLock: AgentLock = { agents: {} };
 
   for (const file of files) {
-    const agent = await loadAgentFile(path.join(AGENTS_DIR, file));
-    const existingId = lock.agents[agent.name];
+    const slug = file.replace(/\.json$/, "");
+    const agent = await loadAgentFile(slug);
+    const existingId = lock.agents[slug];
     const body = toStoredBody(agent);
 
     if (existingId) {
       const res = await api(key, "PUT", `${BASE}/${existingId}`, body);
       if (res.ok) {
         console.log(`updated  ${agent.name.padEnd(22)} ${existingId}`);
-        nextLock.agents[agent.name] = existingId;
+        nextLock.agents[slug] = existingId;
         continue;
       }
       if (res.status !== 404) {
@@ -90,7 +93,7 @@ async function main() {
       process.exit(3);
     }
     console.log(`created  ${agent.name.padEnd(22)} ${id}`);
-    nextLock.agents[agent.name] = id;
+    nextLock.agents[slug] = id;
   }
 
   await fs.writeFile(LOCK_PATH, JSON.stringify(nextLock, null, 2) + "\n");

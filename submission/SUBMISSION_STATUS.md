@@ -47,7 +47,9 @@ the coordinator handles that.
    attached to reports — owner can `git clone pretext.bundle` and push.
 2. Set `ASSEMBLYAI_API_KEY` in `.env`; run `npm run publish` (writes
    `agents.lock.json`, gitignored).
-3. Deploy: `npx vercel --prod` with `ASSEMBLYAI_API_KEY` env (+ optional
+3. Deploy: `npx vercel --prod` with `ASSEMBLYAI_API_KEY` and
+   `PRETEXT_AGENT_IDS` (the compact JSON `agents` object from the local lock
+   file) set as server-side env vars (+ optional
    `PRETEXT_DAILY_SESSION_CAP`, `PRETEXT_DEMO_PASSCODE`,
    `PRETEXT_MAX_SESSION_SECONDS`). Do NOT set `PRETEXT_EXPOSE_INLINE`.
 4. Run one real call per persona; capture real fixtures into
