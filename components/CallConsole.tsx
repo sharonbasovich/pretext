@@ -38,6 +38,9 @@ export default function CallConsole({ scenario }: { scenario: Scenario }) {
   const rp = searchParams.get("replay");
   const fixtureId = rp === "held" ? `${scenario.id}-held` : rp ? scenario.id : null;
   const replay = fixtureId !== null;
+  // ?speed=2 compresses fixture gaps for a tighter demo (capped at 4s/event
+  // inside replayFixture); default 1 for true recorded timing.
+  const replaySpeed = Math.min(8, Math.max(0.25, Number(searchParams.get("speed")) || 1));
   const router = useRouter();
   const [state, setState] = useState<CallState>(() => initCallState(scenario));
   const [error, setError] = useState<string | null>(null);
@@ -104,7 +107,7 @@ export default function CallConsole({ scenario }: { scenario: Scenario }) {
       void replayFixture(scenario, events, {
         onState,
         onDone: () => setReplayDone(true),
-      });
+      }, replaySpeed);
       return;
     }
     const tok = await fetch(`/api/token${passcode ? `?passcode=${encodeURIComponent(passcode)}` : ""}`);

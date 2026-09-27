@@ -17,7 +17,11 @@
     "mock:wav": "tsx scripts/gen-fake-mic-wav.ts",
     "publish": "tsx scripts/publish-agents.ts",
     "verify": "npm run lint && npm run typecheck && npm test && npm run build",
-    "fixtures": "tsx scripts/gen-fixtures.ts"
+    "fixtures": "tsx scripts/gen-fixtures.ts",
+    "demo:record": "tsx scripts/record-demo.ts",
+    "demo:video": "./scripts/demo-video.sh",
+    "slides": "marp submission/slides.md -o submission/slides.pdf",
+    "build:static": "./scripts/build-static.sh"
   },
   "dependencies": {
     "next": "15.5.26",
