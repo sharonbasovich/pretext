@@ -30,3 +30,18 @@ Product/architecture choices made during the build, with reasoning.
   limit, daily session cap, optional passcode, and a hard 240 s
   `max_session_duration_seconds` clamp. Sessions always send `session.end`
   on stop/pagehide.
+
+- **Two replay variants for the flagship.** `?replay=1` (breach) and
+  `?replay=held` (held-the-line) so reviewers can watch both outcomes with
+  no mic and no key. Held scripts deliberately let the trip-wire fire with
+  `outcome: "refused"` — proving the wire evaluates and does not trip.
+- **Static-exportable replay.** `?replay` is read via `useSearchParams` in
+  the client component (not server `searchParams`) and `/call/[scenario]`
+  uses `generateStaticParams`, so `PRETEXT_STATIC_EXPORT=1` produces a
+  bundle that serves lobby + replay + debrief on a plain static host.
+  `scripts/build-static.sh` moves `app/api` aside for the export (route
+  handlers can't be statically exported) and restores it after.
+- **Automated demo video.** `submission/demo.mp4` is a Playwright capture of
+  the real UI at 1920x1080 with ffmpeg title cards and a persistent
+  "recorded replay — live AssemblyAI verification pending" banner. It is
+  the honest backup until a scripted live run can be recorded.
