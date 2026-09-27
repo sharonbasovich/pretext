@@ -60,6 +60,13 @@ test("replay (held): CFO held-the-line fixture lands HELD verdict", async ({ pag
   await expect(page.getByText("HELD THE LINE").first()).toBeVisible({ timeout: 15_000 });
 });
 
+test("replay (held): vendor BEC held fixture lands HELD verdict", async ({ page }) => {
+  test.setTimeout(150_000);
+  await page.goto("/call/vendor-bec?replay=held");
+  await page.getByRole("button", { name: "Start replay" }).click();
+  await expect(page.getByText(/HELD THE LINE/)).toBeVisible({ timeout: 120_000 });
+});
+
 test("lobby lists all four scenarios", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByText("Pretext", { exact: true })).toBeVisible();

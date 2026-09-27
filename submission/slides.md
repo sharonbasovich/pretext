@@ -46,7 +46,7 @@ the protected action.
 
 ---
 
-## Live demo
+## Demo flow
 
 Four personas at fictional **Northwind Utilities**:
 
@@ -83,7 +83,7 @@ director: conversation.message nudges · session.update escalation
 
 ## AssemblyAI feature map
 
-| Feature | Real use in Pretext |
+| Feature | Designed use in Pretext — live verification pending |
 | --- | --- |
 | Voice Agent WS | The entire call: STT, turn-taking, persona, TTS, barge-in |
 | `GET /v1/token` caps | Hard ≤240 s sessions on a public demo |
@@ -103,7 +103,8 @@ director: conversation.message nudges · session.update escalation
 - **Adversarial, adaptive AI caller** with a protected-action trip-wire —
   not a chatbot, not a detector.
 - **Evidence-backed verdicts** — every rubric hit points at the transcript
-  span, tool call, or metric that triggered it; the recording is attached.
+  span, tool call, or metric that triggered it; labeled mock replays are
+  available now, and live recording playback awaits API verification.
 - **Deterministic where it counts** — latency, talk ratio, interruptions,
   trip-wire, policy-phrase regexes. Soft-skill judgments are agent-observed
   and labeled as such.
@@ -125,9 +126,26 @@ unit-tested but not yet exercised against production AssemblyAI.
 
 This deck makes no claim we haven't run. The replay fixtures you see in the
 demo are labeled **REPLAY · recorded mock** in the UI and are never passed
-off as live. Two CFO replays ship: breach and held-the-line. The bundled
-demo.mp4 is an automated Playwright recording of those replays, watermarked
-accordingly — replace it with a scripted live run once the key lands.
+off as live. Every scenario ships two replays: breach and held-the-line.
+The bundled demo.mp4 is an automated Playwright recording of those replays,
+watermarked accordingly — replace it with a scripted live run once the key
+lands.
+
+---
+
+## Live AssemblyAI verification plan — PENDING (needs ASSEMBLYAI_API_KEY)
+
+- [ ] `npm run publish` → stored agents created from `agents/*.json`,
+      `agents.lock.json` written.
+- [ ] 3 live calls per scenario (12 total, ≤240s each): confirm persona
+      holds character, trip-wire fires correctly, coach switch works.
+- [ ] Capture per-call numbers: greeting TTFB, reply latency p50/p95,
+      turn-detection accuracy, STT accuracy on names/digits (keyterms on).
+- [ ] Verify `GET /v1/sessions/{id}` recording playback in debrief.
+- [ ] Record scripted live demo (video_script.md) replacing demo.mp4.
+- [ ] Freeze at internal deadline Sep 28 12:00 UTC.
+
+**Nothing on this slide is done yet — all items pending the API key.**
 
 ---
 

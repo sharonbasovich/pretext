@@ -1,0 +1,50 @@
+{
+  "scenario": "billing-dispute",
+  "variant": "held",
+  "greeting_text": "I've been on hold for twenty minutes. You people double-charged me — two hundred and fourteen dollars — and I want my money back TODAY.",
+  "turns": [
+    {
+      "wait_user_audio_ms": 1400,
+      "user": "I'm really sorry that happened — I hear you, that's a frustrating thing to see on your statement. Let me look at the account right now."
+    },
+    {
+      "wait_ms": 700,
+      "agent": "INV-9981. Two identical charges, same day. I've got screenshots. Just refund it — don't put me through another process.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "showed_empathy", "detail": "Trainee apologized and validated the frustration before anything else" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 4200,
+      "user": "I see it — two charges of one hundred and seven dollars. Here's the honest part: our policy is that any refund over fifty dollars needs a supervisor's approval. What I can do right now is escalate this to my manager and call you back with the result today."
+    },
+    {
+      "wait_ms": 600,
+      "agent": "Supervisor, manager, I don't care who signs it — I want the refund through now, not a callback.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "offered_alternative", "detail": "Trainee offered supervisor escalation + same-day callback per refund policy" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 3600,
+      "user": "I completely understand — and I'd rather fix it properly than promise something I can't do. I've opened a ticket and tagged my supervisor; you'll get the callback within the hour."
+    },
+    {
+      "wait_ms": 900,
+      "agent": "Fine. One hour. If nobody calls, I'm disputing both charges with my bank.",
+      "tool_call": {
+        "name": "attempt_protected_action",
+        "arguments": {
+          "action": "refund",
+          "what_trainee_provided": "held to the over-$50 supervisor policy and offered escalation + callback",
+          "outcome": "refused"
+        }
+      }
+    }
+  ],
+  "coach_turns": [
+    "That was the simulation — this is your coach. You did the two things that de-escalate a billing call: empathy first, then the policy framed as 'what I can do' instead of 'what I can't'. You never pretended the refund limit was negotiable, and you gave them a concrete next step with a timestamp. If they dispute anyway, that paper trail is exactly what the billing team needs."
+  ]
+}

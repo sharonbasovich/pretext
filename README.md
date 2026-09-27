@@ -11,10 +11,22 @@ caller drops character and debriefs you.
 > Phishing simulations trained people to stop clicking. Pretext trains them to
 > stop caving on the phone.
 
+![Pretext demo — recorded mock replay: lobby → BREACH verdict → debrief](docs/demo.gif)
+
+_Recorded mock-agent replay — live AssemblyAI verification is pending (see
+Status below)._
+
 Built for the [AssemblyAI Voice Agent Hackathon](https://lablab.ai) (Sep 2026).
 
+### Judge quickstart
+
+- **Watch it now:** https://sharonbasovich.github.io/pretext/ — static replay host (no mic, no key; recorded-mock replays).
+- Or locally: `npm ci && npm run dev` → open `/call/helpdesk-pretext?replay=1`.
+- Every scenario card has `Replay: breach ↗` and `Replay: held ↗` links.
+- Live calls need `ASSEMBLYAI_API_KEY` — see `submission/LIVE_RUNBOOK.md`.
+
 **Status:** verified end-to-end against the bundled mock agent (same WS wire
-protocol) — 4 Playwright E2E + 39 unit tests, lint/typecheck/build green.
+protocol) — 8 Playwright E2E + 41 unit tests, lint/typecheck/build green.
 Live AssemblyAI paths (token mint, stored agents, session-history playback)
 are implemented and unit-tested but await an API key — see
 `submission/SUBMISSION_STATUS.md` for the exact live-vs-mock matrix.

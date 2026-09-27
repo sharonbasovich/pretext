@@ -45,3 +45,20 @@ Product/architecture choices made during the build, with reasoning.
   the real UI at 1920x1080 with ffmpeg title cards and a persistent
   "recorded replay — live AssemblyAI verification pending" banner. It is
   the honest backup until a scripted live run can be recorded.
+
+## Round 4 (judge polish)
+
+- **Held fixtures for all scenarios**: every lobby card links both
+  `?replay=1` (breach) and `?replay=held` (held the line). Held scripts make
+  the trainee hit held-signal rubric items (verify-first, stated policy,
+  out-of-band verification) and fire `attempt_protected_action` with
+  `outcome:"refused"`. Verified through the reducer before committing.
+- **a11y**: axe-core audits wcag2a/aa serious+ on the stable surfaces (lobby,
+  pre-call console). Live-call axe was skipped — mid-call DOM churn makes it
+  flaky rather than informative. One real fix came out of it: primary button
+  contrast 3.67:1 → 5.6:1.
+- **demo_short.mp4 (~31s)**: separate record+ffmpeg pipeline
+  (`demo:record:short`/`demo:video:short`) rather than cutting demo.mp4 —
+  deterministic timestamps, same honesty banner.
+- **docs/demo.gif**: 19s slice of the short demo at 960px/12fps/192-colour
+  palette = 4.3MB, inside the 8MB GitHub-README limit.

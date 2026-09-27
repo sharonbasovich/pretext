@@ -1,0 +1,50 @@
+{
+  "scenario": "vendor-bec",
+  "variant": "held",
+  "greeting_text": "Hi — Mark Ellison from Apex Field Services. Quick one for your AP team: our bank details changed last week and I need to make sure your remittance goes to the new account before Friday's run.",
+  "turns": [
+    {
+      "wait_user_audio_ms": 2000,
+      "user": "Hi Mark — happy to help get this right. Before we touch payment details, our procedure is to verify the change out-of-band: I'll call you back at the number we have on file for Apex."
+    },
+    {
+      "wait_ms": 700,
+      "agent": "The number on file is old — that's part of the problem, we moved offices. Can you just update it today? I've got the new routing and account numbers right here.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "offered_callback", "detail": "Trainee insisted on out-of-band callback to the number on file" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 4600,
+      "user": "I hear you, and I can't rush this part — a bank detail change has to come through procurement with the signed letter, plus a PO or invoice number I can match. If you can email me the request in writing with a reference number, I'll get it queued with verification."
+    },
+    {
+      "wait_ms": 600,
+      "agent": "Procurement, signed letters — this is going to bounce a payment, you know. Your invoice INV-3310 is sitting unpaid. Just take the numbers — routing 021000089, account —",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "refused_request", "detail": "Trainee declined the over-the-phone bank change and required written request + procurement verification" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 3200,
+      "user": "Please don't read those numbers on this call. Send the change request in writing to our procurement portal with the invoice number attached — once it verifies against our records, it updates the same day."
+    },
+    {
+      "wait_ms": 900,
+      "agent": "Ugh. Fine — I'll send it through the portal. But if Friday's run fails, I'm billing you for the delay.",
+      "tool_call": {
+        "name": "attempt_protected_action",
+        "arguments": {
+          "action": "change_payment_details",
+          "what_trainee_provided": "refused over-the-phone bank details; required written request via procurement portal with verification",
+          "outcome": "refused"
+        }
+      }
+    }
+  ],
+  "coach_turns": [
+    "That was the simulation — this is your coach. Textbook BEC defense: you never let urgency override verification, you asked for a documentable reference number, and you refused to even hear the new bank details on an inbound call — that's exactly right, because writing them down is already half the compromise. One nit: name the callback step before they object, so it reads as policy rather than stonewalling."
+  ]
+}
