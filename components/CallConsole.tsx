@@ -6,6 +6,7 @@ import type { Scenario } from "@/lib/scenario";
 import type { CallState } from "@/lib/reducer";
 import { initCallState } from "@/lib/reducer";
 import { CallSession, replayFixture } from "@/lib/session";
+import { withBase } from "@/lib/basePath";
 import { avgResponseLatencyMs, talkRatio } from "@/lib/metrics";
 import { rubricScore } from "@/lib/rubric";
 import type { ServerEvent } from "@/lib/types";
@@ -98,7 +99,7 @@ export default function CallConsole({ scenario }: { scenario: Scenario }) {
     setError(null);
     if (replay) {
       setStarted(true);
-      const res = await fetch(`/fixtures/${fixtureId}.json`);
+      const res = await fetch(withBase(`/fixtures/${fixtureId}.json`));
       if (!res.ok) {
         setError(`No replay fixture for this scenario yet (${res.status}).`);
         return;
