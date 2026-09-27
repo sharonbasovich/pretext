@@ -9,6 +9,8 @@
  * - Echo cancellation ON, noise suppression OFF (per docs).
  */
 
+import { withBase } from "./basePath";
+
 export const TARGET_RATE = 24000;
 
 export type PcmChunkHandler = (pcm16: Int16Array) => void;
@@ -59,7 +61,7 @@ export class MicCapture {
     }
     this.ctx = ctx;
     const rate = ctx.sampleRate;
-    await ctx.audioWorklet.addModule("/pcm-capture-worklet.js");
+    await ctx.audioWorklet.addModule(withBase("/pcm-capture-worklet.js"));
     this.source = ctx.createMediaStreamSource(this.stream);
     this.node = new AudioWorkletNode(ctx, "pcm-capture");
     this.node.port.onmessage = (ev: MessageEvent<ArrayBuffer>) => {
