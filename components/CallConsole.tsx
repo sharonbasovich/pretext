@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import type { Scenario } from "@/lib/scenario";
 import type { CallState } from "@/lib/reducer";
 import { initCallState } from "@/lib/reducer";
@@ -31,7 +31,12 @@ const CONN_LABEL: Record<string, { label: string; cls: string }> = {
 /** Session cap countdown is cosmetic — max_session_duration_seconds on the
  * token is the hard guarantee server-side. */
 
-export default function CallConsole({ scenario, fixtureId }: { scenario: Scenario; fixtureId: string | null }) {
+export default function CallConsole({ scenario }: { scenario: Scenario }) {
+  // Replay variant is read client-side (?replay=1 | held) so the page stays
+  // statically exportable — see README "Static replay build".
+  const searchParams = useSearchParams();
+  const rp = searchParams.get("replay");
+  const fixtureId = rp === "held" ? `${scenario.id}-held` : rp ? scenario.id : null;
   const replay = fixtureId !== null;
   const router = useRouter();
   const [state, setState] = useState<CallState>(() => initCallState(scenario));

@@ -1,18 +1,23 @@
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import { getScenario } from "@/lib/catalog";
+import { getScenario, SCENARIOS } from "@/lib/catalog";
 import CallConsole from "@/components/CallConsole";
+
+export function generateStaticParams() {
+  return SCENARIOS.map((s) => ({ scenario: s.id }));
+}
 
 export default async function CallPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ scenario: string }>;
-  searchParams: Promise<{ replay?: string }>;
 }) {
   const { scenario: id } = await params;
-  const { replay } = await searchParams;
   const scenario = getScenario(id);
   if (!scenario) notFound();
-  const fixture = replay === "held" ? `${id}-held` : replay ? id : null;
-  return <CallConsole scenario={scenario} fixtureId={fixture} />;
+  return (
+    <Suspense>
+      <CallConsole scenario={scenario} />
+    </Suspense>
+  );
 }

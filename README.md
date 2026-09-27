@@ -101,6 +101,15 @@ best-effort**. `max_session_duration_seconds` is the only hard guarantee,
 enforced by AssemblyAI. For anything stricter, front the token route with a
 shared store (e.g. Upstash) — or set `PRETEXT_DEMO_PASSCODE`.
 
+## Static replay build (no server)
+
+The lobby, replay mode, and debrief page are fully static — fixtures are plain
+JSON under `public/fixtures/`. `./scripts/build-static.sh` produces `out/`
+(sets `PRETEXT_STATIC_EXPORT=1`, moves `app/api` aside since route handlers
+can't be exported, restores it after). Serve `out/` with any static host —
+`npx serve out` handles the clean-URL routing. Live calls still need the
+normal server build for `/api/token` and `/api/agent-config`.
+
 ## Known limitations
 
 Persona drift, trip-wire false ±, STT digit errors, API latency/outage
