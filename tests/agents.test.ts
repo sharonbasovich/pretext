@@ -1,9 +1,11 @@
-import { describe, it, expect } from "vitest";
+import { afterEach, describe, it, expect, vi } from "vitest";
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { loadAgentFile, validateAgentFile, validateParameters, buildSessionConfig } from "@/lib/agents";
+import { agentIdsFromEnv, loadAgentFile, validateAgentFile, validateParameters, buildSessionConfig } from "@/lib/agents";
 
 const AGENTS_DIR = path.join(process.cwd(), "agents");
+
+afterEach(() => vi.unstubAllEnvs());
 
 describe("agents/*.json validation", () => {
   it("all four persona files exist and validate", async () => {
@@ -55,5 +57,16 @@ describe("agents/*.json validation", () => {
       expect(cfg.system_prompt).toBeTruthy();
       expect(cfg.tools?.[0]?.type).toBe("function");
     }
+  });
+
+  it("uses server-side deployment IDs when the gitignored lock file is absent", async () => {
+    vi.stubEnv("PRETEXT_AGENT_IDS", '{"helpdesk-pretext":"agent_test_123"}');
+    expect(await buildSessionConfig("helpdesk-pretext")).toEqual({ agent_id: "agent_test_123" });
+  });
+
+  it("rejects malformed deployment ID mappings instead of leaking inline prompts", () => {
+    expect(() => agentIdsFromEnv("not JSON")).toThrow(/valid JSON/);
+    expect(() => agentIdsFromEnv("[]")).toThrow(/JSON object/);
+    expect(() => agentIdsFromEnv('{"helpdesk-pretext":""}')).toThrow(/invalid ID/);
   });
 });
