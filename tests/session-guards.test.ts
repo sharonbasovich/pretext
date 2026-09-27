@@ -107,3 +107,33 @@ describe("director channel guards", () => {
     expect(ws.sent.filter((m) => m.type === "conversation.message")).toHaveLength(0);
   });
 });
+
+describe("agent-config failure", () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+    FakeWS.instances = [];
+    vi.stubGlobal("WebSocket", FakeWS);
+    vi.stubGlobal("AudioContext", FakeAudioContext);
+  });
+  afterEach(() => {
+    vi.useRealTimers();
+    vi.unstubAllGlobals();
+  });
+
+  it("closes the billable socket instead of leaving it open to the 240s cap", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => ({
+        ok: false,
+        status: 503,
+        json: async () => ({ error: "stored_agent_required", detail: "no stored agent" }),
+      })),
+    );
+    const { session } = makeSession();
+    void session.start("ws://mock/v1/ws", "t");
+    const ws = FakeWS.instances[FakeWS.instances.length - 1];
+    await ws.onopen?.();
+    expect(ws.sent.some((m) => m.type === "session.end")).toBe(true);
+    expect(ws.readyState).toBe(3); // CLOSED
+  });
+});

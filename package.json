@@ -15,7 +15,7 @@
     "e2e": "playwright test",
     "mock": "tsx mock/server.ts",
     "mock:wav": "tsx scripts/gen-fake-mic-wav.ts",
-    "publish": "tsx scripts/publish-agents.ts",
+    "publish": "tsx --env-file-if-exists=.env scripts/publish-agents.ts",
     "verify": "npm run lint && npm run typecheck && npm test && npm run build",
     "fixtures": "tsx scripts/gen-fixtures.ts",
     "demo:record": "tsx scripts/record-demo.ts",

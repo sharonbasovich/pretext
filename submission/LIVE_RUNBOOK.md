@@ -11,6 +11,10 @@ cp .env.example .env
 npm ci
 ```
 
+`npm run publish` loads `.env` itself (`tsx --env-file-if-exists=.env`), so
+plain `npm run publish` picks up the key — no manual `source .env` needed.
+Real exported env vars still win if both are set.
+
 Optional public-demo guards: `PRETEXT_DAILY_SESSION_CAP` (e.g. `40`),
 `PRETEXT_DEMO_PASSCODE`, `PRETEXT_MAX_SESSION_SECONDS` (≤240 — the WS bills
 open time). Do **not** set
@@ -22,9 +26,11 @@ open time). Do **not** set
 npm run publish   # creates/updates /v1/agents from agents/*.json → agents.lock.json
 ```
 
-Expected: 4 agent ids written to `agents.lock.json` (gitignored). If publish
-fails, `/api/agent-config` returns 503 `stored_agent_required` by design —
-fix the key/publish instead of exposing inline config.
+Expected: 4 agent ids written to `agents.lock.json` (gitignored) and a final
+line `PRETEXT_AGENT_IDS={"helpdesk-pretext":"ag_...",...}` — copy that JSON
+verbatim into the deployment env. If publish fails, `/api/agent-config`
+returns 503 `stored_agent_required` by design — fix the key/publish instead
+of exposing inline config.
 
 For a cloud server, copy only the `agents` object into the server-side
 `PRETEXT_AGENT_IDS` environment variable:

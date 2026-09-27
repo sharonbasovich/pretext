@@ -107,11 +107,11 @@ and `PRETEXT_AGENT_IDS`. Optional:
 `PRETEXT_DAILY_SESSION_CAP` (default 200), `PRETEXT_DEMO_PASSCODE`,
 `PRETEXT_MAX_SESSION_SECONDS` (default/max 240).
 
-Run `npm run publish` once after setting the key — it upserts the stored
-agents and writes `agents.lock.json` locally. This file is gitignored, so put
-its `agents` object in the deployment's `PRETEXT_AGENT_IDS` environment
-variable as compact JSON (for example,
-`node -p "JSON.stringify(require('./agents.lock.json').agents)"`). Do not add
+Run `npm run publish` once after setting the key in `.env` (the script loads
+`.env` itself via `--env-file-if-exists`) — it upserts the stored agents,
+writes `agents.lock.json` locally, and prints the exact `PRETEXT_AGENT_IDS`
+JSON to paste into the deployment's environment. That file is gitignored, so
+the printed `agents` object is what goes in `PRETEXT_AGENT_IDS`. Do not add
 `NEXT_PUBLIC_` to this variable or commit the API key. Without a stored agent ID,
 `/api/agent-config` answers **503 `stored_agent_required`** because inline
 configs would ship the attacker's playbook (full persona prompt + tool

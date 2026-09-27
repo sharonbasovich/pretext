@@ -111,7 +111,9 @@ export default function CallConsole({ scenario }: { scenario: Scenario }) {
       }, replaySpeed);
       return;
     }
-    const tok = await fetch(`/api/token${passcode ? `?passcode=${encodeURIComponent(passcode)}` : ""}`);
+    const tok = await fetch(withBase("/api/token"), {
+      headers: passcode ? { "x-demo-passcode": passcode } : {},
+    });
     const body = await tok.json();
     if (!tok.ok) {
       if (body.error === "passcode_required") setNeedsPasscode(true);

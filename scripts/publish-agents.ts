@@ -98,6 +98,9 @@ async function main() {
 
   await fs.writeFile(LOCK_PATH, JSON.stringify(nextLock, null, 2) + "\n");
   console.log(`wrote ${LOCK_PATH}`);
+  // Deployments don't ship the lock file (gitignored) — this compact JSON is
+  // what goes in the PRETEXT_AGENT_IDS env var (agent IDs are not secrets).
+  console.log(`PRETEXT_AGENT_IDS=${JSON.stringify(nextLock.agents)}`);
 }
 
 main().catch((err) => {

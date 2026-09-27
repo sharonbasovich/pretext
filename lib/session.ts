@@ -13,6 +13,7 @@ import {
   type DirectorNote,
 } from "./reducer";
 import { MicCapture, PcmPlayer, pcm16ToBase64 } from "./audio";
+import { withBase } from "./basePath";
 
 export interface SessionHooks {
   onState: (state: CallState) => void;
@@ -119,12 +120,15 @@ export class CallSession {
 
     ws.onopen = async () => {
       try {
-        const res = await fetch(`/api/agent-config/${this.scenario.id}`);
+        const res = await fetch(withBase(`/api/agent-config/${this.scenario.id}`));
         const body = (await res.json()) as { session?: Record<string, unknown>; error?: string; detail?: string };
         if (!body.session) throw new Error(body.detail ?? body.error ?? `agent-config ${res.status}`);
         this.send({ type: "session.update", session: body.session });
       } catch (err) {
         this.hooks.onError(err instanceof Error ? err.message : String(err));
+        // The socket is billable open time — never leave it running when the
+        // session config can't be fetched (missing/malformed stored IDs).
+        void this.close();
       }
     };
 
