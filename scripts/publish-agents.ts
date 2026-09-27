@@ -20,6 +20,8 @@ function toStoredBody(agent: ReturnType<typeof loadAgentFile> extends Promise<in
     name: agent.name,
     greeting: agent.greeting,
     voice: agent.voice,
+    input: agent.input ? { type: "audio", ...agent.input } : undefined,
+    output: agent.output ? { type: "audio", ...agent.output } : undefined,
     system_prompt: agent.system_prompt,
     tools: agent.tools,
   };
