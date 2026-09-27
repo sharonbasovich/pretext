@@ -40,7 +40,7 @@ export default function DebriefPage() {
 
   // When live, fetch the session recording via the history proxy.
   useEffect(() => {
-    if (!call?.session_id || call.session_id.startsWith("sess_mock")) return;
+    if (!call?.session_id || /^sess_(mock|replay)/.test(call.session_id)) return;
     fetch(`/api/session/${call.session_id}`)
       .then(async (res) => {
         if (!res.ok) throw new Error(`history ${res.status}`);

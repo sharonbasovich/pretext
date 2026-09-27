@@ -8,15 +8,23 @@ the coordinator handles that.
 
 - Lint (0 warnings), `tsc --noEmit`, 39/39 Vitest unit tests, `npm run build`
   — re-run green from a clean clone (`git clone` → `npm ci`).
-- Playwright E2E ×3 (chromium, fake mic): live-mock call → BREACH → coach →
-  debrief + export; vendor-BEC replay → HELD THE LINE; lobby rendering.
-  Videos recorded per run.
+- Playwright E2E ×4 (chromium, fake mic): live-mock call → BREACH → coach →
+  debrief + export; vendor-BEC replay → HELD THE LINE; CFO held-fixture
+  replay → HELD THE LINE; lobby rendering. Videos recorded per run.
 - Mock-first call flow: token route → WS connect → session.update →
   session.ready → captions → rubric hits → `attempt_protected_action`
   trip-wire → BREACH → `session.update` coach switch → spoken debrief →
   `session.end` → debrief page + JSON export.
 - Replay mode (`?replay=1`) drives the identical reducer/UI from committed
-  fixtures — labeled "REPLAY (recorded)".
+  fixtures — labeled "REPLAY · recorded mock" banner throughout. Two CFO
+  variants: `?replay=1` (breach) and `?replay=held` (held the line); both
+  linked from the lobby card.
+- Static-exportable replay verified: `PRETEXT_STATIC_EXPORT=1` +
+  `scripts/build-static.sh` → `out/` serves lobby + replay + debrief with
+  fixtures from /public on a plain static host (no server APIs needed).
+- `submission/demo.mp4` (79s, 1920×1080) recorded via Playwright of the real
+  UI — title/closing cards + persistent "mock agent / recorded replay — live
+  AssemblyAI verification pending" banner via ffmpeg drawtext.
 - No API keys or secrets anywhere in git history (`git log -p` grep clean —
   only env-var *names* appear).
 
@@ -32,8 +40,11 @@ the coordinator handles that.
 
 ## Remaining steps for a human
 
-1. Create empty public repo `github.com/sharonbasovich/pretext` (MIT) —
-   local `main` has all commits; `git push -u origin main` (currently 403).
+1. Push to `github.com/sharonbasovich/pretext` (repo now exists, public,
+   empty). Devin's git-manager proxy returns 403 on push — an org-level
+   Devin↔GitHub integration issue (read works, write doesn't; zero repos in
+   `git_list_repos`). Fallback: `git bundle create pretext.bundle --all`
+   attached to reports — owner can `git clone pretext.bundle` and push.
 2. Set `ASSEMBLYAI_API_KEY` in `.env`; run `npm run publish` (writes
    `agents.lock.json`, gitignored).
 3. Deploy: `npx vercel --prod` with `ASSEMBLYAI_API_KEY` env (+ optional
@@ -41,8 +52,9 @@ the coordinator handles that.
    `PRETEXT_MAX_SESSION_SECONDS`). Do NOT set `PRETEXT_EXPOSE_INLINE`.
 4. Run one real call per persona; capture real fixtures into
    `public/fixtures/` if better than the mock-derived ones.
-5. Record the ≤3 min demo video per `submission/video_script.md`
-   (exact trainee lines included); keep the automated Playwright run
-   labeled as automated if used as backup.
+5. Demo video: `submission/demo.mp4` exists (automated Playwright capture
+   of replay + mock flows, clearly watermarked). For the real submission,
+   record the scripted live run per `submission/video_script.md` once the
+   API key is live — the automated file is the honest backup.
 6. Fill the lablab.ai form: title/short/long/tags from `submission/`,
    `cover.png`, `slides.pdf`, repo URL, demo URL.

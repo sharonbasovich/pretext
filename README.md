@@ -13,6 +13,12 @@ caller drops character and debriefs you.
 
 Built for the [AssemblyAI Voice Agent Hackathon](https://lablab.ai) (Sep 2026).
 
+**Status:** verified end-to-end against the bundled mock agent (same WS wire
+protocol) — 4 Playwright E2E + 39 unit tests, lint/typecheck/build green.
+Live AssemblyAI paths (token mint, stored agents, session-history playback)
+are implemented and unit-tested but await an API key — see
+`submission/SUBMISSION_STATUS.md` for the exact live-vs-mock matrix.
+
 ## 60-second demo
 
 1. `cp .env.example .env` and set `ASSEMBLYAI_API_KEY` (or leave unset and use Replay mode).

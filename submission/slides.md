@@ -124,8 +124,10 @@ stored-agent publish, session-history playback are implemented and
 unit-tested but not yet exercised against production AssemblyAI.
 
 This deck makes no claim we haven't run. The replay fixtures you see in the
-demo are labeled **REPLAY (recorded)** in the UI and are never passed off as
-live.
+demo are labeled **REPLAY · recorded mock** in the UI and are never passed
+off as live. Two CFO replays ship: breach and held-the-line. The bundled
+demo.mp4 is an automated Playwright recording of those replays, watermarked
+accordingly — replace it with a scripted live run once the key lands.
 
 ---
 
