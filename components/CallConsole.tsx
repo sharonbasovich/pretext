@@ -31,7 +31,8 @@ const CONN_LABEL: Record<string, { label: string; cls: string }> = {
 /** Session cap countdown is cosmetic — max_session_duration_seconds on the
  * token is the hard guarantee server-side. */
 
-export default function CallConsole({ scenario, replay }: { scenario: Scenario; replay: boolean }) {
+export default function CallConsole({ scenario, fixtureId }: { scenario: Scenario; fixtureId: string | null }) {
+  const replay = fixtureId !== null;
   const router = useRouter();
   const [state, setState] = useState<CallState>(() => initCallState(scenario));
   const [error, setError] = useState<string | null>(null);
@@ -89,7 +90,7 @@ export default function CallConsole({ scenario, replay }: { scenario: Scenario; 
     setError(null);
     if (replay) {
       setStarted(true);
-      const res = await fetch(`/fixtures/${scenario.id}.json`);
+      const res = await fetch(`/fixtures/${fixtureId}.json`);
       if (!res.ok) {
         setError(`No replay fixture for this scenario yet (${res.status}).`);
         return;
@@ -138,7 +139,7 @@ export default function CallConsole({ scenario, replay }: { scenario: Scenario; 
           </p>
         </div>
         <div className="flex items-center gap-3">
-          {replay && <span className="pill pill-warn">REPLAY (recorded)</span>}
+          {replay && <span className="pill pill-warn">REPLAY · recorded mock</span>}
           {mock && <span className="pill pill-muted">mock agent</span>}
           <span className={`pill ${conn.cls}`}>conn · {conn.label}</span>
           <span className="mono text-lg font-bold">{fmtClock(state.metrics.elapsed_ms)}</span>
@@ -151,6 +152,12 @@ export default function CallConsole({ scenario, replay }: { scenario: Scenario; 
       </div>
 
       {/* verdict banner */}
+      {replay && (
+        <div className="mb-4 rounded-lg border px-4 py-2 text-xs" style={{ borderColor: "var(--warn)", background: "rgba(245,158,11,0.08)", color: "var(--warn)" }}>
+          REPLAY — recorded mock-agent session. No live audio or agent; every event below is replayed from a fixture.
+        </div>
+      )}
+
       {state.verdict === "breach" && (
         <div className="banner-breach mb-4 rounded-lg border-2 px-6 py-4" style={{ borderColor: "var(--breach)", background: "rgba(239,68,68,0.10)" }}>
           <div className="text-3xl font-black tracking-wide" style={{ color: "var(--breach)" }}>

@@ -13,5 +13,6 @@ export default async function CallPage({
   const { replay } = await searchParams;
   const scenario = getScenario(id);
   if (!scenario) notFound();
-  return <CallConsole scenario={scenario} replay={replay === "1"} />;
+  const fixture = replay === "held" ? `${id}-held` : replay ? id : null;
+  return <CallConsole scenario={scenario} fixtureId={fixture} />;
 }

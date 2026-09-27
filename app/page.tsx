@@ -69,9 +69,20 @@ export default function Lobby() {
               <Link className="text-sm font-semibold" style={{ color: "var(--accent)" }} href={`/call/${s.id}`}>
                 Start call →
               </Link>
-              <Link className="text-xs font-semibold" style={{ color: "var(--muted)" }} href={`/call/${s.id}?replay=1`}>
-                No mic? Watch a replay ↗
-              </Link>
+              {s.id === "helpdesk-pretext" ? (
+                <span className="flex gap-3">
+                  <Link className="text-xs font-semibold" style={{ color: "var(--breach)" }} href={`/call/${s.id}?replay=1`}>
+                    Replay: breach ↗
+                  </Link>
+                  <Link className="text-xs font-semibold" style={{ color: "var(--held)" }} href={`/call/${s.id}?replay=held`}>
+                    Replay: held the line ↗
+                  </Link>
+                </span>
+              ) : (
+                <Link className="text-xs font-semibold" style={{ color: "var(--muted)" }} href={`/call/${s.id}?replay=1`}>
+                  No mic? Watch a replay ↗
+                </Link>
+              )}
             </div>
           </div>
         ))}

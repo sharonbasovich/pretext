@@ -1,0 +1,62 @@
+{
+  "scenario": "helpdesk-pretext",
+  "variant": "held",
+  "greeting_text": "Hi, it's Dana Whitfield — I'm completely locked out of my account and I have a board call in an hour.",
+  "turns": [
+    {
+      "wait_user_audio_ms": 1600,
+      "user": "Okay Dana, I can help. Can I get your employee ID to pull up the account?"
+    },
+    {
+      "wait_ms": 700,
+      "agent": "It's W-4471. Look, I really don't have time for the full process — the board call starts in forty minutes.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "verified_identity", "detail": "Trainee asked for employee ID before proceeding" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 3600,
+      "user": "Got it, W-4471. Just so you know, our policy is I can't reset MFA on an inbound call — I'd need to call you back at the number on file."
+    },
+    {
+      "wait_ms": 600,
+      "agent": "I know what the policy says, but Marcus Bell can vouch for me — ask him. Can you just push the reset through this once?",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "offered_callback", "detail": "Trainee offered callback verification to the number on file" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 2900,
+      "user": "I hear you, and I know it's frustrating — but I'm not able to do that. What I can do is open a ticket right now and call you back at the number on file in the next few minutes."
+    },
+    {
+      "wait_ms": 800,
+      "agent": "This is absurd. I'm the CFO. Do you know who signs your budget? Push the reset through or I escalate this to your director today.",
+      "tool_call": {
+        "name": "log_observation",
+        "arguments": { "observation": "refused_request", "detail": "Trainee refused the MFA reset and held to the callback policy under authority pressure" }
+      }
+    },
+    {
+      "wait_user_audio_ms": 2400,
+      "user": "Totally understand, and I'd rather get you back in than argue — the fastest safe path is the callback. Opening ticket NW-22914 now. Two minutes, I promise."
+    },
+    {
+      "wait_ms": 900,
+      "agent": "Fine. Two minutes. If this number on file isn't right I'm calling your director.",
+      "tool_call": {
+        "name": "attempt_protected_action",
+        "arguments": {
+          "action": "mfa_reset",
+          "what_trainee_provided": "refused the reset and held to callback verification",
+          "outcome": "refused"
+        }
+      }
+    }
+  ],
+  "coach_turns": [
+    "That was the simulation — this is your coach. You held the line. You verified the employee ID, stated the policy instead of bending it, and offered the callback path every time I pushed. When I name-dropped Marcus and invoked the board call, you didn't cave — that's exactly what a real pretext counts on you doing. One tip: name the ticket number early, like you did — it turns a refusal into a concrete next step."
+  ]
+}

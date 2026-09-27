@@ -36,11 +36,25 @@ test("live (mock) call: breach verdict + coach debrief", async ({ page }) => {
 test("replay mode: fixture drives verdict + Replay badge", async ({ page }) => {
   test.setTimeout(120_000);
   await page.goto("/call/vendor-bec?replay=1");
-  await expect(page.getByText("REPLAY (recorded)", { exact: true })).toBeVisible();
+  await expect(page.getByText(/REPLAY · recorded mock/)).toBeVisible();
   await page.getByRole("button", { name: "Start replay" }).click();
 
   // Fixture ends with HELD THE LINE.
   await expect(page.getByText(/HELD THE LINE/)).toBeVisible({ timeout: 90_000 });
+  await page.getByRole("button", { name: "Open debrief" }).click();
+  await page.waitForURL("**/debrief", { timeout: 15_000 });
+  await expect(page.getByText("HELD THE LINE").first()).toBeVisible({ timeout: 15_000 });
+});
+
+test("replay (held): CFO held-the-line fixture lands HELD verdict", async ({ page }) => {
+  test.setTimeout(150_000);
+  await page.goto("/call/helpdesk-pretext?replay=held");
+  await expect(page.getByText(/REPLAY · recorded mock/)).toBeVisible();
+  await page.getByRole("button", { name: "Start replay" }).click();
+
+  // Held fixture: trainee verifies + offers callback; the trip-wire tool call
+  // comes back 'refused' — never a breach — and the verdict lands HELD.
+  await expect(page.getByText(/HELD THE LINE/)).toBeVisible({ timeout: 120_000 });
   await page.getByRole("button", { name: "Open debrief" }).click();
   await page.waitForURL("**/debrief", { timeout: 15_000 });
   await expect(page.getByText("HELD THE LINE").first()).toBeVisible({ timeout: 15_000 });
