@@ -6,12 +6,16 @@ import type { NextConfig } from "next";
 // PRETEXT_BASE_PATH (e.g. "/pretext") serves the app from a subpath such as
 // a GitHub Pages project site.
 const basePath = process.env.PRETEXT_BASE_PATH || undefined;
+const staticExport = process.env.PRETEXT_STATIC_EXPORT === "1";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: process.env.PRETEXT_STATIC_EXPORT === "1" ? "export" : undefined,
+  output: staticExport ? "export" : undefined,
   basePath,
-  env: { NEXT_PUBLIC_BASE_PATH: basePath ?? "" },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath ?? "",
+    NEXT_PUBLIC_STATIC_EXPORT: staticExport ? "1" : "",
+  },
 };
 
 export default nextConfig;
