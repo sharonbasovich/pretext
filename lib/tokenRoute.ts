@@ -5,7 +5,7 @@
  * Cost controls (per the demo-hardening spec):
  *  - per-IP sliding-window rate limit
  *  - a daily session cap (UTC day rollover)
- *  - optional demo passcode
+ *  - required demo passcode for every live-key deployment
  *  - max_session_duration_seconds hard-clamped to <=240 (Voice Agent API bills
  *    on socket-open time; the free tier is $50 and must survive a public demo)
  */
@@ -18,6 +18,8 @@ const RATE_LIMIT_MAX_PER_IP = 10;
 
 export interface TokenEnv {
   ASSEMBLYAI_API_KEY?: string;
+  NODE_ENV?: string;
+  VERCEL_ENV?: string;
   PRETEXT_MAX_SESSION_SECONDS?: string;
   PRETEXT_DAILY_SESSION_CAP?: string;
   PRETEXT_DEMO_PASSCODE?: string;
@@ -98,7 +100,22 @@ export async function mintToken(
 ): Promise<TokenResponse> {
   const now = opts.now ?? Date.now();
 
-  // Optional passcode gate.
+  // Any deployment with a live key can incur charges, regardless of its
+  // NODE_ENV label. Require a private gate before issuing a token. Production
+  // also fails closed when misconfigured as mock-only, so a later key addition
+  // cannot silently open the endpoint.
+  const production = env.NODE_ENV === "production" || env.VERCEL_ENV === "production";
+  const hasLiveKey = env.PRETEXT_MOCK !== "1" && Boolean(env.ASSEMBLYAI_API_KEY?.trim());
+  if ((production || hasLiveKey) && !env.PRETEXT_DEMO_PASSCODE?.trim()) {
+    return {
+      ok: false,
+      status: 503,
+      error: "passcode_not_configured",
+      detail: "The live demo is unavailable until PRETEXT_DEMO_PASSCODE is configured. Replay mode is always available.",
+    };
+  }
+
+  // Passcode gate. Local mock mode may deliberately omit it.
   const requiredPasscode = env.PRETEXT_DEMO_PASSCODE;
   if (requiredPasscode && opts.passcode !== requiredPasscode) {
     return { ok: false, status: 401, error: "passcode_required" };
@@ -123,7 +140,7 @@ export async function mintToken(
     };
   }
 
-  if (!env.ASSEMBLYAI_API_KEY) {
+  if (!env.ASSEMBLYAI_API_KEY?.trim()) {
     return {
       ok: false,
       status: 503,
