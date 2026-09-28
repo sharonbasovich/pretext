@@ -102,9 +102,11 @@ Scripts: `npm run lint` · `npm run typecheck` · `npm test` · `npm run build` 
 
 ## Deploy (Vercel)
 
-`vercel deploy --prod` with two server-side env vars: `ASSEMBLYAI_API_KEY`
-and `PRETEXT_AGENT_IDS`. Optional:
-`PRETEXT_DAILY_SESSION_CAP` (default 200), `PRETEXT_DEMO_PASSCODE`,
+`vercel deploy --prod` with three server-side env vars: `ASSEMBLYAI_API_KEY`,
+`PRETEXT_AGENT_IDS`, and `PRETEXT_DEMO_PASSCODE`. Live token minting fails
+closed without a nonempty demo passcode, even on a non-production host.
+Optional:
+`PRETEXT_DAILY_SESSION_CAP` (default 200) and
 `PRETEXT_MAX_SESSION_SECONDS` (default/max 240).
 
 Run `npm run publish` once after setting the key in `.env` (the script loads
@@ -118,11 +120,15 @@ configs would ship the attacker's playbook (full persona prompt + tool
 schemas) to every trainee's browser. `PRETEXT_EXPOSE_INLINE=1` opts back in
 for local debugging; `PRETEXT_MOCK=1` is always exempt.
 
+`GET /api/status` returns no-store configuration diagnostics as booleans and
+persona names; `live_ready` means prerequisites are set, not that a genuine
+AssemblyAI call has been verified. It never returns credentials or agent IDs.
+
 Cost-control note: the per-IP rate limit and the daily session cap live in
 route-handler memory, so on Vercel they're **per serverless instance —
 best-effort**. `max_session_duration_seconds` is the only hard guarantee,
 enforced by AssemblyAI. For anything stricter, front the token route with a
-shared store (e.g. Upstash) — or set `PRETEXT_DEMO_PASSCODE`.
+shared store (e.g. Upstash). Keep the required demo passcode private.
 
 ## Static replay build (no server)
 

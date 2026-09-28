@@ -66,7 +66,10 @@ describe("token route", () => {
       calledUrl = url;
       return { ok: true, status: 200, json: async () => ({ token: "tok_live" }), text: async () => "" };
     };
-    const res = await mintToken({ ASSEMBLYAI_API_KEY: "k" }, { ip: "7.7.7.7", fetchFn: fakeFetch });
+    const res = await mintToken(
+      { ASSEMBLYAI_API_KEY: "k", PRETEXT_DEMO_PASSCODE: "private-code" },
+      { ip: "7.7.7.7", passcode: "private-code", fetchFn: fakeFetch },
+    );
     expect(res.ok).toBe(true);
     if (res.ok) {
       expect(res.token).toBe("tok_live");
@@ -76,11 +79,76 @@ describe("token route", () => {
     expect(calledUrl).toContain("max_session_duration_seconds=240");
   });
 
+  it("production build permits a keyless mock session for E2E", async () => {
+    const res = await mintToken({ ...baseEnv, NODE_ENV: "production" }, { ip: "1.1.1.2" });
+    expect(res.ok).toBe(true);
+    if (res.ok) expect(res.mock).toBe(true);
+  });
+
+  it("fails closed whenever a live key is configured without a passcode", async () => {
+    let called = false;
+    const fakeFetch = async () => {
+      called = true;
+      return { ok: true, status: 200, json: async () => ({ token: "should-not-issue" }), text: async () => "" };
+    };
+    for (const env of [
+      { NODE_ENV: "production", ASSEMBLYAI_API_KEY: "k" },
+      { VERCEL_ENV: "production", ASSEMBLYAI_API_KEY: "k", PRETEXT_DEMO_PASSCODE: "   " },
+      { NODE_ENV: "production", PRETEXT_MOCK: "1", ASSEMBLYAI_API_KEY: "k" },
+      { NODE_ENV: "development", ASSEMBLYAI_API_KEY: "k" },
+    ]) {
+      const res = await mintToken(env, { ip: "9.9.9.9", passcode: "   ", fetchFn: fakeFetch });
+      expect(res.ok).toBe(false);
+      if (!res.ok) {
+        expect(res.status).toBe(503);
+        expect(res.error).toBe("passcode_not_configured");
+      }
+    }
+    expect(called).toBe(false);
+  });
+
+  it("allows a production live token only with the configured passcode", async () => {
+    let called = 0;
+    const fakeFetch = async () => {
+      called += 1;
+      return { ok: true, status: 200, json: async () => ({ token: "tok_live" }), text: async () => "" };
+    };
+    const env = { NODE_ENV: "production", ASSEMBLYAI_API_KEY: "k", PRETEXT_DEMO_PASSCODE: "private-code" };
+    const bad = await mintToken(env, { ip: "9.9.9.10", passcode: "wrong", fetchFn: fakeFetch });
+    expect(bad.ok).toBe(false);
+    if (!bad.ok) expect(bad.error).toBe("passcode_required");
+    expect(called).toBe(0);
+    const good = await mintToken(env, { ip: "9.9.9.10", passcode: "private-code", fetchFn: fakeFetch });
+    expect(good.ok).toBe(true);
+    expect(called).toBe(1);
+  });
+
+  it("does not call the upstream when a live key contains only whitespace", async () => {
+    let called = false;
+    const res = await mintToken(
+      { ASSEMBLYAI_API_KEY: "  \n ", PRETEXT_DEMO_PASSCODE: "private-code" },
+      {
+        ip: "9.9.9.11",
+        passcode: "private-code",
+        fetchFn: async () => {
+          called = true;
+          throw new Error("unexpected upstream call");
+        },
+      },
+    );
+    expect(res.ok).toBe(false);
+    if (!res.ok) expect(res.error).toBe("no_api_key");
+    expect(called).toBe(false);
+  });
+
   it("upstream failure → 502", async () => {
     const fakeFetch = async () => ({
       ok: false, status: 401, json: async () => ({}), text: async () => "unauthorized",
     });
-    const res = await mintToken({ ASSEMBLYAI_API_KEY: "k" }, { ip: "8.8.8.8", fetchFn: fakeFetch });
+    const res = await mintToken(
+      { ASSEMBLYAI_API_KEY: "k", PRETEXT_DEMO_PASSCODE: "private-code" },
+      { ip: "8.8.8.8", passcode: "private-code", fetchFn: fakeFetch },
+    );
     expect(res.ok).toBe(false);
     if (!res.ok) expect(res.status).toBe(502);
   });

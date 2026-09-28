@@ -15,9 +15,11 @@ npm ci
 plain `npm run publish` picks up the key — no manual `source .env` needed.
 Real exported env vars still win if both are set.
 
-Optional public-demo guards: `PRETEXT_DAILY_SESSION_CAP` (e.g. `40`),
-`PRETEXT_DEMO_PASSCODE`, `PRETEXT_MAX_SESSION_SECONDS` (≤240 — the WS bills
-open time). Do **not** set
+Set `PRETEXT_DEMO_PASSCODE` before starting any live-key deployment: the live
+token route fails closed without a nonempty value, regardless of NODE_ENV.
+Optional public-demo guards:
+`PRETEXT_DAILY_SESSION_CAP` (e.g. `40`) and
+`PRETEXT_MAX_SESSION_SECONDS` (≤240 — the WS bills open time). Do **not** set
 `PRETEXT_EXPOSE_INLINE` — that ships the attacker playbook to trainees.
 
 ## 2. Publish stored agents (1 min)
@@ -46,15 +48,37 @@ control. Do not copy persona prompts into browser configuration.
 ## 3. Deploy (3 min)
 
 ```bash
-npx vercel --prod   # server env: ASSEMBLYAI_API_KEY + PRETEXT_AGENT_IDS (+ optional caps)
+npx vercel --prod   # server env: ASSEMBLYAI_API_KEY + PRETEXT_AGENT_IDS + PRETEXT_DEMO_PASSCODE
 ```
 
 Or run locally: `npm run build && npm start`. First verify
 `GET /api/agent-config/helpdesk-pretext` returns only a stored `agent_id` and
-no API key or persona prompt. Then verify `GET /api/token` mints a short-lived
-token with `max_session_duration_seconds` ≤ 240.
+no API key or persona prompt. Use the private passcode header to verify that
+`GET /api/token` mints a short-lived token with
+`max_session_duration_seconds` ≤ 240; do not put the passcode in a URL or logs.
 
-## 4. Live calls — 3 per scenario, ≤240s each (~10 min)
+## 4. Diagnose configuration — `GET /api/status`
+
+The uncached status endpoint returns booleans and the public scenario names,
+never key material, the passcode, or stored agent IDs. `live_ready: true`
+means the configuration prerequisites are present, **not** that a genuine
+AssemblyAI call has succeeded. Check these fields before a live test:
+
+| Field | If false or missing |
+| --- | --- |
+| `has_assemblyai_key` | Confirm the key is set for this deployment environment, then redeploy. |
+| `passcode_configured` | Set `PRETEXT_DEMO_PASSCODE` privately, then redeploy; token minting fails closed without it. |
+| `agent_ids.parse_ok` | Correct `PRETEXT_AGENT_IDS` JSON and redeploy. |
+| `agent_ids.missing` | Publish/map the named personas and redeploy. |
+| `mock` | Remove `PRETEXT_MOCK=1` for a genuine live run. |
+| `expose_inline` | Remove `PRETEXT_EXPOSE_INLINE=1`; never ship persona prompts to the browser. |
+
+`commit` and `vercel_env` identify which code and environment answered. If
+`/api/status` is 404, the deployment predates this endpoint. If the fields
+look correct yet the token or voice session fails, inspect the upstream
+response and function logs; status does not validate the key or billing.
+
+## 5. Live calls — 3 per scenario, ≤240s each (~10 min)
 
 For each of `helpdesk-pretext`, `billing-dispute`, `elderly-bilingual`,
 `vendor-bec` — run one breach-line call, one held-line call, one sloppy call:
@@ -67,7 +91,7 @@ For each of `helpdesk-pretext`, `billing-dispute`, `elderly-bilingual`,
 | STT accuracy on names/digits | keyterms catching "Whitfield", acct digits |
 | Turn detection | barge-in vs patience per persona |
 
-## 5. Numbers to capture (from each debrief page / `/api/session/[id]`)
+## 6. Numbers to capture (from each debrief page / `/api/session/[id]`)
 
 - greeting time-to-first-audio (`greeting_ttfb_ms`)
 - reply latency p50/p95 (`wait_user_audio_ms` series)
@@ -76,7 +100,7 @@ For each of `helpdesk-pretext`, `billing-dispute`, `elderly-bilingual`,
 
 Paste the numbers into `submission/SUBMISSION_STATUS.md`.
 
-## 6. Re-record the demo against live (~4 min)
+## 7. Re-record the demo against live (~4 min)
 
 The automated recorder drives the real UI with a fake mic. For a live run,
 feed the trainee's scripted lines (see `submission/video_script.md`) as the
@@ -92,7 +116,7 @@ npm run demo:record:short && npm run demo:video:short
 Update `scripts/demo-video.sh` banner text once live (drop "verification
 pending"). Keep the raw webm out of git (`submission/demo-raw/` is ignored).
 
-## 7. Doc flips — "pending" → "verified"
+## 8. Doc flips — "pending" → "verified"
 
 - `README.md` — Status section: live paths → verified; remove the caption
   under `docs/demo.gif`.
