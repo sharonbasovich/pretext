@@ -79,7 +79,13 @@ describe("token route", () => {
     expect(calledUrl).toContain("max_session_duration_seconds=240");
   });
 
-  it("fails closed in production when the demo passcode is absent or blank", async () => {
+  it("production build permits a keyless mock session for E2E", async () => {
+    const res = await mintToken({ ...baseEnv, NODE_ENV: "production" }, { ip: "1.1.1.2" });
+    expect(res.ok).toBe(true);
+    if (res.ok) expect(res.mock).toBe(true);
+  });
+
+  it("fails closed whenever a live key is configured without a passcode", async () => {
     let called = false;
     const fakeFetch = async () => {
       called = true;
@@ -88,7 +94,7 @@ describe("token route", () => {
     for (const env of [
       { NODE_ENV: "production", ASSEMBLYAI_API_KEY: "k" },
       { VERCEL_ENV: "production", ASSEMBLYAI_API_KEY: "k", PRETEXT_DEMO_PASSCODE: "   " },
-      { NODE_ENV: "production", PRETEXT_MOCK: "1" },
+      { NODE_ENV: "production", PRETEXT_MOCK: "1", ASSEMBLYAI_API_KEY: "k" },
       { NODE_ENV: "development", ASSEMBLYAI_API_KEY: "k" },
     ]) {
       const res = await mintToken(env, { ip: "9.9.9.9", passcode: "   ", fetchFn: fakeFetch });

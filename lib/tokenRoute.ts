@@ -100,13 +100,11 @@ export async function mintToken(
 ): Promise<TokenResponse> {
   const now = opts.now ?? Date.now();
 
-  // Any deployment with a live key can incur charges, regardless of its
-  // NODE_ENV label. Require a private gate before issuing a token. Production
-  // also fails closed when misconfigured as mock-only, so a later key addition
-  // cannot silently open the endpoint.
-  const production = env.NODE_ENV === "production" || env.VERCEL_ENV === "production";
-  const hasLiveKey = env.PRETEXT_MOCK !== "1" && Boolean(env.ASSEMBLYAI_API_KEY?.trim());
-  if ((production || hasLiveKey) && !env.PRETEXT_DEMO_PASSCODE?.trim()) {
+  // A configured live key could incur charges if mock mode is later removed,
+  // regardless of the deployment label. Keep it gated even while mock mode is
+  // selected. A production mock with no key stays usable for E2E verification.
+  const hasLiveKey = Boolean(env.ASSEMBLYAI_API_KEY?.trim());
+  if (hasLiveKey && !env.PRETEXT_DEMO_PASSCODE?.trim()) {
     return {
       ok: false,
       status: 503,
