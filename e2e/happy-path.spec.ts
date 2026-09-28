@@ -73,4 +73,6 @@ test("lobby lists all four scenarios", async ({ page }) => {
   for (const t of ["CFO Pretext", "Double Charge", "Rosa", "Remittance Switch"]) {
     await expect(page.getByText(new RegExp(t, "i")).first()).toBeVisible();
   }
+  // /api/status (PRETEXT_MOCK=1 in the E2E env) feeds the lobby readiness line
+  await expect(page.getByText("Live voice: mock-agent mode")).toBeVisible();
 });

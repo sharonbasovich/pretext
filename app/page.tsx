@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SCENARIOS } from "@/lib/catalog";
+import LiveStatus from "@/components/LiveStatus";
 
 export default function Lobby() {
   return (
@@ -25,6 +26,7 @@ export default function Lobby() {
         <p className="mt-2 text-sm" style={{ color: "var(--muted)" }}>
           Phishing simulations trained people to stop clicking. Pretext trains them to stop caving on the phone.
         </p>
+        <LiveStatus />
       </header>
 
       {/* how it works — 3-step strip */}
