@@ -3,7 +3,8 @@
 - [ ] Chrome (recommended; Firefox/Safari work but may need resampling)
 - [ ] Headphones plugged in (echo cancellation off-mic without them)
 - [ ] `ASSEMBLYAI_API_KEY` set on the deployment
-- [ ] `PRETEXT_DEMO_PASSCODE` set if the demo is public — keep it on a card at the podium
+- [ ] Confirm the required `PRETEXT_DEMO_PASSCODE` is set server-side and
+      available privately to the presenter
 - [ ] `PRETEXT_DAILY_SESSION_CAP` tuned for the audience size
 - [ ] Warm up: run one mock call locally (`npm run mock` + `PRETEXT_MOCK=1 npm run dev`)
 - [ ] Fallback ready: if the API is down, run every scenario via `?replay=1` — say "Replay (recorded)" out loud

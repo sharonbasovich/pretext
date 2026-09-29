@@ -78,14 +78,14 @@ director: conversation.message nudges · session.update escalation
 ```
 
 - **Token route** mints capped tokens (≤240 s, per-IP rate limit, daily cap,
-  optional passcode) — the API key never reaches the browser.
+  required private passcode) — the API key never reaches the browser.
 - **Mock agent + replay fixtures** — offline dev, CI, and a labeled fallback demo path.
 
 ---
 
 ## AssemblyAI feature map
 
-| Feature | Designed use in Pretext — live verification pending |
+| Feature | How Pretext uses it |
 | --- | --- |
 | Voice Agent WS | The entire call: STT, turn-taking, persona, TTS, barge-in |
 | `GET /v1/token` caps | Hard ≤240 s sessions on a public demo |
@@ -106,43 +106,48 @@ director: conversation.message nudges · session.update escalation
   not a chatbot, not a detector.
 - **Evidence-backed verdicts** — every rubric hit points at the transcript
   span, tool call, or metric that triggered it; labeled mock replays are
-  available now, and live recording playback awaits API verification.
+  available now, and live browser recording playback awaits verification.
 - **Deterministic where it counts** — latency, talk ratio, interruptions,
   trip-wire, policy-phrase regexes. Soft-skill judgments are agent-observed
   and labeled as such.
-- **Everything on one API** — no separate STT/TTS/LLM vendors; browser-only;
-  deploys to a server host with the API key and stored-agent IDs kept private.
+- **Everything on one API** — no separate STT/TTS/LLM vendors; the trainee
+  uses a browser while the server keeps the API key and stored-agent IDs private.
 
 ---
 
-## What's live vs mock-verified (honesty slide)
+## Verification status
 
 **Mock-verified:** 8 Playwright E2E and 41 unit tests cover the full call,
 trip-wire verdict, coach debrief, and JSON export. Lint, typecheck, and build
 pass.
 
-**Real AssemblyAI pending:** no key or production voice-agent call yet.
-Stored-agent publish, token minting, and session-history playback are
-implemented and unit-tested, awaiting live verification.
+**Production integration smoke test passed:** `/api/status` returned
+`live_ready: true`, `/api/token` returned HTTP 200, four stored agents were
+configured, and a genuine AssemblyAI session produced a greeting, coach
+response, and retrievable history.
 
-**Demo integrity:** all 8 replays and bundled videos are visibly labeled
-recorded mock. Replace them with a genuine live recording after API testing.
+**Still to verify:** the full deployed browser trainee flow, call quality and
+verdicts across all four personas, and live browser recording playback.
+
+**Demo integrity:** all eight replays and bundled videos are labeled recorded
+mock. Replace the footage after recording a genuine browser call.
 
 ---
 
-## Live AssemblyAI verification plan — PENDING (needs ASSEMBLYAI_API_KEY)
+## Live AssemblyAI verification progress
 
-- [ ] `npm run publish` → stored agents created from `agents/*.json`,
-      `agents.lock.json` written.
+- [x] Publish and configure four stored agents; production status ready.
+- [x] Mint a live token and verify a genuine WebSocket greeting, coach
+      response, and session-history fetch.
 - [ ] 3 live calls per scenario (12 total, ≤240s each): confirm persona
       holds character, trip-wire fires correctly, coach switch works.
 - [ ] Capture per-call numbers: greeting TTFB, reply latency p50/p95,
       turn-detection accuracy, STT accuracy on names/digits (keyterms on).
-- [ ] Verify `GET /v1/sessions/{id}` recording playback in debrief.
+- [ ] Verify a full deployed browser call and recording playback in debrief.
 - [ ] Record scripted live demo (video_script.md) replacing demo.mp4.
-- [ ] Final-submit by the official Sep 30, 11 a.m. EDT deadline.
+- [ ] Finalize and submit the draft LabLab entry.
 
-**Nothing on this slide is done yet — all items pending the API key.**
+**The current demo video and GIF are mock/replay captures. LabLab is draft.**
 
 ---
 

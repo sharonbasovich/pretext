@@ -13,8 +13,8 @@ caller drops character and debriefs you.
 
 ![Pretext demo — recorded mock replay: lobby → BREACH verdict → debrief](docs/demo.gif)
 
-_Recorded mock-agent replay — live AssemblyAI verification is pending (see
-Status below)._
+_Recorded mock-agent replay. Production AssemblyAI API and WebSocket smoke
+tests have passed; a full deployed browser call is still being verified._
 
 Built for the [AssemblyAI Voice Agent Hackathon](https://lablab.ai) (Sep 2026).
 
@@ -23,13 +23,18 @@ Built for the [AssemblyAI Voice Agent Hackathon](https://lablab.ai) (Sep 2026).
 - **Watch it now:** https://sharonbasovich.github.io/pretext/ — static replay host (no mic, no key; recorded-mock replays).
 - Or locally: `npm ci && npm run dev` → open `/call/helpdesk-pretext?replay=1`.
 - Every scenario card has `Replay: breach ↗` and `Replay: held ↗` links.
-- Live calls need `ASSEMBLYAI_API_KEY` — see `submission/LIVE_RUNBOOK.md`.
+- Live calls use the configured server deployment and a private demo passcode —
+  see `submission/LIVE_RUNBOOK.md`.
 
-**Status:** verified end-to-end against the bundled mock agent (same WS wire
-protocol) — 8 Playwright E2E + 41 unit tests, lint/typecheck/build green.
-Live AssemblyAI paths (token mint, stored agents, session-history playback)
-are implemented and unit-tested but await an API key — see
-`submission/SUBMISSION_STATUS.md` for the exact live-vs-mock matrix.
+**Status (2026-09-29):** verified end-to-end against the bundled mock agent
+(same WS wire protocol) — 8 Playwright E2E + 41 unit tests,
+lint/typecheck/build green. On the production server, `/api/status` returned
+`live_ready: true`, `/api/token` minted a token with HTTP 200, and four stored
+agents were configured. A genuine AssemblyAI WebSocket session produced a
+caller greeting and coach response; its session history was retrieved. The
+full deployed browser trainee flow and a genuine live demo recording are still
+being verified. The GIF and bundled videos remain labeled mock replays. See
+`submission/SUBMISSION_STATUS.md` for the verification matrix.
 
 ## 60-second demo
 

@@ -1,10 +1,10 @@
 # Submission status — Pretext
 
-Internal tracker for what is verified and what remains for a human to finish.
-Last updated: 2026-09-27. Nothing here claims registration or submission —
-the coordinator handles that.
+Internal tracker for what is verified and what remains before submission.
+Last updated: 2026-09-29. The LabLab entry remains a draft; this file does not
+claim registration or submission.
 
-## Verified (against the bundled mock agent — real WS wire protocol)
+## Verified with the bundled mock agent (real WS wire protocol)
 
 - Lint (0 warnings), `tsc --noEmit`, 41/41 Vitest unit tests, `npm run build`
   — re-run green from a clean clone (`git clone` → `npm ci`).
@@ -35,34 +35,38 @@ the coordinator handles that.
 - No API keys or secrets anywhere in git history (`git log -p` grep clean —
   only env-var *names* appear).
 
-## Implemented but NOT live-verified (needs `ASSEMBLYAI_API_KEY`)
+## Verified against production AssemblyAI (integration smoke test)
 
-- `GET /api/token` → real `GET /v1/token` mint (caps + limits are unit-tested).
-- `npm run publish` → stored agents on `/v1/agents` + `agents.lock.json`.
-- Real WS session against `wss://agents.assemblyai.com/v1/ws` (turn
-  detection, keyterms, voice choices may need tuning per persona).
-- `GET /api/session/[id]` → session history recording playback on debrief.
-- `PRETEXT_EXPOSE_INLINE=1` inline-config path (default is 503
-  `stored_agent_required` so the attacker playbook isn't shipped to trainees).
+- The deployed `/api/status` reported `live_ready: true`: the server had its
+  AssemblyAI key, required private passcode, and mappings for all four stored
+  agents. This is a configuration check, not proof of a completed browser call.
+- An authorized request to the deployed `/api/token` returned HTTP 200 and
+  minted a live session token.
+- Four caller personas were published as stored AssemblyAI agents and mapped
+  in the deployment; their IDs and the API key remain server-side.
+- A genuine session on `wss://agents.assemblyai.com/v1/ws` produced a caller
+  greeting and coach response. Its session history was retrieved through the
+  live API path.
 
-## Remaining steps for a human
+## Implemented; full deployed browser flow still being verified
 
-1. Keep [the public source](https://github.com/sharonbasovich/pretext) current.
-   Devin's GitHub integration cannot push; Codex can import its reviewed bundle
-   into a branch and merge it after checks pass.
-2. Set `ASSEMBLYAI_API_KEY` in `.env`; run `npm run publish` (writes
-   `agents.lock.json`, gitignored).
-3. Deploy: `npx vercel --prod` with `ASSEMBLYAI_API_KEY` and
-   `PRETEXT_AGENT_IDS` (the compact JSON `agents` object from the local lock
-   file) set as server-side env vars (+ optional
-   `PRETEXT_DAILY_SESSION_CAP`, `PRETEXT_DEMO_PASSCODE`,
-   `PRETEXT_MAX_SESSION_SECONDS`). Do NOT set `PRETEXT_EXPOSE_INLINE`.
-4. Run real calls per persona; capture genuine session IDs and verify the
-   stored-agent, token, WebSocket, and session-history paths end to end.
-   Keep the bundled fixtures labeled as mock-derived.
-5. Demo video: `submission/demo.mp4` exists (automated Playwright capture
-   of replay + mock flows, clearly watermarked). For the real submission,
-   record the scripted live run per `submission/video_script.md` once the
-   API key is live — the automated file is the honest backup.
-6. Fill the lablab.ai form: title/short/long/tags from `submission/`,
-   `cover.png`, `slides.pdf`, repo URL, demo URL.
+- A trainee's browser call from microphone permission through live captions,
+  rubric/tool verdict, coach handoff, `/debrief`, and recording playback has not
+  yet been completed and verified end to end on the deployed server.
+- The production smoke test does not establish call quality, trip-wire accuracy,
+  or the complete breach/held outcomes across all four personas. The mock E2E
+  suite and eight replay fixtures cover those UI paths separately.
+- `PRETEXT_EXPOSE_INLINE=1` remains a local debugging path. Production uses
+  stored agents; the default without an ID is 503 `stored_agent_required` so
+  persona prompts and tool schemas are not sent to trainees.
+
+## Remaining before submission
+
+1. Finish and document the deployed browser trainee run, including the
+   protected-action verdict, coach handoff, and debrief playback. Then test
+   breach and held outcomes across the four personas and capture call metrics.
+2. Record a genuine live demo following `submission/video_script.md`.
+   `submission/demo.mp4`, `submission/demo_short.mp4`, and `docs/demo.gif` are
+   still clearly labeled mock/replay captures.
+3. Keep [the public source](https://github.com/sharonbasovich/pretext) current
+   and finalize the draft LabLab entry with the reviewed copy and live demo.

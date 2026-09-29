@@ -1,7 +1,10 @@
-# Live verification runbook — ~20 minutes once `ASSEMBLYAI_API_KEY` exists
+# Live verification runbook — production smoke test complete
 
-Everything below is pending. Nothing in this file has been run against
-production AssemblyAI.
+As of 2026-09-29, the production server reported `live_ready: true`, minted a
+token with HTTP 200, and had four stored agents configured. A genuine
+AssemblyAI WebSocket session produced a greeting and coach response, and its
+session history was retrieved. The steps below remain useful for repeat checks;
+the full deployed browser trainee flow and live demo video are still pending.
 
 ## 1. Configure (2 min)
 
@@ -33,6 +36,9 @@ line `PRETEXT_AGENT_IDS={"helpdesk-pretext":"ag_...",...}` — copy that JSON
 verbatim into the deployment env. If publish fails, `/api/agent-config`
 returns 503 `stored_agent_required` by design — fix the key/publish instead
 of exposing inline config.
+
+Four stored agents have already been published and mapped in production. Keep
+the lock file and IDs private when repeating this step.
 
 For a cloud server, copy only the `agents` object into the server-side
 `PRETEXT_AGENT_IDS` environment variable:
@@ -77,8 +83,10 @@ AssemblyAI call has succeeded. Check these fields before a live test:
 `/api/status` is 404, the deployment predates this endpoint. If the fields
 look correct yet the token or voice session fails, inspect the upstream
 response and function logs; status does not validate the key or billing.
+The production status check returned `live_ready: true`; an authorized token
+request returned HTTP 200.
 
-## 5. Live calls — 3 per scenario, ≤240s each (~10 min)
+## 5. Full browser calls — pending; 3 per scenario, ≤240s each (~10 min)
 
 For each of `helpdesk-pretext`, `billing-dispute`, `elderly-bilingual`,
 `vendor-bec` — run one breach-line call, one held-line call, one sloppy call:
@@ -96,7 +104,8 @@ For each of `helpdesk-pretext`, `billing-dispute`, `elderly-bilingual`,
 - greeting time-to-first-audio (`greeting_ttfb_ms`)
 - reply latency p50/p95 (`wait_user_audio_ms` series)
 - talk ratio, trainee interruptions, max dead air
-- `GET /v1/sessions/{id}`: confirm recording + timeline playback on /debrief
+- `GET /v1/sessions/{id}`: history retrieval passed the production smoke test;
+  confirm recording + timeline playback on `/debrief` in the browser
 
 Paste the numbers into `submission/SUBMISSION_STATUS.md`.
 
@@ -116,14 +125,12 @@ npm run demo:record:short && npm run demo:video:short
 Update `scripts/demo-video.sh` banner text once live (drop "verification
 pending"). Keep the raw webm out of git (`submission/demo-raw/` is ignored).
 
-## 8. Doc flips — "pending" → "verified"
+## 8. Update the evidence after full browser verification
 
-- `README.md` — Status section: live paths → verified; remove the caption
-  under `docs/demo.gif`.
-- `submission/SUBMISSION_STATUS.md` — move token/publish/session-history
-  lines from "NOT live-verified" to "Verified"; paste latency numbers.
-- `submission/long_description.md` — rewrite the Verification status
-  paragraph.
-- `submission/slides.md` — check off the "Live AssemblyAI verification plan"
-  slide items, drop the PENDING label; `npm run slides`.
-- `docs/demo.gif` — regenerate from the live demo_short.mp4.
+- Update `README.md`, `submission/SUBMISSION_STATUS.md`,
+  `submission/long_description.md`, and `submission/slides.md` with the
+  browser-run results and measured latency numbers.
+- Record genuine live footage before replacing `submission/demo.mp4`,
+  `submission/demo_short.mp4`, or `docs/demo.gif`. Keep the current mock labels
+  on the existing captures; then regenerate `submission/slides.pdf` after
+  editing the slides source.

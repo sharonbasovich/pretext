@@ -45,7 +45,8 @@ Say: "Everything runs on the Voice Agent API — STT, turn-taking, the persona,
 TTS, barge-in. Client-side tools are the trip-wire. `conversation.message` and
 `reply.create` are a director channel that escalates if I stall. Keyterms and
 transcription prompts carry the fictional names and account digits. And it
-deploys to Vercel with one environment variable."
+deploys to Vercel with the API key, stored-agent IDs, and private passcode
+configured server-side."
 
 **2:15–2:50 — Replay + close**
 Screen: `?replay=1` run with the REPLAY badge.

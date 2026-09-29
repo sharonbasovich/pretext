@@ -9,11 +9,13 @@ Agent API. The agent plays the *caller* — four adversarial personas at the fic
 an angry double-charged customer, a confused elderly bilingual caller, and a
 vendor pushing a remittance change (BEC by phone). You play the employee.
 
-**Verification status:** every screen and score below is verified end-to-end
-against a bundled mock agent speaking the same Voice Agent wire protocol, plus
-committed replay fixtures. Live API verification (token mint, stored agents,
-session-history playback) is pending an API key — the exact 20-minute runbook
-ships in `submission/LIVE_RUNBOOK.md`.
+**Verification status (2026-09-29):** the mock agent and committed replay
+fixtures cover the full call UI and score. The production server reports
+`live_ready: true`; its token route returned HTTP 200, four stored agents are
+configured, and a genuine AssemblyAI WebSocket session produced a caller
+greeting, coach response, and retrievable session history. A full deployed
+browser trainee call and live demo recording are still being verified. The
+current public replay footage remains labeled as mock-derived.
 
 While the call runs, a deterministic rubric lights up live: did you verify the
 caller, cite the policy, offer the documented path? The moment you hand over a
@@ -23,8 +25,9 @@ verdict is **HELD THE LINE**. Then the caller drops character — the same voice
 switches persona via `session.update` — and debriefs you with what you did
 right, where the pretext almost worked, and the exact sentence to say next
 time. The debrief shows every rubric item with its evidence span and exports a
-JSON evidence pack. Its live path is designed to fetch a recording through the
-session history API; the published replays use clearly labeled mock fixtures.
+JSON evidence pack. The live session-history fetch passed a production smoke
+test; recording playback in a full browser run remains to be verified. The
+published replays use clearly labeled mock fixtures.
 
 **No mic or no key? Watch the replays.** Each of the 4 scenarios ships two
 recorded fixtures — breach and held-the-line — labeled "REPLAY · recorded
@@ -54,7 +57,7 @@ checks (aria-live verdict + captions, keyboard focus rings, ≥375px mobile).
   can replay both verdicts per scenario with no mic, and a static-export
   bundle serves them from any host.
 
-## AssemblyAI integration designed (live verification pending)
+## AssemblyAI integration (selected production checks verified)
 
 | Feature | Use |
 | --- | --- |

@@ -27,7 +27,7 @@ Product/architecture choices made during the build, with reasoning.
   grading real multi-party calls.
 
 - **Public-demo cost controls.** Token route: per-IP sliding-window rate
-  limit, daily session cap, optional passcode, and a hard 240 s
+  limit, daily session cap, required private passcode, and a hard 240 s
   `max_session_duration_seconds` clamp. Sessions always send `session.end`
   on stop/pagehide.
 
