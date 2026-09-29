@@ -1,16 +1,26 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 
 // Happy path vs the mock agent: connect, captions flow, scripted breach fires
 // the trip-wire, coach switch speaks the debrief, verdict lands.
 
-test("live (mock) call: breach verdict + coach debrief", async ({ page }) => {
-  test.setTimeout(120_000);
+async function startMockCall(page: Page) {
   await page.goto("/call/helpdesk-pretext");
   await expect(page.getByText("Ready?")).toBeVisible();
+  const status = await page.request.get("/api/status");
+  const { passcode_configured: passcodeRequired } = await status.json();
   await page.getByRole("button", { name: "Start call" }).click();
-
-  // LIVE badge once session.ready arrives.
+  if (passcodeRequired) {
+    const passcode = process.env.PRETEXT_DEMO_PASSCODE;
+    if (!passcode) throw new Error("PRETEXT_DEMO_PASSCODE is needed to run the mock call E2E test");
+    await page.getByPlaceholder("Demo passcode").fill(passcode);
+    await page.getByRole("button", { name: "Start call" }).click();
+  }
   await expect(page.getByText(/conn · LIVE|LIVE/).first()).toBeVisible({ timeout: 20_000 });
+}
+
+test("live (mock) call: breach verdict + coach debrief", async ({ page }) => {
+  test.setTimeout(120_000);
+  await startMockCall(page);
 
   // Caller greeting shows in captions.
   await expect(page.getByText(/Dana Whitfield/).first()).toBeVisible({ timeout: 30_000 });
@@ -31,6 +41,14 @@ test("live (mock) call: breach verdict + coach debrief", async ({ page }) => {
   await page.waitForURL("**/debrief", { timeout: 15_000 });
   await expect(page.getByText("BREACH", { exact: true }).first()).toBeVisible({ timeout: 15_000 });
   await expect(page.getByRole("button", { name: "Export JSON" })).toBeVisible();
+});
+
+test("live (mock) coach handoff speaks even before trainee audio", async ({ page }) => {
+  await startMockCall(page);
+  await page.getByRole("button", { name: "Hear the debrief" }).click();
+  await expect(page.getByText(/this is your coach/i).first()).toBeVisible({ timeout: 30_000 });
+  await page.getByRole("button", { name: "End call" }).click();
+  await page.waitForURL("**/debrief", { timeout: 15_000 });
 });
 
 test("replay mode: fixture drives verdict + Replay badge", async ({ page }) => {

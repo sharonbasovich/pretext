@@ -160,9 +160,10 @@ class MockSession {
         return;
       }
       case "session.update": {
-        const prompt = String((msg.session as Record<string, unknown>)?.system_prompt ?? "");
+        const config = (msg.session as Record<string, unknown>) ?? {};
+        const prompt = String(config.system_prompt ?? "");
         if (/coach|trainer|debrief/i.test(prompt)) this.coachMode = true;
-        this.send({ type: "session.updated", config: { applied: true } });
+        this.send({ type: "session.updated", config: { applied: true, ...config } });
         return;
       }
       case "tool.result":
