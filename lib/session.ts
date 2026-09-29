@@ -43,6 +43,7 @@ export class CallSession {
   private escalateTimer: ReturnType<typeof setTimeout> | null = null;
   private finalPushTimer: ReturnType<typeof setTimeout> | null = null;
   private coachRequested = false;
+  private coachUpdatePending = false;
 
   constructor(scenario: Scenario, hooks: SessionHooks) {
     this.scenario = scenario;
@@ -171,6 +172,17 @@ export class CallSession {
         this.armDirectorTimers();
         void this.startMic();
         break;
+      case "session.updated":
+        if (this.coachUpdatePending && msg.config?.system_prompt === this.scenario.coach_prompt) {
+          this.coachUpdatePending = false;
+          // Wait for the coach prompt and tool removal to take effect before
+          // requesting speech; otherwise the persona can call a scoring tool.
+          this.send({
+            type: "reply.create",
+            instructions: "Deliver the spoken debrief now. Begin: 'That was the simulation — this is your coach.' Give one specific strength, one improvement, and the safe next step.",
+          });
+        }
+        break;
       case "input.speech.started":
       case "input.speech.stopped":
       case "transcript.user":
@@ -195,6 +207,7 @@ export class CallSession {
         }
         break;
       case "session.ended":
+        this.coachUpdatePending = false;
         this.clearTimers();
         this.mic.stop();
         break;
@@ -230,16 +243,18 @@ export class CallSession {
 
   /** Persona → coach switch: mutable system_prompt + a prompted reply. */
   startDebrief() {
+    if (this.coachRequested || this.state.phase !== "ready") return;
     this.clearTimers();
-    this.send({ type: "session.update", session: { system_prompt: this.scenario.coach_prompt } });
-    this.send({ type: "reply.create" });
     this.coachRequested = true;
+    this.coachUpdatePending = true;
+    this.send({ type: "session.update", session: { system_prompt: this.scenario.coach_prompt, tools: [] } });
     this.state.coach_started = true;
-    this.note("coach", "Switched persona → coach via session.update; prompted the spoken debrief (coach speaks in the caller's voice — voice is immutable mid-session)");
+    this.note("coach", "Requested persona → coach switch and disabled scoring tools; the debrief starts after session.updated (same voice — voice is immutable mid-session)");
   }
 
   /** Always session.end so billing stops; then close the socket. */
   endCall() {
+    this.coachUpdatePending = false;
     this.clearTimers();
     this.send({ type: "session.end" });
     this.mic.stop();
@@ -253,6 +268,7 @@ export class CallSession {
   }
 
   async close() {
+    this.coachUpdatePending = false;
     this.clearTimers();
     this.mic.stop();
     if (this.ws && this.ws.readyState === WebSocket.OPEN) {

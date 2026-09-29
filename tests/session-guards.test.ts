@@ -95,6 +95,42 @@ describe("director channel guards", () => {
     expect(ws.sent.filter((m) => m.type === "conversation.message")).toHaveLength(0);
   });
 
+  it("starts the coach reply only after scoring tools are removed and the update is acknowledged", () => {
+    const { scenario, session } = makeSession();
+    void session.start("ws://mock/v1/ws", "t");
+    const ws = readyWs();
+
+    session.startDebrief();
+    session.startDebrief(); // a second click must not queue another debrief
+    expect(ws.sent).toEqual([{
+      type: "session.update",
+      session: { system_prompt: scenario.coach_prompt, tools: [] },
+    }]);
+
+    ws.emit({ type: "session.updated", config: { system_prompt: scenario.director.escalation_prompt } });
+    expect(ws.sent).toHaveLength(1);
+
+    ws.emit({ type: "session.updated", config: { system_prompt: scenario.coach_prompt, tools: [] } });
+    expect(ws.sent).toHaveLength(2);
+    expect(ws.sent[1]).toMatchObject({
+      type: "reply.create",
+      instructions: expect.stringContaining("spoken debrief"),
+    });
+
+    ws.emit({ type: "session.updated", config: { system_prompt: scenario.coach_prompt, tools: [] } });
+    expect(ws.sent.filter((m) => m.type === "reply.create")).toHaveLength(1);
+  });
+
+  it("does not request a coach reply if the call ends before the update acknowledgment", () => {
+    const { scenario, session } = makeSession();
+    void session.start("ws://mock/v1/ws", "t");
+    const ws = readyWs();
+    session.startDebrief();
+    session.endCall();
+    ws.emit({ type: "session.updated", config: { system_prompt: scenario.coach_prompt, tools: [] } });
+    expect(ws.sent.filter((m) => m.type === "reply.create")).toHaveLength(0);
+  });
+
   it("sends nothing after endCall", () => {
     const { scenario, session } = makeSession();
     void session.start("ws://mock/v1/ws", "t");

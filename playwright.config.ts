@@ -1,4 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
+import { MOCK_E2E_API_KEY, MOCK_E2E_PASSCODE } from "./e2e/mock-env";
 
 const MOCK_WS_PORT = 8787;
 const APP_PORT = 3100;
@@ -29,15 +30,20 @@ export default defineConfig({
     {
       command: "npx tsx mock/server.ts",
       port: MOCK_WS_PORT,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: false,
       env: { PRETEXT_MOCK_PORT: String(MOCK_WS_PORT) },
     },
     {
       command: process.env.CI ? "npm run start -- -p 3100" : "npm run dev -- -p 3100",
       url: `http://localhost:${APP_PORT}`,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: false,
       timeout: 240_000,
-      env: { PRETEXT_MOCK: "1", PRETEXT_MOCK_WS_URL: `ws://localhost:${MOCK_WS_PORT}/v1/ws` },
+      env: {
+        ASSEMBLYAI_API_KEY: MOCK_E2E_API_KEY,
+        PRETEXT_DEMO_PASSCODE: MOCK_E2E_PASSCODE,
+        PRETEXT_MOCK: "1",
+        PRETEXT_MOCK_WS_URL: `ws://localhost:${MOCK_WS_PORT}/v1/ws`,
+      },
     },
   ],
 });
