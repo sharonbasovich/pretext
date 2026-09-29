@@ -1,4 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
+import { MOCK_E2E_PASSCODE } from "./mock-env";
 
 // Happy path vs the mock agent: connect, captions flow, scripted breach fires
 // the trip-wire, coach switch speaks the debrief, verdict lands.
@@ -7,15 +8,15 @@ async function startMockCall(page: Page) {
   await page.goto("/call/helpdesk-pretext");
   await expect(page.getByText("Ready?")).toBeVisible();
   const status = await page.request.get("/api/status");
-  const { passcode_configured: passcodeRequired } = await status.json();
+  expect(status.ok()).toBe(true);
+  const deployment = await status.json();
+  expect(deployment.mock).toBe(true);
+  expect(deployment.passcode_configured).toBe(true);
   await page.getByRole("button", { name: "Start call" }).click();
-  if (passcodeRequired) {
-    const passcode = process.env.PRETEXT_DEMO_PASSCODE;
-    if (!passcode) throw new Error("PRETEXT_DEMO_PASSCODE is needed to run the mock call E2E test");
-    await page.getByPlaceholder("Demo passcode").fill(passcode);
-    await page.getByRole("button", { name: "Start call" }).click();
-  }
+  await page.getByPlaceholder("Demo passcode").fill(MOCK_E2E_PASSCODE);
+  await page.getByRole("button", { name: "Start call" }).click();
   await expect(page.getByText(/conn · LIVE|LIVE/).first()).toBeVisible({ timeout: 20_000 });
+  await expect(page.getByText("mock agent", { exact: true })).toBeVisible();
 }
 
 test("live (mock) call: breach verdict + coach debrief", async ({ page }) => {
