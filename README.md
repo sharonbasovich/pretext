@@ -61,7 +61,7 @@ CallConsole.tsx                  /api/token     → GET agents.assemblyai.com/v1
       ├─ lib/reducer.ts  (server events → call state)
       ├─ lib/rubric.ts   (tool_observation | transcript_regex | metric_threshold)
       ├─ lib/metrics.ts  (latency, talk ratio, dead air, interruptions)
-      └─ director channel: conversation.message nudges, session.update escalation,
+      └─ director channel: conversation.message nudges and escalation,
          reply.create final push; persona→coach switch via session.update
 ```
 
@@ -78,7 +78,7 @@ to inline `session.update` configs.
 | `GET /v1/token` (`expires_in_seconds`, `max_session_duration_seconds`) | Key never reaches the browser; sessions hard-capped ≤240 s |
 | Stored agents `POST /v1/agents` + `agents.lock.json` | Personas + tool schemas server-side; inline-config fallback |
 | Client-side tools (`tool.call`/`tool.result`) | `attempt_protected_action` = the trip-wire; `log_observation` = rubric hits |
-| `session.update` mid-session | Difficulty escalation + persona→coach switch (voice immutable — coach speaks in the caller's voice) |
+| `session.update` mid-session | Persona→coach switch (voice immutable — coach speaks in the caller's voice) |
 | `conversation.message` + `reply.create` | Director channel: silence nudges, timed escalation, final push |
 | `transcript.*` / `input.speech.*` / `reply.done` | Live captions, rubric regexes, latency/interruption/dead-air metrics |
 | `input.keyterms` + `transcription_prompt` | Northwind names, ticket formats, "MFA", account digits |

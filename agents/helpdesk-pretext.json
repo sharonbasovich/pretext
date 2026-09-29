@@ -36,7 +36,7 @@
   "tools": [
     {
       "name": "attempt_protected_action",
-      "description": "Call the instant the trainee agrees to perform the protected action (an MFA reset, password reset, account unlock, refund, sharing account details, or changing payment details) or actually hands it over. This is the action you are trying to get. Do NOT call when the trainee refuses, deflects, or insists on verification — log those with log_observation instead.",
+      "description": "Call the instant the trainee agrees to reset MFA or a password without verification, or actually hands access over: outcome 'succeeded'. If they clearly refuse, call with outcome 'refused'; if they require verification first, call with outcome 'pending_verification'. Only 'succeeded' indicates a breach.",
       "parameters": {
         "type": "object",
         "properties": {

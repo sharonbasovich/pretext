@@ -31,6 +31,8 @@ const SILENCE_NUDGE =
   "The trainee has gone quiet — keep the pressure on: restate what you need and why it can't wait. Stay in character.";
 const FINAL_PUSH =
   "Time is almost up — make your final push for what you need now, hard. Stay in character.";
+const ESCALATION_TOOL_REMINDER =
+  "Keep the caller persona and its tool rules in force. If the trainee agrees to perform or performs the protected action without the required safeguard, call attempt_protected_action immediately with outcome 'succeeded'.";
 
 export class CallSession {
   private ws: WebSocket | null = null;
@@ -89,9 +91,15 @@ export class CallSession {
     this.resetSilenceTimer();
     this.escalateTimer = setTimeout(() => {
       if (this.state.phase !== "ready" || this.state.escalated || this.directorClosed()) return;
-      this.send({ type: "session.update", session: { system_prompt: d.escalation_prompt } });
+      // An update would replace the stored agent's system prompt, including
+      // its persona and tool-use rules. Add the direction to the conversation.
+      this.send({
+        type: "conversation.message",
+        role: "system",
+        content: `${d.escalation_prompt}\n${ESCALATION_TOOL_REMINDER}`,
+      });
       this.state.escalated = true;
-      this.note("escalation", `Escalated at ${Math.round(d.escalate_at_ms / 1000)}s — sent harder system prompt`);
+      this.note("escalation", `Escalated at ${Math.round(d.escalate_at_ms / 1000)}s — added direction without replacing the caller persona`);
     }, d.escalate_at_ms);
     const finalAt = Math.max(15000, this.scenario.approx_seconds * 1000 - d.final_push_before_end_ms);
     this.finalPushTimer = setTimeout(() => {

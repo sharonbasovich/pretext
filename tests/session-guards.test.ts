@@ -72,13 +72,27 @@ describe("director channel guards", () => {
     vi.unstubAllGlobals();
   });
 
-  it("fires escalation + final push while the call is live", () => {
+  it("escalates without replacing the stored persona or its tool rules", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => ({
+      json: async () => ({ session: { agent_id: "ag_test" } }),
+    })));
     const { scenario, session } = makeSession();
     void session.start("ws://mock/v1/ws", "t");
-    const ws = readyWs();
+    const ws = FakeWS.instances[FakeWS.instances.length - 1];
+    await ws.onopen?.();
+    expect(ws.sent).toEqual([{ type: "session.update", session: { agent_id: "ag_test" } }]);
+    readyWs();
     vi.advanceTimersByTime(scenario.director.escalate_at_ms + 100);
     const updates = ws.sent.filter((m) => m.type === "session.update");
-    expect(updates.some((m) => (m.session as { system_prompt?: string }).system_prompt === scenario.director.escalation_prompt)).toBe(true);
+    expect(updates).toEqual([{ type: "session.update", session: { agent_id: "ag_test" } }]);
+    const escalation = ws.sent.find((m) =>
+      m.type === "conversation.message" &&
+      typeof m.content === "string" &&
+      m.content.includes(scenario.director.escalation_prompt)
+    );
+    expect(escalation).toMatchObject({ type: "conversation.message", role: "system" });
+    expect(escalation?.content).toContain("attempt_protected_action");
+    expect(escalation?.content).toContain("outcome 'succeeded'");
     vi.advanceTimersByTime(scenario.approx_seconds * 1000);
     expect(ws.sent.filter((m) => m.type === "reply.create").length).toBe(1); // final push
   });

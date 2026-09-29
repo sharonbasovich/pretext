@@ -9,10 +9,10 @@ Product/architecture choices made during the build, with reasoning.
   transcript regexes — no LLM judging, labeled as such in the UI.
 
 - **Director channel is client-side.** The browser injects
-  `conversation.message` (role=system) nudges on silence, swaps `system_prompt`
-  via `session.update` to escalate at a scenario-specific time, and fires a
-  `reply.create` final push near the cap. Cheaper and more reliable than
-  a second process.
+  `conversation.message` (role=system) nudges on silence and escalation at a
+  scenario-specific time, preserving the stored caller prompt and tool rules.
+  It fires a `reply.create` final push near the cap. Cheaper and more reliable
+  than a second process.
 
 - **Mock-first.** `ASSEMBLYAI_API_KEY` may be absent in dev/CI, so
   `mock/server.ts` replays scripted wire events over the same WebSocket
